@@ -28,6 +28,8 @@ stonecutter {
         if (isJava25) {
             allVersions.addAll(listOf("26.1", "26.1.2"))
             neoforgeVersions.addAll(listOf("26.1", "26.1.2"))
+        } else {
+            logger.warn("WARNING: You are using Java version < 25. Minecraft 26.x requires Java 25. The 26.x versions will be skipped during this build!")
         }
 
         versions(*allVersions.toTypedArray())
