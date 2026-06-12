@@ -1,39 +1,38 @@
 <div align="center">
-    <a href="https://modrinth.com/mod/undertale-death-screen">
+    <a href="https://modrinth.com/mod/undertale-death-screen-continued">
         <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg">
     </a>
-    <a href="https://www.curseforge.com/minecraft/mc-mods/undertale-death-screen">
+    <a href="https://www.curseforge.com/minecraft/mc-mods/undertale-death-screen-continued">
         <img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg">
     </a>
-    <a href="https://github.com/Raik176/undertale-death-screen">
+    <a href="https://github.com/Denmoth/undertale-death-screen-continued">
         <img alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/github_vector.svg">
     </a>
-    <a href="https://discord.gg/FpEReTJbSA">
+    <a href="https://discord.gg/YOUR_DISCORD_INVITE">
         <img alt="discord-plural" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/social/discord-plural_vector.svg">
     </a>
-    <a href="https://ko-fi.com/R6R3163YVT">
+    <a href="https://ko-fi.com/YOUR_KOFI_LINK">
         <img alt="kofi-singular" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/donate/kofi-singular_vector.svg">
     </a>
 </div>
 
+# Undertale Death Screen: Continued
 
-# Undertale Death Screen
-Makes your last heart shatter when you die like in undertale.
+An active continuation of **Raik176's** original Undertale Death Screen. Since the original project hasn't seen updates for a long time, this fork keeps it alive by bringing the classic death screen to modern Minecraft versions with ongoing support, bug fixes, and requested features.
+
+Makes your last heart shatter when you die just like in Undertale!
 
 ![Example Death](https://i.imgur.com/p5Ql0OT.gif)
 
-# Want to Support the Mod?
-Thank you so much for using this mod! Your support means the world and helps the mod grow.
+## Credits & Support
 
-I now **accept donations**! If you'd like to contribute directly, you can support me on Ko-fi:
+This mod is an actively maintained fork. All original concept and base code belong to the original author. 
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R3163YVT)
+* **Original Author:** [Raik176](https://github.com/Raik176)
+  * [Original Repository](https://github.com/Raik176/undertale-death-screen)
+  * ☕ [Support Raik176 on Ko-fi](https://ko-fi.com/R6R3163YVT)
 
-Even if you don't donate, there are still many ways to help the mod thrive:
+* **Current Maintainer:** [Denmoth](https://github.com/Denmoth)
+  * ☕ [Support Denmoth on Ko-fi](https://ko-fi.com/YOUR_KOFI_LINK)
 
-### How You Can Help Spread the Word:
-- **Showcase It**: Create a video review/showcase, or a let's play featuring the mod.  
-- **Recommend It**: Tell friends who might enjoy it, or share it in relevant online communities (just be considerate and avoid spamming).  
-- **Include It in a Modpack**: Adding it to your modpack is a great way to help others discover it.
-
-Every bit of support makes a difference. Thank you for helping this mod grow!
+*Distributed under the MIT License.*
