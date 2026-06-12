@@ -8,10 +8,10 @@
     <a href="https://github.com/Denmoth/undertale-death-screen-continued">
         <img alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/github_vector.svg">
     </a>
-    <a href="https://discord.gg/YOUR_DISCORD_INVITE">
+    <a href="https://discord.gg/BCXqNfPnSh">
         <img alt="discord-plural" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/social/discord-plural_vector.svg">
     </a>
-    <a href="https://ko-fi.com/YOUR_KOFI_LINK">
+    <a href="https://ko-fi.com/denmoth">
         <img alt="kofi-singular" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/donate/kofi-singular_vector.svg">
     </a>
 </div>
@@ -33,6 +33,6 @@ This mod is an actively maintained fork. All original concept and base code belo
   * ☕ [Support Raik176 on Ko-fi](https://ko-fi.com/R6R3163YVT)
 
 * **Current Maintainer:** [Denmoth](https://github.com/Denmoth)
-  * ☕ [Support Denmoth on Ko-fi](https://ko-fi.com/YOUR_KOFI_LINK)
+  * ☕ [Support Denmoth on Ko-fi](https://ko-fi.com/denmoth)
 
 *Distributed under the MIT License.*
