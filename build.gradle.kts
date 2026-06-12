@@ -25,6 +25,17 @@ dependencies {
     }
 }
 
+java {
+    val javaVer = when {
+        minecraft.startsWith("1.20.4") -> 17
+        minecraft.startsWith("1.20") -> 21
+        minecraft.startsWith("1.21") -> 21
+        minecraft.startsWith("26.") -> 25
+        else -> 21
+    }
+    toolchain.languageVersion.set(JavaLanguageVersion.of(javaVer))
+}
+
 loom {
     accessWidenerPath = rootProject.file("src/main/resources/${mod.id}.accesswidener")
 }
