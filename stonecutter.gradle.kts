@@ -222,10 +222,12 @@ for (node in stonecutter.tree.nodes) {
                 runDir = project.layout.projectDirectory.asFile.toPath().toAbsolutePath()
                     .relativize(rootProject.layout.projectDirectory.file("run").asFile.toPath())
                     .toString()
-                vmArgs(
-                    "-Dmixin.debug.export=true",
-                    "-XX:+AllowEnhancedClassRedefinition"
-                )
+                
+                val jvmArgsList = mutableListOf("-Dmixin.debug.export=true")
+                if (org.gradle.internal.jvm.Jvm.current().javaVersion?.isCompatibleWith(JavaVersion.VERSION_21) != true) {
+                    jvmArgsList.add("-XX:+AllowEnhancedClassRedefinition")
+                }
+                vmArgs(jvmArgsList)
             }
         }
     }
