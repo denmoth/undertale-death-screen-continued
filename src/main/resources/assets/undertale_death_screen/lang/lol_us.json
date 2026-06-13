@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "SHARD RENDER STYLE",
+  "undertale_death_screen.config.shard_render_style.animated": "ANIMATED",
+  "undertale_death_screen.config.shard_render_style.rotated": "ROTATED",
+  "undertale_death_screen.config.shard_render_style.ttp": "HOW SHATTERS LOOK.\n  ANIMATED: IT MOVE BUT NO SPIN.\n  ROTATED: IT SPIN BUT NO MOVE.",
+  "undertale_death_screen.config.music_turnoff": "STAHP MUZIK?",
+  "undertale_death_screen.config.music_turnoff.ttp": "STAHP ALL BEWPS AND BOOPS WEN DED",
+  "undertale_death_screen.config.centered_heart": "CENTER HART?",
+  "undertale_death_screen.config.centered_heart.ttp": "PUT HART IN DA MIDDLE.",
+  "undertale_death_screen.config.centered_heart_anim": "CENTER HART MOOV?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "MOOV HART TO MIDDLE B4 IT BREAK.",
+  "undertale_death_screen.config.centered_heart_speed": "HART MOOV SPEED",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "HOW FAST HART MOOV TO MIDDLE.",
+  "undertale_death_screen.config.determination": "PLAY MUZIK?",
+  "undertale_death_screen.config.determination.ttp": "PLAY UNDERTALE MUZIK ON DED SKREEN.",
+  "subtitles.undertale_death_screen.heart_shatter": "HART BREAKS Y U DO DIS",
+  "subtitles.undertale_death_screen.music.determination": "UNDERTALE - DETERMINASHUN",
+  "undertale_death_screen.config.dynamicHeart": "USE MAJIK HARTS?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "CHANGE COLOR FOR POWAHS:\n - POIZON\n - WITHER\n - ICE",
+  "undertale_death_screen.config.background_fade_speed": "DARK SPEED",
+  "undertale_death_screen.config.background_fade_speed.ttp": "HOW FAST DARK MOOV.\n0 = NO DARK.\n1 = INSTANT DARK."
+}

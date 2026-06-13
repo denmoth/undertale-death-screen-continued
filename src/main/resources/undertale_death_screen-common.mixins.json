@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "org.rhm.undertale_death_screen.mixin",
+  "package": "com.denmoth.undertale_death_screen.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Style de rendu des éclats",
+  "undertale_death_screen.config.shard_render_style.animated": "Animé",
+  "undertale_death_screen.config.shard_render_style.rotated": "Tournant",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configure le style des éclats de cœur.\n  Animé : L'éclat s'anime mais ne tourne pas.\n  Tournant : L'éclat tourne mais ne s'anime pas.",
+  "undertale_death_screen.config.music_turnoff": "Arrêter toute la musique ?",
+  "undertale_death_screen.config.music_turnoff.ttp": "S'il faut arrêter tous les sons et musiques à la mort.",
+  "undertale_death_screen.config.centered_heart": "Centrer le cœur ?",
+  "undertale_death_screen.config.centered_heart.ttp": "S'il faut centrer le cœur au milieu de l'écran.",
+  "undertale_death_screen.config.centered_heart_anim": "Animation de centrage ?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "S'il faut animer fluidement le cœur vers le centre\nde l'écran avant qu'il n'éclate.",
+  "undertale_death_screen.config.centered_heart_speed": "Vitesse de centrage",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Vitesse de l'animation de centrage.",
+  "undertale_death_screen.config.determination": "Jouer la musique ?",
+  "undertale_death_screen.config.determination.ttp": "S'il faut jouer la musique (Determination d'Undertale) sur l'écran de mort.",
+  "subtitles.undertale_death_screen.heart_shatter": "Le cœur se brise",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Utiliser des cœurs dynamiques ?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "S'il faut modifier la texture du cœur selon le statut :\n - Empoisonné\n - Wither\n - Congélation",
+  "undertale_death_screen.config.background_fade_speed": "Vitesse de fondu du fond",
+  "undertale_death_screen.config.background_fade_speed.ttp": "La vitesse à laquelle l'écran devient noir.\nSi défini sur 0, il est désactivé.\nSi défini sur 1, c'est instantané."
+}

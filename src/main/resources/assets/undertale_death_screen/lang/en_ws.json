@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Shard Rendereth Stylus",
+  "undertale_death_screen.config.shard_render_style.animated": "Animateth",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotateth",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configureth the style of the shattered heart pieces.\n  Animateth: The piece shall animate but not rotate.\n  Rotateth: The piece shall rotate but not animate.",
+  "undertale_death_screen.config.music_turnoff": "Cease all minstrelsy?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Whether to cease all sound and minstrelsy upon thy demise.",
+  "undertale_death_screen.config.centered_heart": "Center thy heart?",
+  "undertale_death_screen.config.centered_heart.ttp": "Whether to center thy heart in the middle.",
+  "undertale_death_screen.config.centered_heart_anim": "Center heart animation?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Whether to smoothly animate thy heart to the center before shattering.",
+  "undertale_death_screen.config.centered_heart_speed": "Heart center velocity",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Velocity of thy heart center animation.",
+  "undertale_death_screen.config.determination": "Play minstrelsy?",
+  "undertale_death_screen.config.determination.ttp": "Whether to play minstrelsy (Determination) on thy death screen.",
+  "subtitles.undertale_death_screen.heart_shatter": "Heart shattereth",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Use dynamic hearts?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Whether to dynamically alter thy heart texture based on thy status:\n - Poisoned\n - Withering\n - Freezing",
+  "undertale_death_screen.config.background_fade_speed": "Background Fade Velocity",
+  "undertale_death_screen.config.background_fade_speed.ttp": "The velocity at which to fill the screen with black.\nIf 0, it is disabled.\nIf 1, it is instantaneous."
+}

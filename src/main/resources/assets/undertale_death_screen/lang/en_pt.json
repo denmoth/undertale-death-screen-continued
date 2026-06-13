@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Pieces o' Eight Style",
+  "undertale_death_screen.config.shard_render_style.animated": "Dancin'",
+  "undertale_death_screen.config.shard_render_style.rotated": "Spinnin'",
+  "undertale_death_screen.config.shard_render_style.ttp": "Arr, how the shattered pieces look.\n  Dancin': The piece dances but spins nay.\n  Spinnin': The piece spins but dances nay.",
+  "undertale_death_screen.config.music_turnoff": "Silence the shanty?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Silence all sound when ye visit Davy Jones' locker.",
+  "undertale_death_screen.config.centered_heart": "Center yer heart?",
+  "undertale_death_screen.config.centered_heart.ttp": "Put the heart dead in the middle.",
+  "undertale_death_screen.config.centered_heart_anim": "Center yer heart smoothly?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Smoothly sail the heart to the middle before it shatters.",
+  "undertale_death_screen.config.centered_heart_speed": "Heart sailin' speed",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "The knots at which yer heart sails to the center.",
+  "undertale_death_screen.config.determination": "Play a shanty?",
+  "undertale_death_screen.config.determination.ttp": "Play the Undertale tune when ye perish.",
+  "subtitles.undertale_death_screen.heart_shatter": "Heart splinters",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Use cursed hearts?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Change the heart texture when ye be:\n - Poisoned by grog\n - Witherin' away\n - Frozen to the bone",
+  "undertale_death_screen.config.background_fade_speed": "Blackout Speed",
+  "undertale_death_screen.config.background_fade_speed.ttp": "The speed to blackout the screen.\nIf 0, it be disabled.\nIf 1, it be instant."
+}

@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Estilo de los Fragmentos",
+  "undertale_death_screen.config.shard_render_style.animated": "Animado",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotado",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configura el estilo de los fragmentos del corazón.\n  Animado: El fragmento se animará pero no rotará.\n  Rotado: El fragmento rotará pero no se animará.",
+  "undertale_death_screen.config.music_turnoff": "¿Detener toda la música?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Si se debe detener toda la música y sonidos al morir.",
+  "undertale_death_screen.config.centered_heart": "¿Centrar el corazón?",
+  "undertale_death_screen.config.centered_heart.ttp": "Si se debe poner el corazón en el centro de la pantalla.",
+  "undertale_death_screen.config.centered_heart_anim": "¿Animar el corazón al centro?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Si se debe animar suavemente el corazón hacia el centro\nantes de romperse.",
+  "undertale_death_screen.config.centered_heart_speed": "Velocidad de centrado",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "La velocidad de la animación de centrado.",
+  "undertale_death_screen.config.determination": "¿Reproducir música?",
+  "undertale_death_screen.config.determination.ttp": "Si se debe reproducir música (Determination de Undertale) en la pantalla de muerte.",
+  "subtitles.undertale_death_screen.heart_shatter": "Corazón rompiéndose",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "¿Usar corazones dinámicos?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Si la textura del corazón debe cambiar según tu estado:\n - Envenenamiento\n - Wither\n - Congelación",
+  "undertale_death_screen.config.background_fade_speed": "Velocidad de fundido",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Velocidad a la que la pantalla se vuelve negra.\nSi es 0, está desactivado.\nSi es 1, es instantáneo."
+}

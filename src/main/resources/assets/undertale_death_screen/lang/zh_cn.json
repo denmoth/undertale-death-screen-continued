@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "碎片渲染风格",
+  "undertale_death_screen.config.shard_render_style.animated": "动画",
+  "undertale_death_screen.config.shard_render_style.rotated": "旋转",
+  "undertale_death_screen.config.shard_render_style.ttp": "配置心形碎片的风格。\n  动画：碎片会有动画但不会旋转。\n  旋转：碎片会旋转但不会有动画。",
+  "undertale_death_screen.config.music_turnoff": "停止所有音乐？",
+  "undertale_death_screen.config.music_turnoff.ttp": "死亡时是否停止所有声音和音乐",
+  "undertale_death_screen.config.centered_heart": "心形居中？",
+  "undertale_death_screen.config.centered_heart.ttp": "是否将心形置于屏幕中央。",
+  "undertale_death_screen.config.centered_heart_anim": "居中动画？",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "心形碎裂前是否平滑地移动到屏幕中央。",
+  "undertale_death_screen.config.centered_heart_speed": "居中速度",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "心形居中动画的速度。",
+  "undertale_death_screen.config.determination": "播放音乐？",
+  "undertale_death_screen.config.determination.ttp": "死亡屏幕上是否播放音乐 (默认播放传说之下的 Determination)。",
+  "subtitles.undertale_death_screen.heart_shatter": "心碎的声音",
+  "subtitles.undertale_death_screen.music.determination": "传说之下 - Determination",
+  "undertale_death_screen.config.dynamicHeart": "动态心形？",
+  "undertale_death_screen.config.dynamicHeart.ttp": "是否根据玩家状态动态改变心形的纹理和颜色，支持：\n - 中毒\n - 凋零\n - 冰冻",
+  "undertale_death_screen.config.background_fade_speed": "背景淡出速度",
+  "undertale_death_screen.config.background_fade_speed.ttp": "屏幕变黑的速度。\n如果设置为 0，则禁用。\n如果设置为 1，则瞬间变黑。"
+}
