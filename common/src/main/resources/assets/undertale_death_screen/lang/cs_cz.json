@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Plynulý přechod do Vanilly?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Zda se po roztříštění plynule objeví normální obrazovka smrti.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Délka přechodu",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Jak dlouho trvá prolínání v ticích (20 = 1 sekunda)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Jak dlouho trvá prolínání v ticích (20 = 1 sekunda).",
+  "undertale_death_screen.config.text_fade_in": "Fade In Text?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Zda text „Zemřel jsi“ hladce zmizí poté, co se srdce rozbije.",
+  "undertale_death_screen.config.text_fade_in_duration": "Text Fade In Duration",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Jak dlouho trvá postupné prolínání textu v tikáních (20 = 1 sekunda).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Fade to Vanilla Screen?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Zda černé pozadí pomalu mizí na pozadí vanilkové smrti.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Rychlost slábnutí zpět na vanilkovou obrazovku.",
+  "undertale_death_screen.config.fixed_animation_rate": "Pevná sazba animace?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Pokud je pravda, animace běží na stabilních 60 FPS bez ohledu na vaši snímkovou frekvenci.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Zakázat tlačítka během animace?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Pokud je true, nemůžete kliknout na Respawn/Title Screen před dokončením animace."
 }

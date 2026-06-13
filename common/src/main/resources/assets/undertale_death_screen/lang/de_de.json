@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Sanfter Übergang zu Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Ob der normale Todesbildschirm nach dem Zersplittern sanft eingeblendet werden soll.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Übergangsdauer",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Dauer des Einblendens in Ticks (20 = 1 Sekunde)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Dauer des Einblendens in Ticks (20 = 1 Sekunde).",
+  "undertale_death_screen.config.text_fade_in": "Text einblenden?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Ob der Text „Du bist gestorben“ sanft eingeblendet wird, nachdem das Herz zerbricht.",
+  "undertale_death_screen.config.text_fade_in_duration": "Text-Einblenddauer",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Gibt an, wie lange das Einblenden des Textes in Ticks dauert (20 = 1 Sekunde).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Auf Vanilla-Bildschirm verblassen?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Ob der schwarze Hintergrund langsam zum Vanille-Death-Screen-Hintergrund übergeht.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Geschwindigkeit des Zurückblendens zum Vanilla-Bildschirm.",
+  "undertale_death_screen.config.fixed_animation_rate": "Feste Animationsrate?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Wenn dies zutrifft, läuft die Animation unabhängig von Ihrer Framerate mit stabilen 60 FPS.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Schaltflächen während der Animation deaktivieren?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Wenn „true“, können Sie nicht auf „Respawn/Titelbildschirm“ klicken, bevor die Animation beendet ist."
 }

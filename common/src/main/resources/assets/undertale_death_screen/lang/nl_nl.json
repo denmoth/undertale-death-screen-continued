@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Vloeiende overgang naar Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Of het normale doodsscherm vloeiend verschijnt na het verbrijzelen.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Overgangsduur",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Hoe lang het verschijnen duurt in ticks (20 = 1 seconde)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Hoe lang het verschijnen duurt in ticks (20 = 1 seconde).",
+  "undertale_death_screen.config.text_fade_in": "Tekst vervagen?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Zal de 'Je bent dood!'-tekst langzaam in beeld komen na de animatie.",
+  "undertale_death_screen.config.text_fade_in_duration": "Tekst vervagingsduur",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Duur van de tekst vervaging in ticks (20 = 1 seconde).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Vervagen naar vanilla scherm?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Zal de zwarte achtergrond vervagen aan het einde.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Vervagingssnelheid",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Snelheid waarmee de zwarte achtergrond verdwijnt.",
+  "undertale_death_screen.config.fixed_animation_rate": "Vaste animatiesnelheid?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Indien ingeschakeld, loopt de animatie op een vaste 60 FPS.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Knoppen uitschakelen voor animatie?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Indien ingeschakeld kun je geen knoppen aanklikken voordat de animatie is afgelopen."
 }

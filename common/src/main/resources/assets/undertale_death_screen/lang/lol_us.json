@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "NORMAL DED SKREEN?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "BRING BAK DA NORMAL DED SKREEN WEN HART GO BOOM.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "HOW LONG TO COME BAK",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "HOW LONG IT TAYK IN TIKS (20 = 1 SEKUND)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "HOW LONG IT TAYK IN TIKS (20 = 1 SEKUND).",
+  "undertale_death_screen.config.text_fade_in": "TEXT FAD IN???",
+  "undertale_death_screen.config.text_fade_in.ttp": "WILL DA 'U DED!' TEXT SHOW UP SLOW AFTAR MOOVIN?",
+  "undertale_death_screen.config.text_fade_in_duration": "HOW LONG 2 SHOW TEXT???",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "HOW LONG IN TICKS (20 = 1 SEC) MEOOOWW!!",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "BACK TO NORMAL SCREEN???",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "WILL BLACK SCREEN GO AWAY N SHOW NORMAL SCREEN???",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "HOW FAST 2 NORMAL SCREEN???",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "SPEED DAT DA BLACK SKREEN GOS AWAY MEOOW!!",
+  "undertale_death_screen.config.fixed_animation_rate": "FIXD ANIMASHUN SPEED???",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "IF YES MOOVES AT 60 FPS NO MATR WAT!!",
+  "undertale_death_screen.config.disable_buttons_before_animation": "DISABLE BUTTNS B4 ANIMASHUN???",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "U CANT CLICK DA BUTTONS TILL DA ANIMASHUN IS DUN!!!"
 }

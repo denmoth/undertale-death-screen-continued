@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Tranziție lentă la Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Dacă ecranul normal de moarte apare treptat după sfărâmare.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Durata tranziției",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Durata estompării în tick-uri (20 = 1 secundă)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Durata estompării în tick-uri (20 = 1 secundă).",
+  "undertale_death_screen.config.text_fade_in": "Apariție treptată a textului?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Dacă textul 'Ai murit!' va apărea treptat după animație.",
+  "undertale_death_screen.config.text_fade_in_duration": "Durata apariției textului",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Durata apariției textului în tick-uri (20 = 1 secundă).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Întoarcere la ecranul vanilla?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Dacă fundalul negru va dispărea la sfârșitul animației.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Viteza de întoarcere",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Viteza cu care dispare fundalul negru.",
+  "undertale_death_screen.config.fixed_animation_rate": "Rata fixă a animației?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Dacă este activat, animația va rula la 60 FPS indiferent de FPS-ul tău.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Dezactivați butoanele înainte de animație?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Dacă este activat, nu veți putea face clic pe butoane înainte ca animația să se termine."
 }

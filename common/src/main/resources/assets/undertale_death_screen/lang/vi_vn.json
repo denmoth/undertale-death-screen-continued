@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Chuyển dần sang Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Cho dù màn hình chết bình thường hiện ra mượt mà sau khi vỡ vụn.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Thời lượng xuất hiện",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Thời lượng làm mờ bằng tick (20 = 1 giây)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Thời lượng làm mờ bằng tick (20 = 1 giây).",
+  "undertale_death_screen.config.text_fade_in": "Chữ hiện dần?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Dòng chữ 'Bạn đã chết!' có hiện dần lên sau hoạt ảnh không.",
+  "undertale_death_screen.config.text_fade_in_duration": "Thời gian hiện chữ",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Thời gian hiện chữ tính bằng tick (20 = 1 giây).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Trở về màn hình vanilla?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Nền đen có mờ dần vào cuối hoạt ảnh không.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Tốc độ về màn hình",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Tốc độ mờ đi của nền đen.",
+  "undertale_death_screen.config.fixed_animation_rate": "Tốc độ hoạt ảnh cố định?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Nếu bật, hoạt ảnh sẽ chạy ở tốc độ 60 FPS cố định bất kể FPS của bạn.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Vô hiệu hóa nút trước hoạt ảnh?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Nếu bật, bạn sẽ không thể nhấp vào các nút Hồi sinh/Màn hình chính trước khi hoạt ảnh kết thúc."
 }

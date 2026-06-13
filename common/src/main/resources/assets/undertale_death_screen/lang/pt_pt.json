@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Transição suave para Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Se o ecrã de morte normal aparece suavemente após estilhaçar.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Duração da transição",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Duração da transição em ticks (20 = 1 segundo)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Duração da transição em ticks (20 = 1 segundo).",
+  "undertale_death_screen.config.text_fade_in": "Surgimento gradual do texto?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Se o texto 'Morreste!' surgirá suavemente após a animação.",
+  "undertale_death_screen.config.text_fade_in_duration": "Duração do surgimento do texto",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Duração do surgimento em ticks (20 = 1 segundo).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Voltar para tela vanilla?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Se o fundo preto desaparecerá no final.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Velocidade de retorno",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Velocidade na qual o fundo preto desaparece.",
+  "undertale_death_screen.config.fixed_animation_rate": "Taxa de animação fixa?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Se ativado, a animação roda a 60 FPS fixos.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Desativar botões antes da animação?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Se ativado, não poderás clicar nos botões antes do fim da animação."
 }

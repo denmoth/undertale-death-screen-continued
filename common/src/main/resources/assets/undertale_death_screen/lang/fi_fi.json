@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Häivytys Vanillaan?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Ilmestyykö normaali kuolinruutu pehmeästi särkymisen jälkeen.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Häivytyksen Kesto",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Häivytyksen kesto tickeinä (20 = 1 sekunti)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Häivytyksen kesto tickeinä (20 = 1 sekunti).",
+  "undertale_death_screen.config.text_fade_in": "Häivytetään tekstissä?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Häivytetäänkö \"Sinä kuolit\" -teksti sujuvasti sydämen särkymisen jälkeen.",
+  "undertale_death_screen.config.text_fade_in_duration": "Tekstin haalistumisen kesto",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Kuinka kauan tekstin häivytys kestää (20 = 1 sekunti).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Häivytetäänkö Vanilla Screeniin?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Häivyttääkö musta tausta hitaasti vaniljakuoleman näytön taustaksi.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Nopeus haalistumista takaisin vaniljakankaaseen.",
+  "undertale_death_screen.config.fixed_animation_rate": "Kiinteä animaationopeus?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Jos totta, animaatio toimii vakaalla 60 FPS:llä kuvanopeudesta riippumatta.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Poistetaanko painikkeet käytöstä animaation aikana?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Jos tosi, et voi napsauttaa Respawn/Title Screen ennen kuin animaatio on valmis."
 }

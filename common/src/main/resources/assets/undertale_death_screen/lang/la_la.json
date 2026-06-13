@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Apparitio in Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "An velum mortis usitatum clarescat lente post frangendum.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Mora apparitionis",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Quantum morae sit in apparitione (20 = 1 secunda)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Quantum morae sit in apparitione (20 = 1 secunda).",
+  "undertale_death_screen.config.text_fade_in": "Testu dilucescat?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Num verba 'Mortuus es!' post motum dilucescant.",
+  "undertale_death_screen.config.text_fade_in_duration": "Mora dilucescendi testu",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Mora dilucescendi testu in momentis (XX = I secunda).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Reditus ad velum solum?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Num scaena nigra in fine dilucescat.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Celeritas reditus",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Celeritas qua scaena nigra evanescit.",
+  "undertale_death_screen.config.fixed_animation_rate": "Certa motus celeritas?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Si verum est, motus in LX machinis per secundam curret.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Claude pugas ante motum?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Si verum est, pugas tangere non potes ante finem motus."
 }

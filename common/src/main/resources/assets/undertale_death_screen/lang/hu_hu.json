@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Fokozatos átmenet a Vanillára?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "A normál halál képernyő fokozatosan jelenjen-e meg az összetörés után.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Átmenet hossza",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Az átmenet hossza tickekben (20 = 1 másodperc)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Az átmenet hossza tickekben (20 = 1 másodperc).",
+  "undertale_death_screen.config.text_fade_in": "Elhalványul a szövegben?",
+  "undertale_death_screen.config.text_fade_in.ttp": "A „Meghaltál” szöveg simán elhalványul-e, miután összetörik a szív.",
+  "undertale_death_screen.config.text_fade_in_duration": "A szöveg elhalványulásának időtartama",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Mennyi ideig tart a szöveg elhalványulása (20 = 1 másodperc).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Elhalványul a Vanilla Screen?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "A fekete háttér lassan elhalványul-e a vanília halál képernyő hátterévé.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "A vanília szitára való visszahalványulás sebessége.",
+  "undertale_death_screen.config.fixed_animation_rate": "Fix animációs ráta?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Ha igaz, az animáció stabil 60 FPS-sel fut, függetlenül a képkockafrekvenciától.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Letiltja a gombokat animáció közben?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ha igaz, akkor nem kattinthat a Respawn/Title Screen gombra az animáció befejezése előtt."
 }

@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Cala yá Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "I firil cala tuluva yá rácë.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Lintië cala",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Lintië i cala (20 = 1 lú)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Lintië i cala (20 = 1 lú).",
+  "undertale_death_screen.config.text_fade_in": "Tengwë cala?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Ma i quettar 'Firnelyë!' cecuva formen.",
+  "undertale_death_screen.config.text_fade_in_duration": "Lúmë cala",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Lúmë cala tickissen (20 = 1 lúmë).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Pelë vanilla canca?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Ma morë luvu pusta.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Lintië pelë",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Lintië morë pusta.",
+  "undertale_death_screen.config.fixed_animation_rate": "Tanca lintië?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Qui tanca, lintië 60 FPS.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Hecë botones?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Qui tanca, lá polilyë nappa."
 }

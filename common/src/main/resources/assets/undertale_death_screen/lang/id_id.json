@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Pudar perlahan ke Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Apakah layar kematian normal muncul dengan mulus setelah hancur.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Durasi Pudar",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Berapa lama pudarnya dalam ticks (20 = 1 detik)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Berapa lama pudarnya dalam ticks (20 = 1 detik).",
+  "undertale_death_screen.config.text_fade_in": "Memudar Dalam Teks?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Apakah teks 'Kamu mati' memudar dengan mulus setelah hati hancur.",
+  "undertale_death_screen.config.text_fade_in_duration": "Durasi Teks Memudar",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Berapa lama waktu yang dibutuhkan untuk memudarkan teks dalam satuan tick (20 = 1 detik).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Memudar ke Layar Vanila?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Apakah latar belakang hitam perlahan memudar menjadi latar belakang layar kematian vanilla.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Memudar ke Kecepatan Vanila",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Kecepatan memudar kembali ke layar vanilla.",
+  "undertale_death_screen.config.fixed_animation_rate": "Tingkat Animasi Tetap?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Jika benar, animasi berjalan pada 60 FPS yang stabil, berapa pun framerate Anda.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Nonaktifkan tombol selama animasi?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Jika benar, Anda tidak dapat mengklik Respawn/Title Screen sebelum animasi selesai."
 }

@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Vanilla pIv?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "ghorDI' tIq, Vanilla Hegh much pIv nargh.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "pIv poH",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "pIv poH 'ut (20 = 1 tup)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "pIv poH 'ut (20 = 1 tup).",
+  "undertale_death_screen.config.text_fade_in": "mu'mey pegh?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Heghpu' mu'mey pegh.",
+  "undertale_death_screen.config.text_fade_in_duration": "pegh poH",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "pegh poH (20 = 1 lup).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "vanilla jIH?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "qIbbogh pegh.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "vanilla Do",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "qIbbogh pegh Do.",
+  "undertale_death_screen.config.fixed_animation_rate": "Do stodi?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "60 FPS Do",
+  "undertale_death_screen.config.disable_buttons_before_animation": "batke Qam?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "batke Qam pu'."
 }

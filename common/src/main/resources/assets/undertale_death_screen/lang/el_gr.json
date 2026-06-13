@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Ομαλή μετάβαση σε Vanilla;",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Εάν η κανονική οθόνη θανάτου εμφανίζεται ομαλά μετά το σπάσιμο.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Διάρκεια Μετάβασης",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Η διάρκεια της εμφάνισης σε ticks (20 = 1 δευτερόλεπτο)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Η διάρκεια της εμφάνισης σε ticks (20 = 1 δευτερόλεπτο).",
+  "undertale_death_screen.config.text_fade_in": "Fade In Text;",
+  "undertale_death_screen.config.text_fade_in.ttp": "Το αν το κείμενο «Πέθανες» ξεθωριάζει ομαλά αφού η καρδιά θρυμματιστεί.",
+  "undertale_death_screen.config.text_fade_in_duration": "Κείμενο Fade In Duration",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Πόσος χρόνος διαρκεί το fade in σε τικ (20 = 1 δευτερόλεπτο).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Fade to Vanilla Screen;",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Είτε το μαύρο φόντο ξεθωριάζει αργά στο φόντο της οθόνης θανάτου βανίλιας.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Ταχύτητα εξασθένισης πίσω στην οθόνη βανίλιας.",
+  "undertale_death_screen.config.fixed_animation_rate": "Σταθερό ποσοστό κινούμενων εικόνων;",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Εάν ισχύει, η κινούμενη εικόνα εκτελείται σε σταθερά 60 FPS ανεξάρτητα από τον ρυθμό καρέ σας.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Απενεργοποίηση κουμπιών κατά τη διάρκεια της κίνησης;",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Εάν είναι αληθές, δεν μπορείτε να κάνετε κλικ στην οθόνη Respawn/Title Screen πριν ολοκληρωθεί η κινούμενη εικόνα."
 }

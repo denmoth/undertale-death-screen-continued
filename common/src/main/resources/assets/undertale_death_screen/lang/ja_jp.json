@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "バニラへのフェードイン？",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "砕け散った後、通常の死亡画面が滑らかにフェードインするかどうか。",
   "undertale_death_screen.config.vanilla_fade_in_duration": "フェードイン時間",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "フェードインの長さ（ティック単位、20 = 1秒）。"
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "フェードインの長さ（ティック単位、20 = 1秒）。",
+  "undertale_death_screen.config.text_fade_in": "テキストをフェードインしますか?",
+  "undertale_death_screen.config.text_fade_in.ttp": "心が砕けた後、「あなたは死んだ」というテキストがスムーズにフェードインするかどうか。",
+  "undertale_death_screen.config.text_fade_in_duration": "テキストのフェードイン期間",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "テキストのフェードインにかかる時間 (ティック単位) (20 = 1 秒)。",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "バニラ画面にフェードしますか?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "黒の背景がゆっくりとバニラのデス画面の背景にフェードインするかどうか。",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "バニラスピード​​までフェード",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "バニラ画面にフェードバックする速度。",
+  "undertale_death_screen.config.fixed_animation_rate": "固定アニメーションレート?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "true の場合、アニメーションはフレームレートに関係なく安定した 60 FPS で実行されます。",
+  "undertale_death_screen.config.disable_buttons_before_animation": "アニメーション中にボタンを無効にしますか?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "true の場合、アニメーションが終了する前に [Respawn/Title Screen] をクリックすることはできません。"
 }

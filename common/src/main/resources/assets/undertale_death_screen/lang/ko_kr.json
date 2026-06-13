@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "바닐라 페이드 인?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "조각난 후 기본 사망 화면이 부드럽게 나타날지 여부.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "페이드 인 지속 시간",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "페이드 인 지속 시간 (틱 단위, 20 = 1초)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "페이드 인 지속 시간 (틱 단위, 20 = 1초).",
+  "undertale_death_screen.config.text_fade_in": "텍스트 페이드 인?",
+  "undertale_death_screen.config.text_fade_in.ttp": "애니메이션 후에 '죽었습니다!' 텍스트가 부드럽게 페이드 인되는지 여부.",
+  "undertale_death_screen.config.text_fade_in_duration": "텍스트 페이드 인 지속 시간",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "텍스트 페이드 인 지속 시간을 틱 단위로 설정합니다(20 = 1초).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "바닐라 화면으로 돌아가기?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "애니메이션이 끝날 때 검은색 배경이 페이드 아웃되어 바닐라 화면이 나타나는지 여부.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "바닐라 화면 페이드 속도",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "검은색 배경이 페이드 아웃되는 속도입니다.",
+  "undertale_death_screen.config.fixed_animation_rate": "고정 애니메이션 속도?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "활성화된 경우, 프레임 속도에 관계없이 애니메이션이 60 FPS로 고정 실행됩니다.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "애니메이션 전에 버튼 비활성화?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "활성화된 경우, 애니메이션이 끝나기 전에 리스폰/타이틀 화면 버튼을 클릭할 수 없습니다."
 }

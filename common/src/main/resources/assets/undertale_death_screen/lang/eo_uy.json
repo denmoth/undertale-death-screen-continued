@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Apero de Vanila?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Ĉu la normala mort-ekrano mole aperas post la rompiĝo.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Daŭro de apero",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Daŭro de la apero en tikoj (20 = 1 sekundo)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Daŭro de la apero en tikoj (20 = 1 sekundo).",
+  "undertale_death_screen.config.text_fade_in": "Fade In Text?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Whether the 'You died' text fades in smoothly after the heart shatters.",
+  "undertale_death_screen.config.text_fade_in_duration": "Text Fade In Duration",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "How long the text fade in takes in ticks (20 = 1 second).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Fade to Vanilla Screen?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Whether the black background slowly fades to the vanilla death screen background.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Speed of fading back to the vanilla screen.",
+  "undertale_death_screen.config.fixed_animation_rate": "Fixed Animation Rate?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "If true, the animation runs at a stable 60 FPS regardless of your framerate.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Disable buttons during animation?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "If true, you cannot click Respawn/Title Screen before the animation finishes."
 }

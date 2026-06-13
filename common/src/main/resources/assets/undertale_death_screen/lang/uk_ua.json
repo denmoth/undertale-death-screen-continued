@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Плавний перехід до ваніли?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Чи має плавно з'являтися звичайний екран смерті після розбиття.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Тривалість переходу",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Тривалість плавного з'явлення у тіках (20 = 1 секунда)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Тривалість плавного з'явлення у тіках (20 = 1 секунда).",
+  "undertale_death_screen.config.text_fade_in": "Плавна поява тексту?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Чи буде текст 'Ви померли!' плавно з'являтися після анімації.",
+  "undertale_death_screen.config.text_fade_in_duration": "Тривалість появи тексту",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Тривалість появи тексту в тіках (20 = 1 секунда).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Повернення до звичайного екрану?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Чи зникатиме чорний фон в кінці анімації.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Швидкість повернення",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Швидкість зникнення чорного фону.",
+  "undertale_death_screen.config.fixed_animation_rate": "Фіксована частота анімації?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Якщо увімкнено, анімація працюватиме на частоті 60 FPS незалежно від ваших FPS.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Заблокувати кнопки під час анімації?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Якщо увімкнено, ви не зможете натискати кнопки Відродження/Головне меню до закінчення анімації."
 }

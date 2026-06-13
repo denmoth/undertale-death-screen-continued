@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Cala Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "I firil cala tuluva yá rácë.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Lintië cala",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Lintië i cala (20 = 1 lú)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Lintië i cala (20 = 1 lú).",
+  "undertale_death_screen.config.text_fade_in": "Text fade in?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Will the 'You died!' text fade in smoothly after the animation.",
+  "undertale_death_screen.config.text_fade_in_duration": "Text fade in duration",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Duration of the text fade in in ticks (20 = 1 second).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Fade to vanilla screen?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Will the black background fade out.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Fade to vanilla speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Speed at which the black background dissolves.",
+  "undertale_death_screen.config.fixed_animation_rate": "Fixed animation rate?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "If enabled, the animation will run at a fixed 60 FPS.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Disable buttons before animation?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "If enabled, you will not be able to click buttons before the animation ends."
 }

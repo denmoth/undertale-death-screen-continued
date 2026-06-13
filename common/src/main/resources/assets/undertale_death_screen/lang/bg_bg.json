@@ -22,5 +22,17 @@
   "undertale_death_screen.config.vanilla_fade_in": "Плавен преход към Vanilla?",
   "undertale_death_screen.config.vanilla_fade_in.ttp": "Дали нормалният екран при смърт плавно се появява след счупването.",
   "undertale_death_screen.config.vanilla_fade_in_duration": "Продължителност на прехода",
-  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Продължителността на плавното появяване в тикове (20 = 1 секунда)."
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Продължителността на плавното появяване в тикове (20 = 1 секунда).",
+  "undertale_death_screen.config.text_fade_in": "Избледняване на текста?",
+  "undertale_death_screen.config.text_fade_in.ttp": "Дали текстът „Ти умря“ избледнява плавно, след като сърцето се разбие.",
+  "undertale_death_screen.config.text_fade_in_duration": "Продължителност на избледняване на текста",
+  "undertale_death_screen.config.text_fade_in_duration.ttp": "Колко време отнема избледняването на текста (20 = 1 секунда).",
+  "undertale_death_screen.config.fade_to_vanilla_screen": "Избледняване до ванилов екран?",
+  "undertale_death_screen.config.fade_to_vanilla_screen.ttp": "Дали черният фон бавно избледнява до фона на ваниловия екран на смъртта.",
+  "undertale_death_screen.config.fade_to_vanilla_speed": "Избледняване до Vanilla Speed",
+  "undertale_death_screen.config.fade_to_vanilla_speed.ttp": "Скорост на избледняване обратно към ванилия екран.",
+  "undertale_death_screen.config.fixed_animation_rate": "Фиксирана скорост на анимация?",
+  "undertale_death_screen.config.fixed_animation_rate.ttp": "Ако е вярно, анимацията работи със стабилни 60 кадъра в секунда, независимо от вашата честота на кадрите.",
+  "undertale_death_screen.config.disable_buttons_before_animation": "Да се ​​деактивират ли бутоните по време на анимация?",
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ако е вярно, не можете да щракнете върху Respawn/Title Screen, преди анимацията да приключи."
 }
