@@ -13,11 +13,14 @@
     "sources": "https://github.com/Denmoth/undertale-death-screen-continued"
   },
   "license": "MIT",
-  "icon": "assets/undertale_death_screen/icon.png",
+  "icon": "icon.png",
   "environment": "client",
   "entrypoints": {
     "main": [
       "com.denmoth.undertale_death_screen.fabric.UndertaleDeathScreenFabric"
+    ],
+    "client": [
+      "com.denmoth.undertale_death_screen.fabric.client.UndertaleDeathScreenClientFabric"
     ],
     "modmenu": [
       "com.denmoth.undertale_death_screen.fabric.compat.ModMenuCompat"
