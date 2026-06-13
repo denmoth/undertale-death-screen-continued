@@ -18,7 +18,7 @@
 
 # Undertale Death Screen: Continued
 
-An active continuation of **Raik176's** original Undertale Death Screen. Since the original project hasn't seen updates for a long time, this fork keeps it alive by bringing the classic death screen to modern Minecraft versions with ongoing support, bug fixes, and requested features.
+Undertale Death Screen Continued is a direct fork of the original mod by Raik176. Since the original hasn't been updated or ported in a long time, this project keeps it alive by providing active support, bug fixes, and ports to modern Minecraft versions.
 
 Makes your last heart shatter when you die just like in Undertale!
 
