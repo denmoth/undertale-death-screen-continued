@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "USE MAJIK HARTS?",
   "undertale_death_screen.config.dynamicHeart.ttp": "CHANGE COLOR FOR POWAHS:\n - POIZON\n - WITHER\n - ICE",
   "undertale_death_screen.config.background_fade_speed": "DARK SPEED",
-  "undertale_death_screen.config.background_fade_speed.ttp": "HOW FAST DARK MOOV.\n0 = NO DARK.\n1 = INSTANT DARK."
+  "undertale_death_screen.config.background_fade_speed.ttp": "HOW FAST DARK MOOV.\n0 = NO DARK.\n1 = INSTANT DARK.",
+  "undertale_death_screen.config.vanilla_fade_in": "NORMAL DED SKREEN?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "BRING BAK DA NORMAL DED SKREEN WEN HART GO BOOM.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "HOW LONG TO COME BAK",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "HOW LONG IT TAYK IN TIKS (20 = 1 SEKUND)."
 }

@@ -94,6 +94,25 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                         .setSaveConsumer(Config.INSTANCE::setBackgroundFadeSpeed)
                         .build()
         );
+        BooleanListEntry vanillaFadeInToggle = entryBuilder.startBooleanToggle(
+                        UndertaleDeathScreenCommon.translatable("config.vanilla_fade_in"),
+                        Config.INSTANCE.getVanillaFadeIn()
+                ).setDefaultValue(Config.getDefault().getVanillaFadeIn())
+                .setTooltip(UndertaleDeathScreenCommon.translatable("config.vanilla_fade_in.ttp"))
+                .setSaveConsumer(Config.INSTANCE::setVanillaFadeIn)
+                .build();
+        general.addEntry(vanillaFadeInToggle);
+        general.addEntry(entryBuilder.startIntField(
+                        UndertaleDeathScreenCommon.translatable("config.vanilla_fade_in_duration"),
+                        Config.INSTANCE.getVanillaFadeInDuration()
+                ).setDefaultValue(Config.getDefault().getVanillaFadeInDuration())
+                .setMin(0)
+                .setMax(200)
+                .setTooltip(UndertaleDeathScreenCommon.translatable("config.vanilla_fade_in_duration.ttp"))
+                .setSaveConsumer(Config.INSTANCE::setVanillaFadeInDuration)
+                .setDisplayRequirement(Requirement.isTrue(vanillaFadeInToggle))
+                .build()
+        );
 
         return builder.build();
     }

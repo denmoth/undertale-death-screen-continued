@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Folosește inimi dinamice?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Dacă să schimbe dinamic textura și culoarea inimii în funcție de starea jucătorului:\n - Otrăvire\n - Wither\n - Înghețare",
   "undertale_death_screen.config.background_fade_speed": "Viteza de Estompare a Fundalului",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Viteza cu care ecranul se umple de negru.\nDacă este setat pe 0, este dezactivat.\nDacă este setat pe 1, este instantaneu."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Viteza cu care ecranul se umple de negru.\nDacă este setat pe 0, este dezactivat.\nDacă este setat pe 1, este instantaneu.",
+  "undertale_death_screen.config.vanilla_fade_in": "Tranziție lentă la Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Dacă ecranul normal de moarte apare treptat după sfărâmare.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Durata tranziției",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Durata estompării în tick-uri (20 = 1 secundă)."
 }

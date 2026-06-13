@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Usa cuori dinamici?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Se cambiare dinamicamente la texture del cuore in base allo stato del giocatore:\n - Avvelenamento\n - Wither\n - Congelamento",
   "undertale_death_screen.config.background_fade_speed": "Velocità dissolvenza sfondo",
-  "undertale_death_screen.config.background_fade_speed.ttp": "La velocità con cui riempire lo schermo di nero.\n0 = disabilitato.\n1 = istantaneo."
+  "undertale_death_screen.config.background_fade_speed.ttp": "La velocità con cui riempire lo schermo di nero.\n0 = disabilitato.\n1 = istantaneo.",
+  "undertale_death_screen.config.vanilla_fade_in": "Dissolvenza verso Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Se la normale schermata di morte appare gradualmente dopo l'infrangersi.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Durata dissolvenza",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Durata della dissolvenza in tick (20 = 1 secondo)."
 }

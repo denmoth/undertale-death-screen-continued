@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "xu vrici risna?",
   "undertale_death_screen.config.dynamicHeart.ttp": "xu galfi lo risna",
   "undertale_death_screen.config.background_fade_speed": "lo nilsu'a pe lo manku",
-  "undertale_death_screen.config.background_fade_speed.ttp": "lo nilsu'a pe lo manku binxo"
+  "undertale_death_screen.config.background_fade_speed.ttp": "lo nilsu'a pe lo manku binxo",
+  "undertale_death_screen.config.vanilla_fade_in": "xu binxo lo manku?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "xu lo mrobi'o cu binxo ba lo spisa",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "lo nilsu'a pe lo binxo",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "lo nilsu'a pe lo binxo (20 = 1 snidu)"
 }

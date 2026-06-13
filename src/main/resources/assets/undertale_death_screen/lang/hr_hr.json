@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Koristi dinamična srca?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Da li dinamično mijenjati teksturu srca ovisno o statusu igrača:\n - Otrovan\n - Wither\n - Zamrzavanje",
   "undertale_death_screen.config.background_fade_speed": "Brzina Zatamnjenja Pozadine",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Brzina kojom se ekran puni crnom bojom.\nAko je 0, opcija je isključena.\nAko je 1, učinak je trenutan."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Brzina kojom se ekran puni crnom bojom.\nAko je 0, opcija je isključena.\nAko je 1, učinak je trenutan.",
+  "undertale_death_screen.config.vanilla_fade_in": "Blagi prijelaz na Vanillu?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Da li se normalni ekran smrti polako prikazuje nakon razbijanja.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Trajanje prijelaza",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Trajanje pojavljivanja u tickovima (20 = 1 sekunda)."
 }

@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "동적 하트 사용?",
   "undertale_death_screen.config.dynamicHeart.ttp": "플레이어 상태에 따라 하트 텍스처를 동적으로 변경할지 여부:\n - 독\n - 위더\n - 동결",
   "undertale_death_screen.config.background_fade_speed": "배경 페이드 속도",
-  "undertale_death_screen.config.background_fade_speed.ttp": "화면이 검은색으로 채워지는 속도.\n0으로 설정하면 비활성화됩니다.\n1로 설정하면 즉시 채워집니다."
+  "undertale_death_screen.config.background_fade_speed.ttp": "화면이 검은색으로 채워지는 속도.\n0으로 설정하면 비활성화됩니다.\n1로 설정하면 즉시 채워집니다.",
+  "undertale_death_screen.config.vanilla_fade_in": "바닐라 페이드 인?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "조각난 후 기본 사망 화면이 부드럽게 나타날지 여부.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "페이드 인 지속 시간",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "페이드 인 지속 시간 (틱 단위, 20 = 1초)."
 }

@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "tIq pIm lo'?",
   "undertale_death_screen.config.dynamicHeart.ttp": "bIQuchDI' tIq rItlh choH.",
   "undertale_death_screen.config.background_fade_speed": "Hur hurgh Do",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Hur hurghmoH Do.\n0: mev.\n1: nom."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Hur hurghmoH Do.\n0: mev.\n1: nom.",
+  "undertale_death_screen.config.vanilla_fade_in": "Vanilla pIv?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "ghorDI' tIq, Vanilla Hegh much pIv nargh.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "pIv poH",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "pIv poH 'ut (20 = 1 tup)."
 }

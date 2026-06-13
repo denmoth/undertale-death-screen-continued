@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "استخدام قلوب ديناميكية؟",
   "undertale_death_screen.config.dynamicHeart.ttp": "ما إذا كان سيتم تغيير نسيج القلب ديناميكيًا بناءً على الحالة:\n - تسمم\n - الذبول\n - التجميد",
   "undertale_death_screen.config.background_fade_speed": "سرعة تلاشي الخلفية",
-  "undertale_death_screen.config.background_fade_speed.ttp": "السرعة التي تمتلئ بها الشاشة باللون الأسود.\nإذا تم تعيينها على 0، يتم تعطيلها.\nإذا تم تعيينها على 1، تكون فورية."
+  "undertale_death_screen.config.background_fade_speed.ttp": "السرعة التي تمتلئ بها الشاشة باللون الأسود.\nإذا تم تعيينها على 0، يتم تعطيلها.\nإذا تم تعيينها على 1، تكون فورية.",
+  "undertale_death_screen.config.vanilla_fade_in": "انتقال سلس إلى فانيلا؟",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "ما إذا كانت شاشة الموت العادية تظهر بسلاسة بعد التحطم.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "مدة الانتقال",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "مدة التلاشي بالقرادات (20 = 1 ثانية)."
 }

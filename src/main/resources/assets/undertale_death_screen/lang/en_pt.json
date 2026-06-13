@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Use cursed hearts?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Change the heart texture when ye be:\n - Poisoned by grog\n - Witherin' away\n - Frozen to the bone",
   "undertale_death_screen.config.background_fade_speed": "Blackout Speed",
-  "undertale_death_screen.config.background_fade_speed.ttp": "The speed to blackout the screen.\nIf 0, it be disabled.\nIf 1, it be instant."
+  "undertale_death_screen.config.background_fade_speed.ttp": "The speed to blackout the screen.\nIf 0, it be disabled.\nIf 1, it be instant.",
+  "undertale_death_screen.config.vanilla_fade_in": "Vanilla Dawning?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Whether the normal death screen dawns slowly after shatterin'.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Dawning Tides",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "How long the dawining takes in tides (20 = 1 second)."
 }

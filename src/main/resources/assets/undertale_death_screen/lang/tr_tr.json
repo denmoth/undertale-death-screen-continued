@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Dinamik kalpler kullan?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Oyuncunun durumuna göre kalp dokusunun değişip değişmeyeceği:\n - Zehirlenme\n - Wither\n - Donma",
   "undertale_death_screen.config.background_fade_speed": "Arka Plan Kararma Hızı",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Ekranın siyahla dolma hızı.\n0 ise devre dışıdır.\n1 ise anında kararır."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Ekranın siyahla dolma hızı.\n0 ise devre dışıdır.\n1 ise anında kararır.",
+  "undertale_death_screen.config.vanilla_fade_in": "Vanilla'ya yumuşak geçiş?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Kırıldıktan sonra normal ölüm ekranının yumuşak bir şekilde belirip belirmeyeceği.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Geçiş Süresi",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Geçişin tick cinsinden süresi (20 = 1 saniye)."
 }

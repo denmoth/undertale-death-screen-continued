@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Yuhta alya hón?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Ahya i hón cala yá:\n - Hloirë\n - Hestë\n - Ringë",
   "undertale_death_screen.config.background_fade_speed": "Morë Lintië",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Lintië i morë.\n0 lócina.\n1 ascan."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Lintië i morë.\n0 lócina.\n1 ascan.",
+  "undertale_death_screen.config.vanilla_fade_in": "Cala Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "I firil cala tuluva yá rácë.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Lintië cala",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Lintië i cala (20 = 1 lú)."
 }

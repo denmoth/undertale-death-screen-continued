@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Dynamische Herzen verwenden?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Ob die Herztextur und -farbe basierend auf dem Spielerstatus geändert werden soll:\n - Vergiftet\n - Wither\n - Erfrierend",
   "undertale_death_screen.config.background_fade_speed": "Geschwindigkeit des Ausblendens",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Die Geschwindigkeit, mit der der Bildschirm schwarz wird.\n0 bedeutet deaktiviert.\n1 bedeutet sofort."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Die Geschwindigkeit, mit der der Bildschirm schwarz wird.\n0 bedeutet deaktiviert.\n1 bedeutet sofort.",
+  "undertale_death_screen.config.vanilla_fade_in": "Sanfter Übergang zu Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Ob der normale Todesbildschirm nach dem Zersplittern sanft eingeblendet werden soll.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Übergangsdauer",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Dauer des Einblendens in Ticks (20 = 1 Sekunde)."
 }

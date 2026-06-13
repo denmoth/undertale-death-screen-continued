@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Gunakan hati dinamis?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Apakah akan mengubah tekstur dan warna hati secara dinamis berdasarkan status pemain:\n - Keracunan\n - Layu\n - Membeku",
   "undertale_death_screen.config.background_fade_speed": "Kecepatan Pudar Latar Belakang",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Kecepatan layar dipenuhi warna hitam.\nJika diatur ke 0, akan dinonaktifkan.\nJika diatur ke 1, akan seketika."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Kecepatan layar dipenuhi warna hitam.\nJika diatur ke 0, akan dinonaktifkan.\nJika diatur ke 1, akan seketika.",
+  "undertale_death_screen.config.vanilla_fade_in": "Pudar perlahan ke Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Apakah layar kematian normal muncul dengan mulus setelah hancur.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Durasi Pudar",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Berapa lama pudarnya dalam ticks (20 = 1 detik)."
 }

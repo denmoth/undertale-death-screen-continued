@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Sử dụng trái tim động?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Cho dù có thay đổi kết cấu trái tim động theo trạng thái của người chơi:\n - Trúng Độc\n - Khô Héo\n - Đóng Băng",
   "undertale_death_screen.config.background_fade_speed": "Tốc Độ Mờ Nền",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Tốc độ làm đen màn hình.\nNếu là 0, chức năng bị tắt.\nNếu là 1, màn hình sẽ đen ngay lập tức."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Tốc độ làm đen màn hình.\nNếu là 0, chức năng bị tắt.\nNếu là 1, màn hình sẽ đen ngay lập tức.",
+  "undertale_death_screen.config.vanilla_fade_in": "Chuyển dần sang Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Cho dù màn hình chết bình thường hiện ra mượt mà sau khi vỡ vụn.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Thời lượng xuất hiện",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Thời lượng làm mờ bằng tick (20 = 1 giây)."
 }

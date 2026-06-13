@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "ダイナミックなハートを使う？",
   "undertale_death_screen.config.dynamicHeart.ttp": "プレイヤーの状態に基づいてハートのテクスチャを動的に変更するかどうか：\n - 毒\n - ウィザー\n - 凍結",
   "undertale_death_screen.config.background_fade_speed": "背景のフェード速度",
-  "undertale_death_screen.config.background_fade_speed.ttp": "画面が黒で満たされる速度。\n0に設定すると無効になります。\n1に設定すると瞬時になります。"
+  "undertale_death_screen.config.background_fade_speed.ttp": "画面が黒で満たされる速度。\n0に設定すると無効になります。\n1に設定すると瞬時になります。",
+  "undertale_death_screen.config.vanilla_fade_in": "バニラへのフェードイン？",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "砕け散った後、通常の死亡画面が滑らかにフェードインするかどうか。",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "フェードイン時間",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "フェードインの長さ（ティック単位、20 = 1秒）。"
 }

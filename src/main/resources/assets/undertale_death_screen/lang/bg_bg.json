@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Динамични сърца?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Дали динамично да се променя текстурата на сърцето въз основа на статуса на играча:\n - Отравяне\n - Исушаване\n - Замръзване",
   "undertale_death_screen.config.background_fade_speed": "Скорост на затъмняване",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Скоростта, с която екранът се запълва с черно.\nАко е 0, е изключено.\nАко е 1, е моментално."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Скоростта, с която екранът се запълва с черно.\nАко е 0, е изключено.\nАко е 1, е моментално.",
+  "undertale_death_screen.config.vanilla_fade_in": "Плавен преход към Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Дали нормалният екран при смърт плавно се появява след счупването.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Продължителност на прехода",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Продължителността на плавното появяване в тикове (20 = 1 секунда)."
 }

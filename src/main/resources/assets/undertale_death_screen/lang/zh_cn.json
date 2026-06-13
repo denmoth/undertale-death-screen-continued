@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "动态心形？",
   "undertale_death_screen.config.dynamicHeart.ttp": "是否根据玩家状态动态改变心形的纹理和颜色，支持：\n - 中毒\n - 凋零\n - 冰冻",
   "undertale_death_screen.config.background_fade_speed": "背景淡出速度",
-  "undertale_death_screen.config.background_fade_speed.ttp": "屏幕变黑的速度。\n如果设置为 0，则禁用。\n如果设置为 1，则瞬间变黑。"
+  "undertale_death_screen.config.background_fade_speed.ttp": "屏幕变黑的速度。\n如果设置为 0，则禁用。\n如果设置为 1，则瞬间变黑。",
+  "undertale_death_screen.config.vanilla_fade_in": "原版淡入？",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "破碎后是否平滑淡入原版的死亡界面。",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "淡入时长",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "淡入的时长（单位为刻，20刻=1秒）。"
 }

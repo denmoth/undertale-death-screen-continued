@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "¿Usar corazones dinámicos?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Si la textura del corazón debe cambiar según tu estado:\n - Envenenamiento\n - Wither\n - Congelación",
   "undertale_death_screen.config.background_fade_speed": "Velocidad de fundido",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Velocidad a la que la pantalla se vuelve negra.\nSi es 0, está desactivado.\nSi es 1, es instantáneo."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Velocidad a la que la pantalla se vuelve negra.\nSi es 0, está desactivado.\nSi es 1, es instantáneo.",
+  "undertale_death_screen.config.vanilla_fade_in": "¿Transición suave a Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Si la pantalla de muerte normal aparece gradualmente después de romperse.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Duración de transición",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Duración de la aparición gradual en tics (20 = 1 segundo)."
 }

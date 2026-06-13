@@ -25,6 +25,8 @@ public class Config {
     private double centeredHeartSpeed = 0.15;
     private double backgroundFadeSpeed = 1;
     private boolean dynamicHeart = true;
+    private boolean vanillaFadeIn = true;
+    private int vanillaFadeInDuration = 20;
 
     private Config() {
     }
@@ -123,6 +125,20 @@ public class Config {
     }
     public void setBackgroundFadeSpeed(double backgroundFadeSpeed) {
         this.backgroundFadeSpeed = backgroundFadeSpeed;
+    }
+
+    public boolean getVanillaFadeIn() {
+        return vanillaFadeIn;
+    }
+    public void setVanillaFadeIn(boolean vanillaFadeIn) {
+        this.vanillaFadeIn = vanillaFadeIn;
+    }
+
+    public int getVanillaFadeInDuration() {
+        return vanillaFadeInDuration;
+    }
+    public void setVanillaFadeInDuration(int vanillaFadeInDuration) {
+        this.vanillaFadeInDuration = vanillaFadeInDuration;
     }
 
 

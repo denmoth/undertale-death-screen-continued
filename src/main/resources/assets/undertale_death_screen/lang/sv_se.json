@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Använd dynamiska hjärtan?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Om hjärtats textur och färg dynamiskt ska ändras baserat på spelarstatus:\n - Förgiftad\n - Wither\n - Fryser",
   "undertale_death_screen.config.background_fade_speed": "Bakgrunds Fade Hastighet",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Hastigheten med vilken skärmen fylls med svart.\nOm satt till 0 inaktiveras det.\nOm satt till 1 sker det direkt."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Hastigheten med vilken skärmen fylls med svart.\nOm satt till 0 inaktiveras det.\nOm satt till 1 sker det direkt.",
+  "undertale_death_screen.config.vanilla_fade_in": "Fade in till Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Om den vanliga dödsskärmen mjukt tonas in efter krossandet.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Toningens Längd",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Toningens längd i ticks (20 = 1 sekund)."
 }

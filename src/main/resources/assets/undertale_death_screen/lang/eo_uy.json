@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Uzi dinamikajn korojn?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Ĉu dinamike ŝanĝi la teksturon de la koro laŭ la stato:\n - Veneno\n - Vithero\n - Frosto",
   "undertale_death_screen.config.background_fade_speed": "Rapideco de Mallumiĝo",
-  "undertale_death_screen.config.background_fade_speed.ttp": "La rapideco mallumigi la ekranon.\nSe 0, ĝi estas malŝaltita.\nSe 1, ĝi estas tuja."
+  "undertale_death_screen.config.background_fade_speed.ttp": "La rapideco mallumigi la ekranon.\nSe 0, ĝi estas malŝaltita.\nSe 1, ĝi estas tuja.",
+  "undertale_death_screen.config.vanilla_fade_in": "Apero de Vanila?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Ĉu la normala mort-ekrano mole aperas post la rompiĝo.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Daŭro de apero",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Daŭro de la apero en tikoj (20 = 1 sekundo)."
 }

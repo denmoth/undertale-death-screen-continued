@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Use dynamic hearts?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Whether to dynamically alter thy heart texture based on thy status:\n - Poisoned\n - Withering\n - Freezing",
   "undertale_death_screen.config.background_fade_speed": "Background Fade Velocity",
-  "undertale_death_screen.config.background_fade_speed.ttp": "The velocity at which to fill the screen with black.\nIf 0, it is disabled.\nIf 1, it is instantaneous."
+  "undertale_death_screen.config.background_fade_speed.ttp": "The velocity at which to fill the screen with black.\nIf 0, it is disabled.\nIf 1, it is instantaneous.",
+  "undertale_death_screen.config.vanilla_fade_in": "Vanilla Dawning?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Whether the normal death screen dawns smoothly after shattering.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Dawning Duration",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "How long the dawning takes in ticks (20 = 1 second)."
 }

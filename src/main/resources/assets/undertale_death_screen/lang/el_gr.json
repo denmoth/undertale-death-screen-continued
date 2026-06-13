@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Χρήση δυναμικών καρδιών;",
   "undertale_death_screen.config.dynamicHeart.ttp": "Εάν θα αλλάζει δυναμικά η υφή της καρδιάς βάσει της κατάστασης του παίκτη:\n - Δηλητηρίαση\n - Μαρασμός\n - Πάγωμα",
   "undertale_death_screen.config.background_fade_speed": "Ταχύτητα Σκοτεινιάσματος Φόντου",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Η ταχύτητα με την οποία η οθόνη γεμίζει με μαύρο.\nΑν 0, είναι απενεργοποιημένο.\nΑν 1, είναι ακαριαίο."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Η ταχύτητα με την οποία η οθόνη γεμίζει με μαύρο.\nΑν 0, είναι απενεργοποιημένο.\nΑν 1, είναι ακαριαίο.",
+  "undertale_death_screen.config.vanilla_fade_in": "Ομαλή μετάβαση σε Vanilla;",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Εάν η κανονική οθόνη θανάτου εμφανίζεται ομαλά μετά το σπάσιμο.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Διάρκεια Μετάβασης",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Η διάρκεια της εμφάνισης σε ticks (20 = 1 δευτερόλεπτο)."
 }

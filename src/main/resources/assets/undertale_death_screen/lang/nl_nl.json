@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Dynamische harten gebruiken?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Of de hartkleur dynamisch verandert gebaseerd op de status:\n - Vergiftiging\n - Wither\n - Bevriezing",
   "undertale_death_screen.config.background_fade_speed": "Achtergrond vervagingssnelheid",
-  "undertale_death_screen.config.background_fade_speed.ttp": "De snelheid waarmee het scherm zwart wordt.\nBij 0 is dit uitgeschakeld.\nBij 1 is het onmiddellijk."
+  "undertale_death_screen.config.background_fade_speed.ttp": "De snelheid waarmee het scherm zwart wordt.\nBij 0 is dit uitgeschakeld.\nBij 1 is het onmiddellijk.",
+  "undertale_death_screen.config.vanilla_fade_in": "Vloeiende overgang naar Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Of het normale doodsscherm vloeiend verschijnt na het verbrijzelen.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Overgangsduur",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Hoe lang het verschijnen duurt in ticks (20 = 1 seconde)."
 }

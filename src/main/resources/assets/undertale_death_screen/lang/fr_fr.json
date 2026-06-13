@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Utiliser des cœurs dynamiques ?",
   "undertale_death_screen.config.dynamicHeart.ttp": "S'il faut modifier la texture du cœur selon le statut :\n - Empoisonné\n - Wither\n - Congélation",
   "undertale_death_screen.config.background_fade_speed": "Vitesse de fondu du fond",
-  "undertale_death_screen.config.background_fade_speed.ttp": "La vitesse à laquelle l'écran devient noir.\nSi défini sur 0, il est désactivé.\nSi défini sur 1, c'est instantané."
+  "undertale_death_screen.config.background_fade_speed.ttp": "La vitesse à laquelle l'écran devient noir.\nSi défini sur 0, il est désactivé.\nSi défini sur 1, c'est instantané.",
+  "undertale_death_screen.config.vanilla_fade_in": "Fondu vers Vanilla ?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Si l'écran de mort normal apparaît progressivement après le bris.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Durée du fondu",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Durée du fondu en ticks (20 = 1 seconde)."
 }

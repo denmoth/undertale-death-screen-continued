@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Použít dynamická srdce?",
   "undertale_death_screen.config.dynamicHeart.ttp": "Zda dynamicky měnit texturu a barvu srdce na základě stavu hráče:\n - Otrava\n - Chřadnutí\n - Mrznutí",
   "undertale_death_screen.config.background_fade_speed": "Rychlost Stmívání Pozadí",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Rychlost, kterou se obrazovka vyplní černou barvou.\nPokud je nastaveno na 0, je zakázáno.\nPokud je nastaveno na 1, je okamžité."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Rychlost, kterou se obrazovka vyplní černou barvou.\nPokud je nastaveno na 0, je zakázáno.\nPokud je nastaveno na 1, je okamžité.",
+  "undertale_death_screen.config.vanilla_fade_in": "Plynulý přechod do Vanilly?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "Zda se po roztříštění plynule objeví normální obrazovka smrti.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Délka přechodu",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Jak dlouho trvá prolínání v ticích (20 = 1 sekunda)."
 }

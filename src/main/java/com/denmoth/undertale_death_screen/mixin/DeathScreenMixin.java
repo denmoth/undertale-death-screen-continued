@@ -80,14 +80,20 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     @Unique
     @Nullable
     private BGMSoundInstance undertale_death_animation$bgmSoundInstance;
+    @Unique
+    private boolean undertale_death_animation$fadingInVanilla;
+    @Unique
+    private int undertale_death_animation$fadeStartAge;
 
     protected DeathScreenMixin(Component component) {
         super(component);
     }
 
     @Inject(method = "renderDeathBackground", at = @At("HEAD"), require = 0, cancellable = true)
-    private static void disableBackground(GuiGraphics guiGraphics, int i, int j, CallbackInfo ci) {
-        ci.cancel();
+    private void disableBackground(GuiGraphics guiGraphics, int i, int j, CallbackInfo ci) {
+        if (!this.undertale_death_animation$hasFinished && !this.undertale_death_animation$fadingInVanilla) {
+            ci.cancel();
+        }
     }
 
     @Shadow
@@ -105,6 +111,8 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         this.undertale_death_animation$progress = 0;
         this.undertale_death_animation$pieces = new ArrayList<>();
         this.undertale_death_animation$hasFinished = false;
+        this.undertale_death_animation$fadingInVanilla = false;
+        this.undertale_death_animation$fadeStartAge = 0;
         this.undertale_death_animation$shouldStart = !Config.INSTANCE.getCenteredHeartAnimation() && Config.INSTANCE.getCenteredHeart();
         if (Minecraft.getInstance().player != null) {
             this.undertale_death_animation$randomSource = Minecraft.getInstance().player.level().getRandom();
@@ -132,20 +140,33 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         Minecraft.getInstance().getMusicManager().stopPlaying();
 
         if ((!undertale_death_animation$pieces.isEmpty()
-                && undertale_death_animation$pieces.stream().allMatch(piece -> piece.y >= this.height)) && !undertale_death_animation$hasFinished) {
+                && undertale_death_animation$pieces.stream().allMatch(piece -> piece.y >= this.height)) && !undertale_death_animation$hasFinished && !undertale_death_animation$fadingInVanilla) {
             if (undertale_death_animation$finishedAge == 0) {
                 undertale_death_animation$finishedAge = undertale_death_animation$age;
             } else if (undertale_death_animation$age - undertale_death_animation$finishedAge >= 5) {
                 undertale_death_animation$pieces.clear();
+                if (Config.INSTANCE.getVanillaFadeIn() && Config.INSTANCE.getVanillaFadeInDuration() > 0) {
+                    undertale_death_animation$fadingInVanilla = true;
+                    undertale_death_animation$fadeStartAge = undertale_death_animation$age;
+                } else {
+                    undertale_death_animation$hasFinished = true;
+                }
+            }
+        }
+        
+        if (undertale_death_animation$fadingInVanilla) {
+            if (undertale_death_animation$age - undertale_death_animation$fadeStartAge >= Config.INSTANCE.getVanillaFadeInDuration()) {
+                undertale_death_animation$fadingInVanilla = false;
                 undertale_death_animation$hasFinished = true;
             }
         }
+        
         this.undertale_death_animation$age++;
         if (this.undertale_death_animation$age == 25) {
             Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEventRegistry.HEART_SHATTER_NOISES.get(), 1));
         }
 
-        if (!undertale_death_animation$hasFinished)
+        if (!undertale_death_animation$hasFinished && !undertale_death_animation$fadingInVanilla)
             ci.cancel();
     }
 
@@ -237,8 +258,22 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             }
         }
 
-        if (!undertale_death_animation$hasFinished)
+        if (!undertale_death_animation$hasFinished && !undertale_death_animation$fadingInVanilla)
             ci.cancel();
+    }
+
+    @Inject(method = "render", at = @At("TAIL"))
+    private void renderTail(GuiGraphics guiGraphics, int i, int j, float delta, CallbackInfo ci) {
+        if (undertale_death_animation$fadingInVanilla) {
+            int fadeAge = undertale_death_animation$age - undertale_death_animation$fadeStartAge;
+            float progress = (fadeAge + delta) / Config.INSTANCE.getVanillaFadeInDuration();
+            progress = Mth.clamp(progress, 0.0f, 1.0f);
+            int alpha = (int) ((1.0f - progress) * 255.0f);
+            if (alpha > 0) {
+                int bgColor = (alpha << 24);
+                guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
+            }
+        }
     }
 
     @Unique

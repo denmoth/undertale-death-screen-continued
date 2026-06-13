@@ -18,5 +18,9 @@
   "undertale_death_screen.config.dynamicHeart": "Uti cordibus dynamicis?",
   "undertale_death_screen.config.dynamicHeart.ttp": "An mutet colorem cordis ex statu:\n - Venenum\n - Wither\n - Glacies",
   "undertale_death_screen.config.background_fade_speed": "Celeritas Obscurationis",
-  "undertale_death_screen.config.background_fade_speed.ttp": "Celeritas obscurandi velum.\n0 = non est.\n1 = statim."
+  "undertale_death_screen.config.background_fade_speed.ttp": "Celeritas obscurandi velum.\n0 = non est.\n1 = statim.",
+  "undertale_death_screen.config.vanilla_fade_in": "Apparitio in Vanilla?",
+  "undertale_death_screen.config.vanilla_fade_in.ttp": "An velum mortis usitatum clarescat lente post frangendum.",
+  "undertale_death_screen.config.vanilla_fade_in_duration": "Mora apparitionis",
+  "undertale_death_screen.config.vanilla_fade_in_duration.ttp": "Quantum morae sit in apparitione (20 = 1 secunda)."
 }
