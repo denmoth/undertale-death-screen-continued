@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Shard Show Make",
+  "undertale_death_screen.config.shard_render_style.animated": "Moving",
+  "undertale_death_screen.config.shard_render_style.rotated": "Spun",
+  "undertale_death_screen.config.shard_render_style.ttp": "Sets how the broken heart shards look.\n  Moving: The shard will move but not spin.\n  Spun: The shard will spin but not move.",
+  "undertale_death_screen.config.music_turnoff": "Stop all gleecraft?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Whether to stop all sounds and gleecraft when thou diest.",
+  "undertale_death_screen.config.centered_heart": "Middle heart?",
+  "undertale_death_screen.config.centered_heart.ttp": "Whether to put the heart in the middle of the screen.",
+  "undertale_death_screen.config.centered_heart_anim": "Middle moving?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Whether to smoothly move the heart to the middle\nbefore it shatters.",
+  "undertale_death_screen.config.centered_heart_speed": "Heart middle swiftness",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Swiftness of the heart moving to the middle.",
+  "undertale_death_screen.config.determination": "Play gleecraft?",
+  "undertale_death_screen.config.determination.ttp": "Whether to play gleecraft (Determination from Undertale) on the death screen.",
+  "subtitles.undertale_death_screen.heart_shatter": "Heart breaks",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Use living hearts?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Whether to change the heart's look based on thy state:\n - Bane\n - Rot\n - Chill",
+  "undertale_death_screen.config.background_fade_speed": "Backdrop Dark Speed",
+  "undertale_death_screen.config.background_fade_speed.ttp": "The speed to fill the screen with blackness.\n0 = Off.\n1 = Right away."
+}

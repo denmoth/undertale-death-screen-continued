@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Stil Randare Ciobor",
+  "undertale_death_screen.config.shard_render_style.animated": "Animat",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotit",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configurează stilul bucăților de inimă sfărâmate.\n  Animat: Bucata va fi animată, dar nu se va roti.\n  Rotit: Bucata se va roti, dar nu va fi animată.",
+  "undertale_death_screen.config.music_turnoff": "Oprește toată muzica?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Dacă să oprească toate sunetele și muzica atunci când mori.",
+  "undertale_death_screen.config.centered_heart": "Inimă centrată?",
+  "undertale_death_screen.config.centered_heart.ttp": "Dacă să poziționeze inima în mijlocul ecranului.",
+  "undertale_death_screen.config.centered_heart_anim": "Animație de centrare?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Dacă inima se va mișca lin spre centrul ecranului\nînainte de a se sfărâma.",
+  "undertale_death_screen.config.centered_heart_speed": "Viteza de centrare",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Viteza animației de centrare a inimii.",
+  "undertale_death_screen.config.determination": "Redă muzica?",
+  "undertale_death_screen.config.determination.ttp": "Dacă să redea muzică (implicit Determination din Undertale) pe ecranul de moarte.",
+  "subtitles.undertale_death_screen.heart_shatter": "Inima se sfărâmă",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Folosește inimi dinamice?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Dacă să schimbe dinamic textura și culoarea inimii în funcție de starea jucătorului:\n - Otrăvire\n - Wither\n - Înghețare",
+  "undertale_death_screen.config.background_fade_speed": "Viteza de Estompare a Fundalului",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Viteza cu care ecranul se umple de negru.\nDacă este setat pe 0, este dezactivat.\nDacă este setat pe 1, este instantaneu."
+}

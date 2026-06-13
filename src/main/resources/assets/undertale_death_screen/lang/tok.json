@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "nasin lukin pi kipisi pilin",
+  "undertale_death_screen.config.shard_render_style.animated": "tawa",
+  "undertale_death_screen.config.shard_render_style.rotated": "tawa sike",
+  "undertale_death_screen.config.shard_render_style.ttp": "o ante e nasin lukin pi kipisi pilin.\ntawa: kipisi li tawa taso.\ntawa sike: kipisi li tawa sike taso.",
+  "undertale_death_screen.config.music_turnoff": "o pini e kalama musi ali?",
+  "undertale_death_screen.config.music_turnoff.ttp": "sina moli la o pini e kalama ali",
+  "undertale_death_screen.config.centered_heart": "o tawa e pilin lon insa?",
+  "undertale_death_screen.config.centered_heart.ttp": "o pana e pilin lon insa pi ilo lukin.",
+  "undertale_death_screen.config.centered_heart_anim": "o tawa insa?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "pilin li tawa insa pona lon tenpo pini pi pakala ona.",
+  "undertale_death_screen.config.centered_heart_speed": "tenpo tawa insa",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "tenpo pi tawa insa pi pilin moli.",
+  "undertale_death_screen.config.determination": "o kalama musi?",
+  "undertale_death_screen.config.determination.ttp": "o kalama musi (Undertale - Determination) lon tenpo moli.",
+  "subtitles.undertale_death_screen.heart_shatter": "pilin li pakala",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "pilin ante mute?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "o ante e kule pilin tan moli lete anu moli ike.",
+  "undertale_death_screen.config.background_fade_speed": "wawa pi pimeja tawa",
+  "undertale_death_screen.config.background_fade_speed.ttp": "wawa pi tawa pimeja pi ilo lukin."
+}

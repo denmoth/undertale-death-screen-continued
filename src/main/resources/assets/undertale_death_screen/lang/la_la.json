@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Modus Fragmentorum",
+  "undertale_death_screen.config.shard_render_style.animated": "Animatus",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotatus",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configurat modum fragmentorum cordis.\n  Animatus: Fragmentum animabitur sed non rotat.\n  Rotatus: Fragmentum rotat sed non animabitur.",
+  "undertale_death_screen.config.music_turnoff": "Desinere omnem musicam?",
+  "undertale_death_screen.config.music_turnoff.ttp": "An desinat omnem sonum et musicam cum moreris.",
+  "undertale_death_screen.config.centered_heart": "Cor in medio?",
+  "undertale_death_screen.config.centered_heart.ttp": "An ponat cor in medio veli.",
+  "undertale_death_screen.config.centered_heart_anim": "Animatio in medium?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "An cor ad medium veli movet antequam frangitur.",
+  "undertale_death_screen.config.centered_heart_speed": "Celeritas in medium",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Celeritas animationis in medium.",
+  "undertale_death_screen.config.determination": "Ludere musicam?",
+  "undertale_death_screen.config.determination.ttp": "An ludere musicam in velo mortis.",
+  "subtitles.undertale_death_screen.heart_shatter": "Cor frangitur",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Uti cordibus dynamicis?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "An mutet colorem cordis ex statu:\n - Venenum\n - Wither\n - Glacies",
+  "undertale_death_screen.config.background_fade_speed": "Celeritas Obscurationis",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Celeritas obscurandi velum.\n0 = non est.\n1 = statim."
+}

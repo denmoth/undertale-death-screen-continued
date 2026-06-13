@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Skår Renderingsstil",
+  "undertale_death_screen.config.shard_render_style.animated": "Animeret",
+  "undertale_death_screen.config.shard_render_style.rotated": "Roteret",
+  "undertale_death_screen.config.shard_render_style.ttp": "Konfigurerer stilen for de splintrede hjertestykker.\n  Animeret: Stykket vil animere men ikke rotere.\n  Roteret: Stykket vil rotere men ikke animere.",
+  "undertale_death_screen.config.music_turnoff": "Stop al musik?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Om alle lyde og musik skal stoppes, når du dør.",
+  "undertale_death_screen.config.centered_heart": "Centrer hjerte?",
+  "undertale_death_screen.config.centered_heart.ttp": "Om hjertet skal placeres i midten af skærmen.",
+  "undertale_death_screen.config.centered_heart_anim": "Centreringsanimation?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Om hjertet glidende skal bevæge sig til midten\naf skærmen før det splintres.",
+  "undertale_death_screen.config.centered_heart_speed": "Centreringshastighed",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Hastigheden af hjertets centreringsanimation.",
+  "undertale_death_screen.config.determination": "Spil musik?",
+  "undertale_death_screen.config.determination.ttp": "Om der skal spilles musik (standard Determination fra Undertale) på dødsskærmen.",
+  "subtitles.undertale_death_screen.heart_shatter": "Hjertet splintres",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Brug dynamiske hjerter?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Om hjertets tekstur og farve dynamisk skal ændres baseret på spillerstatus:\n - Forgiftet\n - Wither\n - Fryser",
+  "undertale_death_screen.config.background_fade_speed": "Baggrund Fade Hastighed",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Hastigheden hvormed skærmen fyldes med sort.\nHvis sat til 0, er det deaktiveret.\nHvis sat til 1, er det øjeblikkeligt."
+}

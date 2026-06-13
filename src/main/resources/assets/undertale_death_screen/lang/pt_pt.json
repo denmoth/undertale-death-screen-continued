@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Estilo de Renderização dos Estilhaços",
+  "undertale_death_screen.config.shard_render_style.animated": "Animado",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rodado",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configura o estilo dos estilhaços do coração.\n  Animado: O estilhaço terá animação mas não irá rodar.\n  Rodado: O estilhaço irá rodar mas não terá animação.",
+  "undertale_death_screen.config.music_turnoff": "Parar toda a música?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Se deve parar todos os sons e músicas ao morrer.",
+  "undertale_death_screen.config.centered_heart": "Centrar o coração?",
+  "undertale_death_screen.config.centered_heart.ttp": "Se deve centrar o coração no meio do ecrã.",
+  "undertale_death_screen.config.centered_heart_anim": "Animação de centragem?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Se deve mover o coração suavemente para o centro\ndo ecrã antes de estilhaçar.",
+  "undertale_death_screen.config.centered_heart_speed": "Velocidade de centragem",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Velocidade da animação de centragem do coração.",
+  "undertale_death_screen.config.determination": "Tocar música?",
+  "undertale_death_screen.config.determination.ttp": "Se deve tocar música (por defeito Determination do Undertale) no ecrã de morte.",
+  "subtitles.undertale_death_screen.heart_shatter": "Coração estilhaça-se",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Usar corações dinâmicos?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Se deve alterar a textura do coração com base no estado:\n - Envenenamento\n - Wither\n - Congelamento",
+  "undertale_death_screen.config.background_fade_speed": "Velocidade de escurecimento",
+  "undertale_death_screen.config.background_fade_speed.ttp": "A velocidade com que o ecrã fica preto.\nSe for 0, é desativado.\nSe for 1, é instantâneo."
+}

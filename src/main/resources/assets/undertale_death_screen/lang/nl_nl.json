@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Scherven weergavestijl",
+  "undertale_death_screen.config.shard_render_style.animated": "Geanimeerd",
+  "undertale_death_screen.config.shard_render_style.rotated": "Gedraaid",
+  "undertale_death_screen.config.shard_render_style.ttp": "Bepaalt de stijl van de verbrijzelde hartstukjes.\n  Geanimeerd: Het stukje animeert maar draait niet.\n  Gedraaid: Het stukje draait maar animeert niet.",
+  "undertale_death_screen.config.music_turnoff": "Stop alle muziek?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Of alle geluiden en muziek gestopt moeten worden als je sterft.",
+  "undertale_death_screen.config.centered_heart": "Hart centreren?",
+  "undertale_death_screen.config.centered_heart.ttp": "Of het hart in het midden van het scherm geplaatst moet worden.",
+  "undertale_death_screen.config.centered_heart_anim": "Centreren animatie?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Of het hart vloeiend naar het midden van het\nscherm moet animeren voordat het breekt.",
+  "undertale_death_screen.config.centered_heart_speed": "Centreren snelheid",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "De snelheid van de centreeranimatie.",
+  "undertale_death_screen.config.determination": "Muziek afspelen?",
+  "undertale_death_screen.config.determination.ttp": "Of er muziek (standaard Determination uit Undertale) afgespeeld moet worden op het doodsscherm.",
+  "subtitles.undertale_death_screen.heart_shatter": "Hart verbrijzelt",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Dynamische harten gebruiken?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Of de hartkleur dynamisch verandert gebaseerd op de status:\n - Vergiftiging\n - Wither\n - Bevriezing",
+  "undertale_death_screen.config.background_fade_speed": "Achtergrond vervagingssnelheid",
+  "undertale_death_screen.config.background_fade_speed.ttp": "De snelheid waarmee het scherm zwart wordt.\nBij 0 is dit uitgeschakeld.\nBij 1 is het onmiddellijk."
+}

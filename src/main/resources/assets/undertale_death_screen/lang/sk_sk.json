@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Štýl Vykresľovania Úlomkov",
+  "undertale_death_screen.config.shard_render_style.animated": "Animované",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotované",
+  "undertale_death_screen.config.shard_render_style.ttp": "Nastavuje štýl roztrieštených úlomkov srdca.\n  Animované: Úlomok bude animovaný, ale nebude rotovať.\n  Rotované: Úlomok bude rotovať, ale nebude animovaný.",
+  "undertale_death_screen.config.music_turnoff": "Zastaviť všetku hudbu?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Či sa majú po smrti zastaviť všetky zvuky a hudba.",
+  "undertale_death_screen.config.centered_heart": "Vycentrovať srdce?",
+  "undertale_death_screen.config.centered_heart.ttp": "Či má byť srdce umiestnené v strede obrazovky.",
+  "undertale_death_screen.config.centered_heart_anim": "Animácia vycentrovania?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Či sa má srdce plynulo presunúť do stredu\nobrazovky predtým, ako sa roztriešti.",
+  "undertale_death_screen.config.centered_heart_speed": "Rýchlosť vycentrovania",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Rýchlosť animácie presunu srdca do stredu.",
+  "undertale_death_screen.config.determination": "Prehrávať hudbu?",
+  "undertale_death_screen.config.determination.ttp": "Či prehrávať hudbu (predvolene Determination z Undertale) na obrazovke smrti.",
+  "subtitles.undertale_death_screen.heart_shatter": "Srdce sa triešti",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Použiť dynamické srdcia?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Či dynamicky meniť textúru a farbu srdca na základe stavu hráča:\n - Otrava\n - Chradnutie\n - Mrznutie",
+  "undertale_death_screen.config.background_fade_speed": "Rýchlosť Stmavovania Pozadia",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Rýchlosť, ktorou sa obrazovka vyplní čiernou farbou.\nAk je nastavené na 0, je to zakázané.\nAk je nastavené na 1, je to okamžité."
+}

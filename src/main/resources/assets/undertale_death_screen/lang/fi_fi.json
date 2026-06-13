@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Sirpaleiden Piirtotyyli",
+  "undertale_death_screen.config.shard_render_style.animated": "Animoitu",
+  "undertale_death_screen.config.shard_render_style.rotated": "Pyörivä",
+  "undertale_death_screen.config.shard_render_style.ttp": "Asettaa särkyneiden sydämen sirpaleiden tyylin.\n  Animoitu: Sirpale animoituu mutta ei pyöri.\n  Pyörivä: Sirpale pyörii mutta ei animoidu.",
+  "undertale_death_screen.config.music_turnoff": "Pysäytä kaikki musiikki?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Pysäytetäänkö kaikki äänet ja musiikki, kun kuolet.",
+  "undertale_death_screen.config.centered_heart": "Keskitetty sydän?",
+  "undertale_death_screen.config.centered_heart.ttp": "Sijoitetaanko sydän keskelle ruutua.",
+  "undertale_death_screen.config.centered_heart_anim": "Keskittämisanimaatio?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Liikkuuko sydän pehmeästi ruudun keskelle\nennen särkymistään.",
+  "undertale_death_screen.config.centered_heart_speed": "Keskittämisnopeus",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Sydämen keskittämisanimaation nopeus.",
+  "undertale_death_screen.config.determination": "Soita musiikkia?",
+  "undertale_death_screen.config.determination.ttp": "Soitetaanko kuolinruudulla musiikkia (oletuksena Undertalen Determination).",
+  "subtitles.undertale_death_screen.heart_shatter": "Sydän särkyy",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Käytä dynaamisia sydämiä?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Muuttuuko sydämen tekstuuri ja väri dynaamisesti pelaajan tilan mukaan:\n - Myrkytetty\n - Näivetetty\n - Jäätynyt",
+  "undertale_death_screen.config.background_fade_speed": "Taustan Häivytysnopeus",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Nopeus, jolla ruutu täyttyy mustalla.\nJos asetettu 0, se on poistettu käytöstä.\nJos asetettu 1, se on välitön."
+}

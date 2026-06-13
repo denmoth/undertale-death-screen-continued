@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Стил Приказа Крхотина",
+  "undertale_death_screen.config.shard_render_style.animated": "Анимирано",
+  "undertale_death_screen.config.shard_render_style.rotated": "Ротирано",
+  "undertale_death_screen.config.shard_render_style.ttp": "Подешава стил крхотина сломљеног срца.\n  Анимирано: Крхотина ће бити анимирана али се неће ротирати.\n  Ротирано: Крхотина ће се ротирати али неће бити анимирана.",
+  "undertale_death_screen.config.music_turnoff": "Заустави сву музику?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Да ли да се зауставе сви звукови и музика након смрти.",
+  "undertale_death_screen.config.centered_heart": "Центрирај срце?",
+  "undertale_death_screen.config.centered_heart.ttp": "Да ли да се срце постави у центар екрана.",
+  "undertale_death_screen.config.centered_heart_anim": "Анимација центрирања?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Да ли да се срце полако премести у центар екрана\nпре него што се разбије.",
+  "undertale_death_screen.config.centered_heart_speed": "Брзина центрирања",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Брзина анимације премештања срца у центар.",
+  "undertale_death_screen.config.determination": "Свирај музику?",
+  "undertale_death_screen.config.determination.ttp": "Да ли да свира музика (задато Determination из Undertale-а) на екрану смрти.",
+  "subtitles.undertale_death_screen.heart_shatter": "Срце се разбија",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Користи динамична срца?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Да ли динамично мењати текстуру срца зависно од статуса играча:\n - Отрован\n - Видер\n - Замрзавање",
+  "undertale_death_screen.config.background_fade_speed": "Брзина Затамњења Позадине",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Брзина којом се екран пуни црном бојом.\nАко је 0, опција је искључена.\nАко је 1, учинак је тренутан."
+}

@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Stile rendering frammenti",
+  "undertale_death_screen.config.shard_render_style.animated": "Animato",
+  "undertale_death_screen.config.shard_render_style.rotated": "Ruotato",
+  "undertale_death_screen.config.shard_render_style.ttp": "Configura lo stile dei frammenti di cuore.\n  Animato: Il frammento sarà animato ma non ruoterà.\n  Ruotato: Il frammento ruoterà ma non sarà animato.",
+  "undertale_death_screen.config.music_turnoff": "Interrompere tutta la musica?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Se interrompere tutti i suoni e la musica alla morte",
+  "undertale_death_screen.config.centered_heart": "Cuore al centro?",
+  "undertale_death_screen.config.centered_heart.ttp": "Se posizionare il cuore al centro dello schermo.",
+  "undertale_death_screen.config.centered_heart_anim": "Animazione verso il centro?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Se animare in modo fluido il cuore verso il centro\ndello schermo prima di infrangersi.",
+  "undertale_death_screen.config.centered_heart_speed": "Velocità di centramento",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Velocità dell'animazione di centramento.",
+  "undertale_death_screen.config.determination": "Riprodurre musica?",
+  "undertale_death_screen.config.determination.ttp": "Se riprodurre la musica (di default Determination da Undertale) nella schermata di morte.",
+  "subtitles.undertale_death_screen.heart_shatter": "Il cuore si infrange",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Usa cuori dinamici?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Se cambiare dinamicamente la texture del cuore in base allo stato del giocatore:\n - Avvelenamento\n - Wither\n - Congelamento",
+  "undertale_death_screen.config.background_fade_speed": "Velocità dissolvenza sfondo",
+  "undertale_death_screen.config.background_fade_speed.ttp": "La velocità con cui riempire lo schermo di nero.\n0 = disabilitato.\n1 = istantaneo."
+}

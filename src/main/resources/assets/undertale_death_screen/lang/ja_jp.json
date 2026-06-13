@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "破片の描画スタイル",
+  "undertale_death_screen.config.shard_render_style.animated": "アニメーション",
+  "undertale_death_screen.config.shard_render_style.rotated": "回転",
+  "undertale_death_screen.config.shard_render_style.ttp": "砕けたハートの破片のスタイルを設定します。\n  アニメーション: 破片はアニメーションしますが回転しません。\n  回転: 破片は回転しますがアニメーションしません。",
+  "undertale_death_screen.config.music_turnoff": "全ての音楽を止める？",
+  "undertale_death_screen.config.music_turnoff.ttp": "死亡時に全てのサウンドと音楽を停止するかどうか。",
+  "undertale_death_screen.config.centered_heart": "ハートを中央に配置する？",
+  "undertale_death_screen.config.centered_heart.ttp": "ハートを画面の中央に配置するかどうか。",
+  "undertale_death_screen.config.centered_heart_anim": "中央へ向かうアニメーション？",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "砕ける前にハートが画面の中央へ\n滑らかに移動するかどうか。",
+  "undertale_death_screen.config.centered_heart_speed": "中央へ向かう速度",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "ハートが中央へ移動するアニメーションの速度。",
+  "undertale_death_screen.config.determination": "音楽を再生する？",
+  "undertale_death_screen.config.determination.ttp": "死亡画面で音楽（デフォルトはUndertaleのDetermination）を再生するかどうか。",
+  "subtitles.undertale_death_screen.heart_shatter": "ハートが砕ける",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "ダイナミックなハートを使う？",
+  "undertale_death_screen.config.dynamicHeart.ttp": "プレイヤーの状態に基づいてハートのテクスチャを動的に変更するかどうか：\n - 毒\n - ウィザー\n - 凍結",
+  "undertale_death_screen.config.background_fade_speed": "背景のフェード速度",
+  "undertale_death_screen.config.background_fade_speed.ttp": "画面が黒で満たされる速度。\n0に設定すると無効になります。\n1に設定すると瞬時になります。"
+}

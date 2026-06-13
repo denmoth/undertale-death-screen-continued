@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Kiểu Render Mảnh Vỡ",
+  "undertale_death_screen.config.shard_render_style.animated": "Hoạt Ảnh",
+  "undertale_death_screen.config.shard_render_style.rotated": "Xoay",
+  "undertale_death_screen.config.shard_render_style.ttp": "Cấu hình kiểu mảnh vỡ trái tim.\n  Hoạt Ảnh: Mảnh vỡ sẽ chạy hoạt ảnh nhưng không xoay.\n  Xoay: Mảnh vỡ sẽ xoay nhưng không chạy hoạt ảnh.",
+  "undertale_death_screen.config.music_turnoff": "Tắt tất cả âm nhạc?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Cho dù có tắt tất cả âm thanh & âm nhạc khi bạn chết.",
+  "undertale_death_screen.config.centered_heart": "Căn giữa trái tim?",
+  "undertale_death_screen.config.centered_heart.ttp": "Cho dù có căn giữa trái tim trên màn hình.",
+  "undertale_death_screen.config.centered_heart_anim": "Hoạt ảnh căn giữa?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Cho dù trái tim có di chuyển mượt mà vào giữa\nmàn hình trước khi vỡ vụn.",
+  "undertale_death_screen.config.centered_heart_speed": "Tốc độ căn giữa",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Tốc độ của hoạt ảnh căn giữa trái tim.",
+  "undertale_death_screen.config.determination": "Phát nhạc?",
+  "undertale_death_screen.config.determination.ttp": "Cho dù có phát nhạc (mặc định là Determination từ Undertale) trên màn hình chết.",
+  "subtitles.undertale_death_screen.heart_shatter": "Trái tim vỡ vụn",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Sử dụng trái tim động?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Cho dù có thay đổi kết cấu trái tim động theo trạng thái của người chơi:\n - Trúng Độc\n - Khô Héo\n - Đóng Băng",
+  "undertale_death_screen.config.background_fade_speed": "Tốc Độ Mờ Nền",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Tốc độ làm đen màn hình.\nNếu là 0, chức năng bị tắt.\nNếu là 1, màn hình sẽ đen ngay lập tức."
+}

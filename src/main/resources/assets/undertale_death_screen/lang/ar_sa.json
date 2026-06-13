@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "نمط تصيير الشظايا",
+  "undertale_death_screen.config.shard_render_style.animated": "متحرك",
+  "undertale_death_screen.config.shard_render_style.rotated": "دوران",
+  "undertale_death_screen.config.shard_render_style.ttp": "تكوين نمط قطع القلب المحطمة.\n  متحرك: ستتحرك القطعة لكن لن تدور.\n  دوران: ستدور القطعة لكن لن تتحرك.",
+  "undertale_death_screen.config.music_turnoff": "إيقاف جميع الموسيقى؟",
+  "undertale_death_screen.config.music_turnoff.ttp": "ما إذا كان سيتم إيقاف كل الأصوات والموسيقى عند الموت.",
+  "undertale_death_screen.config.centered_heart": "توسيط القلب؟",
+  "undertale_death_screen.config.centered_heart.ttp": "ما إذا كان سيتم وضع القلب في وسط الشاشة.",
+  "undertale_death_screen.config.centered_heart_anim": "حركة التوسيط؟",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "ما إذا كان سيتحرك القلب بسلاسة إلى وسط\nالشاشة قبل أن يتحطم.",
+  "undertale_death_screen.config.centered_heart_speed": "سرعة التوسيط",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "سرعة حركة تمركز القلب.",
+  "undertale_death_screen.config.determination": "تشغيل الموسيقى؟",
+  "undertale_death_screen.config.determination.ttp": "ما إذا كان سيتم تشغيل الموسيقى على شاشة الموت.",
+  "subtitles.undertale_death_screen.heart_shatter": "تحطم القلب",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "استخدام قلوب ديناميكية؟",
+  "undertale_death_screen.config.dynamicHeart.ttp": "ما إذا كان سيتم تغيير نسيج القلب ديناميكيًا بناءً على الحالة:\n - تسمم\n - الذبول\n - التجميد",
+  "undertale_death_screen.config.background_fade_speed": "سرعة تلاشي الخلفية",
+  "undertale_death_screen.config.background_fade_speed.ttp": "السرعة التي تمتلئ بها الشاشة باللون الأسود.\nإذا تم تعيينها على 0، يتم تعطيلها.\nإذا تم تعيينها على 1، تكون فورية."
+}

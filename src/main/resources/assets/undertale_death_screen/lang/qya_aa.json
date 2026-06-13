@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Cantal Malle",
+  "undertale_death_screen.config.shard_render_style.animated": "Laita",
+  "undertale_death_screen.config.shard_render_style.rotated": "Pelë",
+  "undertale_death_screen.config.shard_render_style.ttp": "Canta i malle i rácina hón.\n  Laita: I hón laita lá pelë.\n  Pelë: I hón pelë lá laita.",
+  "undertale_death_screen.config.music_turnoff": "Pusta ilya lindë?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Pusta ilya lindë yá firil.",
+  "undertale_death_screen.config.centered_heart": "Endëa hón?",
+  "undertale_death_screen.config.centered_heart.ttp": "Tuluva i hón endanna.",
+  "undertale_death_screen.config.centered_heart_anim": "Endëa laita?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "I hón laita endanna nó rácë.",
+  "undertale_death_screen.config.centered_heart_speed": "Endëa lintië",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Lintië i endëa laita.",
+  "undertale_death_screen.config.determination": "Lirë lindë?",
+  "undertale_death_screen.config.determination.ttp": "Lirë lindë yá firil.",
+  "subtitles.undertale_death_screen.heart_shatter": "Hón rácë",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Estel",
+  "undertale_death_screen.config.dynamicHeart": "Yuhta alya hón?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Ahya i hón cala yá:\n - Hloirë\n - Hestë\n - Ringë",
+  "undertale_death_screen.config.background_fade_speed": "Morë Lintië",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Lintië i morë.\n0 lócina.\n1 ascan."
+}

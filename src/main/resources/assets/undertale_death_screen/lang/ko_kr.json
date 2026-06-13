@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "조각 렌더링 스타일",
+  "undertale_death_screen.config.shard_render_style.animated": "애니메이션",
+  "undertale_death_screen.config.shard_render_style.rotated": "회전",
+  "undertale_death_screen.config.shard_render_style.ttp": "부서진 하트 조각의 스타일을 설정합니다.\n  애니메이션: 조각이 애니메이션되지만 회전하지는 않습니다.\n  회전: 조각이 회전하지만 애니메이션되지는 않습니다.",
+  "undertale_death_screen.config.music_turnoff": "모든 음악 정지?",
+  "undertale_death_screen.config.music_turnoff.ttp": "사망 시 모든 소리와 음악을 정지할지 여부.",
+  "undertale_death_screen.config.centered_heart": "하트를 중앙에?",
+  "undertale_death_screen.config.centered_heart.ttp": "하트를 화면 중앙에 배치할지 여부.",
+  "undertale_death_screen.config.centered_heart_anim": "중앙 이동 애니메이션?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "부서지기 전에 하트가 화면 중앙으로\n부드럽게 이동할지 여부.",
+  "undertale_death_screen.config.centered_heart_speed": "중앙 이동 속도",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "하트가 중앙으로 이동하는 애니메이션의 속도.",
+  "undertale_death_screen.config.determination": "음악 재생?",
+  "undertale_death_screen.config.determination.ttp": "사망 화면에서 음악(기본값은 언더테일의 Determination)을 재생할지 여부.",
+  "subtitles.undertale_death_screen.heart_shatter": "하트가 산산조각남",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "동적 하트 사용?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "플레이어 상태에 따라 하트 텍스처를 동적으로 변경할지 여부:\n - 독\n - 위더\n - 동결",
+  "undertale_death_screen.config.background_fade_speed": "배경 페이드 속도",
+  "undertale_death_screen.config.background_fade_speed.ttp": "화면이 검은색으로 채워지는 속도.\n0으로 설정하면 비활성화됩니다.\n1로 설정하면 즉시 채워집니다."
+}

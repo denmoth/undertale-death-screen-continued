@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Szilánk Renderelési Stílus",
+  "undertale_death_screen.config.shard_render_style.animated": "Animált",
+  "undertale_death_screen.config.shard_render_style.rotated": "Forgó",
+  "undertale_death_screen.config.shard_render_style.ttp": "Beállítja az összetört szív darabjainak stílusát.\n  Animált: A darab animálva lesz, de nem forog.\n  Forgó: A darab forogni fog, de nem lesz animálva.",
+  "undertale_death_screen.config.music_turnoff": "Minden zene leállítása?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Állítson-e le minden hangot és zenét, amikor meghalsz.",
+  "undertale_death_screen.config.centered_heart": "Középre zárt szív?",
+  "undertale_death_screen.config.centered_heart.ttp": "Középre helyezze-e a szívet a képernyőn.",
+  "undertale_death_screen.config.centered_heart_anim": "Középre húzás animáció?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "A szív finoman középre mozogjon-e a képernyőn\nmielőtt összetörik.",
+  "undertale_death_screen.config.centered_heart_speed": "Középre zárás sebessége",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "A szív középre záró animációjának sebessége.",
+  "undertale_death_screen.config.determination": "Zene lejátszása?",
+  "undertale_death_screen.config.determination.ttp": "Játsszon-e le zenét (alapértelmezésben Determination az Undertale-ből) a halál képernyőn.",
+  "subtitles.undertale_death_screen.heart_shatter": "A szív összetörik",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Dinamikus szívek használata?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "A szív textúrája és színe dinamikusan változzon-e a játékos állapota alapján:\n - Mérgezés\n - Sorvadás\n - Fagyás",
+  "undertale_death_screen.config.background_fade_speed": "Háttér Elhalványulási Sebesség",
+  "undertale_death_screen.config.background_fade_speed.ttp": "A képernyő feketével való kitöltésének sebessége.\nHa 0-ra van állítva, ki van kapcsolva.\nHa 1-re van állítva, azonnali."
+}

@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "สไตล์การเรนเดอร์ชิ้นส่วน",
+  "undertale_death_screen.config.shard_render_style.animated": "เคลื่อนไหว",
+  "undertale_death_screen.config.shard_render_style.rotated": "หมุน",
+  "undertale_death_screen.config.shard_render_style.ttp": "กำหนดรูปแบบของชิ้นส่วนหัวใจที่แตกสลาย\n  เคลื่อนไหว: ชิ้นส่วนจะขยับแต่ไม่หมุน\n  หมุน: ชิ้นส่วนจะหมุนแต่ไม่ขยับ",
+  "undertale_death_screen.config.music_turnoff": "หยุดเพลงทั้งหมดไหม?",
+  "undertale_death_screen.config.music_turnoff.ttp": "ไม่ว่าจะหยุดเสียงและเพลงทั้งหมดเมื่อคุณตาย",
+  "undertale_death_screen.config.centered_heart": "จัดหัวใจไว้ตรงกลางไหม?",
+  "undertale_death_screen.config.centered_heart.ttp": "ไม่ว่าจะวางหัวใจไว้ตรงกลางหน้าจอหรือไม่",
+  "undertale_death_screen.config.centered_heart_anim": "แอนิเมชั่นเข้าสู่ตรงกลางไหม?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "ไม่ว่าหัวใจจะเลื่อนไปยังกึ่งกลางหน้าจอ\nอย่างนุ่มนวลก่อนที่จะแตกสลายหรือไม่",
+  "undertale_death_screen.config.centered_heart_speed": "ความเร็วในการจัดกึ่งกลาง",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "ความเร็วของแอนิเมชั่นจัดหัวใจกึ่งกลาง",
+  "undertale_death_screen.config.determination": "เล่นเพลงไหม?",
+  "undertale_death_screen.config.determination.ttp": "ไม่ว่าจะเล่นเพลง (ค่าเริ่มต้นคือ Determination จาก Undertale) ในหน้าจอการตายหรือไม่",
+  "subtitles.undertale_death_screen.heart_shatter": "หัวใจแตกสลาย",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "ใช้หัวใจแบบไดนามิกไหม?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "ไม่ว่าจะเปลี่ยนพื้นผิวสีหัวใจแบบไดนามิกตามสถานะของผู้เล่นหรือไม่:\n - โดนพิษ\n - เหี่ยวเฉา\n - แช่แข็ง",
+  "undertale_death_screen.config.background_fade_speed": "ความเร็วในการจางพื้นหลัง",
+  "undertale_death_screen.config.background_fade_speed.ttp": "ความเร็วในการทำให้หน้าจอเป็นสีดำ\nถ้าตั้งค่าเป็น 0 คือปิดใช้งาน\nถ้าตั้งค่าเป็น 1 คือทันที"
+}

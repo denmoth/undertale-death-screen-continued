@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "ghotI' le' ghantoH",
+  "undertale_death_screen.config.shard_render_style.animated": "yIt",
+  "undertale_death_screen.config.shard_render_style.rotated": "jIr",
+  "undertale_death_screen.config.shard_render_style.ttp": "tIq ghotI' le' ghantoH.\nyIt: ghotI' yIt 'ach jIrbe'.\njIr: ghotI' jIr 'ach yItbe'.",
+  "undertale_death_screen.config.music_turnoff": "Hoch bom mev?",
+  "undertale_death_screen.config.music_turnoff.ttp": "bIHeghDI' Hoch wab mev.",
+  "undertale_death_screen.config.centered_heart": "tIq botlh?",
+  "undertale_death_screen.config.centered_heart.ttp": "botlhDaq tIq chenmoH.",
+  "undertale_death_screen.config.centered_heart_anim": "botlhDaq yIt?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "bIHeghpa' botlhDaq tIq yIt.",
+  "undertale_death_screen.config.centered_heart_speed": "botlh yIt Do",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "botlhDaq tIq yIt Do.",
+  "undertale_death_screen.config.determination": "bom much?",
+  "undertale_death_screen.config.determination.ttp": "bIHeghDI' bom much (Undertale Determination).",
+  "subtitles.undertale_death_screen.heart_shatter": "tIq ghor",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "tIq pIm lo'?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "bIQuchDI' tIq rItlh choH.",
+  "undertale_death_screen.config.background_fade_speed": "Hur hurgh Do",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Hur hurghmoH Do.\n0: mev.\n1: nom."
+}

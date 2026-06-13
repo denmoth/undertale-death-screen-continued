@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Parça İşleme Stili",
+  "undertale_death_screen.config.shard_render_style.animated": "Hareketli",
+  "undertale_death_screen.config.shard_render_style.rotated": "Dönerek",
+  "undertale_death_screen.config.shard_render_style.ttp": "Kırılan kalp parçalarının stilini ayarlar.\n  Hareketli: Parça hareket eder ancak dönmez.\n  Dönerek: Parça döner ancak hareket etmez.",
+  "undertale_death_screen.config.music_turnoff": "Tüm müziği durdur?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Öldüğünde tüm seslerin ve müziklerin durdurulup durdurulmayacağı.",
+  "undertale_death_screen.config.centered_heart": "Kalbi ortala?",
+  "undertale_death_screen.config.centered_heart.ttp": "Kalbin ekranın tam ortasına yerleştirilip yerleştirilmeyeceği.",
+  "undertale_death_screen.config.centered_heart_anim": "Ortalama animasyonu?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Kalp kırılmadan önce ekranın ortasına\nyumuşak bir şekilde kayıp kaymayacağı.",
+  "undertale_death_screen.config.centered_heart_speed": "Ortalama hızı",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Kalbin ortaya kayma animasyonunun hızı.",
+  "undertale_death_screen.config.determination": "Müzik çal?",
+  "undertale_death_screen.config.determination.ttp": "Ölüm ekranında müzik (varsayılan olarak Undertale'dan Determination) çalınıp çalınmayacağı.",
+  "subtitles.undertale_death_screen.heart_shatter": "Kalp kırılıyor",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Dinamik kalpler kullan?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Oyuncunun durumuna göre kalp dokusunun değişip değişmeyeceği:\n - Zehirlenme\n - Wither\n - Donma",
+  "undertale_death_screen.config.background_fade_speed": "Arka Plan Kararma Hızı",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Ekranın siyahla dolma hızı.\n0 ise devre dışıdır.\n1 ise anında kararır."
+}

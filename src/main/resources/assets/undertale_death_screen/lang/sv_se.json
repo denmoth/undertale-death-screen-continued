@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Fragment Rendering Stil",
+  "undertale_death_screen.config.shard_render_style.animated": "Animerad",
+  "undertale_death_screen.config.shard_render_style.rotated": "Roterad",
+  "undertale_death_screen.config.shard_render_style.ttp": "Konfigurerar stilen på de krossade hjärtbitarna.\n  Animerad: Biten animeras men roterar inte.\n  Roterad: Biten roterar men animeras inte.",
+  "undertale_death_screen.config.music_turnoff": "Stoppa all musik?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Om allt ljud & musik ska stoppas när du dör.",
+  "undertale_death_screen.config.centered_heart": "Centrerat hjärta?",
+  "undertale_death_screen.config.centered_heart.ttp": "Om hjärtat ska placeras i mitten av skärmen.",
+  "undertale_death_screen.config.centered_heart_anim": "Centrerings-animation?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Om hjärtat ska animeras mjukt till mitten av\nskärmen innan det krossas.",
+  "undertale_death_screen.config.centered_heart_speed": "Centrerings-hastighet",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Hastigheten på centrerings-animationen.",
+  "undertale_death_screen.config.determination": "Spela musik?",
+  "undertale_death_screen.config.determination.ttp": "Om musik (som standard Determination från Undertale) ska spelas på dödsskärmen.",
+  "subtitles.undertale_death_screen.heart_shatter": "Hjärtat krossas",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Använd dynamiska hjärtan?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Om hjärtats textur och färg dynamiskt ska ändras baserat på spelarstatus:\n - Förgiftad\n - Wither\n - Fryser",
+  "undertale_death_screen.config.background_fade_speed": "Bakgrunds Fade Hastighet",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Hastigheten med vilken skärmen fylls med svart.\nOm satt till 0 inaktiveras det.\nOm satt till 1 sker det direkt."
+}

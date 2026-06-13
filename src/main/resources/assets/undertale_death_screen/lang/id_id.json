@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Gaya Render Pecahan",
+  "undertale_death_screen.config.shard_render_style.animated": "Animasi",
+  "undertale_death_screen.config.shard_render_style.rotated": "Berputar",
+  "undertale_death_screen.config.shard_render_style.ttp": "Mengatur gaya potongan hati yang hancur.\n  Animasi: Potongan akan bergerak tapi tidak berputar.\n  Berputar: Potongan akan berputar tapi tidak bergerak.",
+  "undertale_death_screen.config.music_turnoff": "Hentikan semua musik?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Apakah akan menghentikan semua suara & musik saat kamu mati.",
+  "undertale_death_screen.config.centered_heart": "Tengahkan hati?",
+  "undertale_death_screen.config.centered_heart.ttp": "Apakah akan menaruh hati di tengah layar.",
+  "undertale_death_screen.config.centered_heart_anim": "Animasi menengahkan?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Apakah hati akan bergerak mulus ke tengah\nlayar sebelum hancur.",
+  "undertale_death_screen.config.centered_heart_speed": "Kecepatan ke tengah",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Kecepatan animasi hati menuju ke tengah layar.",
+  "undertale_death_screen.config.determination": "Putar musik?",
+  "undertale_death_screen.config.determination.ttp": "Apakah akan memutar musik (secara bawaan Determination dari Undertale) pada layar kematian.",
+  "subtitles.undertale_death_screen.heart_shatter": "Hati hancur berkeping-keping",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Gunakan hati dinamis?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Apakah akan mengubah tekstur dan warna hati secara dinamis berdasarkan status pemain:\n - Keracunan\n - Layu\n - Membeku",
+  "undertale_death_screen.config.background_fade_speed": "Kecepatan Pudar Latar Belakang",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Kecepatan layar dipenuhi warna hitam.\nJika diatur ke 0, akan dinonaktifkan.\nJika diatur ke 1, akan seketika."
+}

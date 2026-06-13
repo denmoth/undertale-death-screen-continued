@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Стил на рендиране на парчетата",
+  "undertale_death_screen.config.shard_render_style.animated": "Анимиран",
+  "undertale_death_screen.config.shard_render_style.rotated": "Въртящ",
+  "undertale_death_screen.config.shard_render_style.ttp": "Конфигурира стила на счупените парчета сърце.\n  Анимиран: Парчето ще бъде анимирано, но няма да се върти.\n  Въртящ: Парчето ще се върти, но няма да бъде анимирано.",
+  "undertale_death_screen.config.music_turnoff": "Спиране на цялата музика?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Дали да спират всички звуци и музика при смърт.",
+  "undertale_death_screen.config.centered_heart": "Центрирано сърце?",
+  "undertale_death_screen.config.centered_heart.ttp": "Дали сърцето да се позиционира в средата на екрана.",
+  "undertale_death_screen.config.centered_heart_anim": "Анимация за центриране?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Дали сърцето плавно да се премества в средата на\nекрана преди да се счупи.",
+  "undertale_death_screen.config.centered_heart_speed": "Скорост на центриране",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Скоростта на анимацията за центриране на сърцето.",
+  "undertale_death_screen.config.determination": "Възпроизвеждане на музика?",
+  "undertale_death_screen.config.determination.ttp": "Дали да се възпроизвежда музика (по подразбиране Determination от Undertale) на екрана при смърт.",
+  "subtitles.undertale_death_screen.heart_shatter": "Сърцето се чупи",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Динамични сърца?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Дали динамично да се променя текстурата на сърцето въз основа на статуса на играча:\n - Отравяне\n - Исушаване\n - Замръзване",
+  "undertale_death_screen.config.background_fade_speed": "Скорост на затъмняване",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Скоростта, с която екранът се запълва с черно.\nАко е 0, е изключено.\nАко е 1, е моментално."
+}

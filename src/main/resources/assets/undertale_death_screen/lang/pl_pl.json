@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Styl renderowania odłamków",
+  "undertale_death_screen.config.shard_render_style.animated": "Animacja",
+  "undertale_death_screen.config.shard_render_style.rotated": "Obrót",
+  "undertale_death_screen.config.shard_render_style.ttp": "Konfiguruje styl roztrzaskanych kawałków serca.\n  Animacja: Kawałek będzie animowany, ale nie będzie się obracał.\n  Obrót: Kawałek będzie się obracał, ale nie będzie animowany.",
+  "undertale_death_screen.config.music_turnoff": "Zatrzymać całą muzykę?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Czy zatrzymać wszystkie dźwięki i muzykę po śmierci.",
+  "undertale_death_screen.config.centered_heart": "Wyśrodkować serce?",
+  "undertale_death_screen.config.centered_heart.ttp": "Czy umieścić serce na środku ekranu.",
+  "undertale_death_screen.config.centered_heart_anim": "Animacja do środka?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Czy serce ma płynnie przesunąć się na środek\nekranu przed roztrzaskaniem się.",
+  "undertale_death_screen.config.centered_heart_speed": "Prędkość środkowania",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Prędkość animacji przesuwania do środka.",
+  "undertale_death_screen.config.determination": "Odtwarzać muzykę?",
+  "undertale_death_screen.config.determination.ttp": "Czy odtwarzać muzykę (domyślnie Determination z Undertale) na ekranie śmierci.",
+  "subtitles.undertale_death_screen.heart_shatter": "Serce pęka",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Dynamiczne serca?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Czy dynamicznie zmieniać teksturę serca w zależności od statusu gracza:\n - Zatrucie\n - Wither\n - Zamrożenie",
+  "undertale_death_screen.config.background_fade_speed": "Prędkość ściemniania",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Szybkość wypełniania ekranu czernią.\n0 = wyłączone.\n1 = natychmiastowo."
+}

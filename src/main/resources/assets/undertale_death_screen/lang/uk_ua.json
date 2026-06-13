@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Стиль рендерингу уламків",
+  "undertale_death_screen.config.shard_render_style.animated": "Анімація",
+  "undertale_death_screen.config.shard_render_style.rotated": "Обертання",
+  "undertale_death_screen.config.shard_render_style.ttp": "Налаштовує стиль уламків розбитого серця.\n  Анімація: Уламок буде анімованим, але не обертатиметься.\n  Обертання: Уламок обертатиметься, але не буде анімованим.",
+  "undertale_death_screen.config.music_turnoff": "Зупинити всю музику?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Чи зупиняти всі звуки та музику під час смерті.",
+  "undertale_death_screen.config.centered_heart": "Серце по центру?",
+  "undertale_death_screen.config.centered_heart.ttp": "Чи розташовувати серце по центру екрана.",
+  "undertale_death_screen.config.centered_heart_anim": "Анімація центрування?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Чи має серце плавно переміщатися в центр екрана\nперед тим, як розбитися.",
+  "undertale_death_screen.config.centered_heart_speed": "Швидкість центрування",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Швидкість анімації переміщення в центр.",
+  "undertale_death_screen.config.determination": "Грати музику?",
+  "undertale_death_screen.config.determination.ttp": "Чи грати музику (за замовчуванням Determination з Undertale) на екрані смерті.",
+  "subtitles.undertale_death_screen.heart_shatter": "Серце розбивається",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Динамічні серця?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Чи змінювати текстуру серця залежно від статусу гравця:\n - Отруєння\n - Висушення\n - Замерзання",
+  "undertale_death_screen.config.background_fade_speed": "Швидкість згасання",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Швидкість заповнення екрана чорним кольором.\nЯкщо 0 — вимкнено.\nЯкщо 1 — миттєво."
+}

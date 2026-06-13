@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Stil Prikaza Krhotina",
+  "undertale_death_screen.config.shard_render_style.animated": "Animirano",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotirano",
+  "undertale_death_screen.config.shard_render_style.ttp": "Podešava stil krhotina slomljenog srca.\n  Animirano: Krhotina će biti animirana ali se neće rotirati.\n  Rotirano: Krhotina će se rotirati ali neće biti animirana.",
+  "undertale_death_screen.config.music_turnoff": "Zaustavi svu muziku?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Da li da se zaustave svi zvukovi i muzika nakon smrti.",
+  "undertale_death_screen.config.centered_heart": "Centriraj srce?",
+  "undertale_death_screen.config.centered_heart.ttp": "Da li da se srce postavi u centar ekrana.",
+  "undertale_death_screen.config.centered_heart_anim": "Animacija centriranja?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Da li da se srce polako premjesti u centar ekrana\nprije nego što se razbije.",
+  "undertale_death_screen.config.centered_heart_speed": "Brzina centriranja",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Brzina animacije premještanja srca u centar.",
+  "undertale_death_screen.config.determination": "Sviraj muziku?",
+  "undertale_death_screen.config.determination.ttp": "Da li da svira muzika (zadano Determination iz Undertale-a) na ekranu smrti.",
+  "subtitles.undertale_death_screen.heart_shatter": "Srce se razbija",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Koristi dinamična srca?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Da li dinamično mijenjati teksturu srca ovisno o statusu igrača:\n - Otrovan\n - Wither\n - Zamrzavanje",
+  "undertale_death_screen.config.background_fade_speed": "Brzina Zatamnjenja Pozadine",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Brzina kojom se ekran puni crnom bojom.\nAko je 0, opcija je isključena.\nAko je 1, učinak je trenutan."
+}

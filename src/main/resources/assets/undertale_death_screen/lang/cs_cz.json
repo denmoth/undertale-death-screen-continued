@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Styl Vykreslování Úlomků",
+  "undertale_death_screen.config.shard_render_style.animated": "Animované",
+  "undertale_death_screen.config.shard_render_style.rotated": "Rotované",
+  "undertale_death_screen.config.shard_render_style.ttp": "Nastavuje styl roztříštěných úlomků srdce.\n  Animované: Úlomek bude animován, ale nebude rotovat.\n  Rotované: Úlomek bude rotovat, ale nebude animován.",
+  "undertale_death_screen.config.music_turnoff": "Zastavit veškerou hudbu?",
+  "undertale_death_screen.config.music_turnoff.ttp": "Zda se mají po smrti zastavit všechny zvuky a hudba.",
+  "undertale_death_screen.config.centered_heart": "Vystředit srdce?",
+  "undertale_death_screen.config.centered_heart.ttp": "Zda má být srdce uprostřed obrazovky.",
+  "undertale_death_screen.config.centered_heart_anim": "Animace vystředění?",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Zda se má srdce plynule přesunout do středu\nobrazovky předtím, než se roztříští.",
+  "undertale_death_screen.config.centered_heart_speed": "Rychlost vystředění",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Rychlost animace přesunu srdce do středu.",
+  "undertale_death_screen.config.determination": "Přehrávat hudbu?",
+  "undertale_death_screen.config.determination.ttp": "Zda přehrávat hudbu (ve výchozím nastavení Determination z Undertale) na obrazovce smrti.",
+  "subtitles.undertale_death_screen.heart_shatter": "Srdce se tříští",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Použít dynamická srdce?",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Zda dynamicky měnit texturu a barvu srdce na základě stavu hráče:\n - Otrava\n - Chřadnutí\n - Mrznutí",
+  "undertale_death_screen.config.background_fade_speed": "Rychlost Stmívání Pozadí",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Rychlost, kterou se obrazovka vyplní černou barvou.\nPokud je nastaveno na 0, je zakázáno.\nPokud je nastaveno na 1, je okamžité."
+}

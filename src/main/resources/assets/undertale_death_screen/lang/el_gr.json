@@ -1,0 +1,22 @@
+{
+  "undertale_death_screen.config.shard_render_style": "Στυλ Απόδοσης Θραυσμάτων",
+  "undertale_death_screen.config.shard_render_style.animated": "Κινούμενα",
+  "undertale_death_screen.config.shard_render_style.rotated": "Περιστρεφόμενα",
+  "undertale_death_screen.config.shard_render_style.ttp": "Ρυθμίζει το στυλ των θραυσμάτων της καρδιάς.\n  Κινούμενα: Το θραύσμα θα κινείται αλλά δεν θα περιστρέφεται.\n  Περιστρεφόμενα: Το θραύσμα θα περιστρέφεται αλλά δεν θα κινείται.",
+  "undertale_death_screen.config.music_turnoff": "Διακοπή όλης της μουσικής;",
+  "undertale_death_screen.config.music_turnoff.ttp": "Εάν θα διακόπτονται όλοι οι ήχοι και η μουσική όταν πεθαίνεις.",
+  "undertale_death_screen.config.centered_heart": "Κεντραρισμένη καρδιά;",
+  "undertale_death_screen.config.centered_heart.ttp": "Εάν η καρδιά θα τοποθετείται στο κέντρο της οθόνης.",
+  "undertale_death_screen.config.centered_heart_anim": "Κινούμενη στο κέντρο;",
+  "undertale_death_screen.config.centered_heart_anim.ttp": "Εάν η καρδιά θα μετακινείται ομαλά προς το κέντρο\nτης οθόνης πριν σπάσει.",
+  "undertale_death_screen.config.centered_heart_speed": "Ταχύτητα κεντραρίσματος",
+  "undertale_death_screen.config.centered_heart_speed.ttp": "Η ταχύτητα της κίνησης κεντραρίσματος.",
+  "undertale_death_screen.config.determination": "Αναπαραγωγή μουσικής;",
+  "undertale_death_screen.config.determination.ttp": "Εάν θα αναπαράγεται μουσική (από προεπιλογή Determination από το Undertale) στην οθόνη θανάτου.",
+  "subtitles.undertale_death_screen.heart_shatter": "Η καρδιά σπάει",
+  "subtitles.undertale_death_screen.music.determination": "Undertale - Determination",
+  "undertale_death_screen.config.dynamicHeart": "Χρήση δυναμικών καρδιών;",
+  "undertale_death_screen.config.dynamicHeart.ttp": "Εάν θα αλλάζει δυναμικά η υφή της καρδιάς βάσει της κατάστασης του παίκτη:\n - Δηλητηρίαση\n - Μαρασμός\n - Πάγωμα",
+  "undertale_death_screen.config.background_fade_speed": "Ταχύτητα Σκοτεινιάσματος Φόντου",
+  "undertale_death_screen.config.background_fade_speed.ttp": "Η ταχύτητα με την οποία η οθόνη γεμίζει με μαύρο.\nΑν 0, είναι απενεργοποιημένο.\nΑν 1, είναι ακαριαίο."
+}
