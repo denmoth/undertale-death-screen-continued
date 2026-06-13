@@ -204,6 +204,14 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
 
     @Inject(method = "render", at = @At("HEAD"), cancellable = true)
     private void render(GuiGraphics guiGraphics, int i, int j, float delta, CallbackInfo ci) {
+        long currentTime = net.minecraft.Util.getMillis();
+        if (undertale_death_animation$lastRenderTime == 0) {
+            undertale_death_animation$lastRenderTime = currentTime;
+        }
+        double deltaTime = (currentTime - undertale_death_animation$lastRenderTime) / 1000.0;
+        undertale_death_animation$lastRenderTime = currentTime;
+        double timeScale = deltaTime * 60.0; // 60 ticks per second is 1.0 timescale
+
         int x;
         int y;
 
@@ -244,11 +252,6 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         if (!undertale_death_animation$shouldStart) {
             double speed = Config.INSTANCE.getCenteredHeartSpeed();
             if (Config.INSTANCE.getFixedAnimationRate()) {
-                long currentTime = net.minecraft.Util.getMillis();
-                if (undertale_death_animation$lastRenderTime == 0) {
-                    undertale_death_animation$lastRenderTime = currentTime;
-                }
-                double deltaTime = (currentTime - undertale_death_animation$lastRenderTime) / 1000.0;
                 undertale_death_animation$progress = Math.min(undertale_death_animation$progress + deltaTime * speed * 60.0, 1);
             } else {
                 undertale_death_animation$progress = Math.min(undertale_death_animation$progress + delta * speed, 1);
@@ -302,15 +305,6 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             }
 
             if (Config.INSTANCE.getFixedAnimationRate()) {
-                long currentTime = net.minecraft.Util.getMillis();
-                if (undertale_death_animation$lastRenderTime == 0) {
-                    undertale_death_animation$lastRenderTime = currentTime;
-                }
-                double deltaTime = (currentTime - undertale_death_animation$lastRenderTime) / 1000.0;
-                undertale_death_animation$lastRenderTime = currentTime;
-
-                double timeScale = deltaTime * 60.0; // 60 ticks per second is 1.0 timescale
-
                 for (HeartPiece piece : undertale_death_animation$pieces) {
                     piece.renderTick(timeScale);
                     piece.render(guiGraphics);

@@ -62,6 +62,33 @@ public class Config {
         return config;
     }
 
+    public static void updateFromServer(String json) {
+        try {
+            Config serverConfig = GSON.fromJson(json, Config.class);
+            if (serverConfig != null) {
+                INSTANCE.style = serverConfig.style;
+                INSTANCE.musicTurnoff = serverConfig.musicTurnoff;
+                INSTANCE.determination = serverConfig.determination;
+                INSTANCE.centeredHeart = serverConfig.centeredHeart;
+                INSTANCE.centeredHeartAnimation = serverConfig.centeredHeartAnimation;
+                INSTANCE.centeredHeartSpeed = serverConfig.centeredHeartSpeed;
+                INSTANCE.backgroundFadeSpeed = serverConfig.backgroundFadeSpeed;
+                INSTANCE.dynamicHeart = serverConfig.dynamicHeart;
+                INSTANCE.vanillaFadeIn = serverConfig.vanillaFadeIn;
+                INSTANCE.vanillaFadeInDuration = serverConfig.vanillaFadeInDuration;
+                INSTANCE.textFadeIn = serverConfig.textFadeIn;
+                INSTANCE.textFadeInDuration = serverConfig.textFadeInDuration;
+                INSTANCE.fadeToVanillaScreen = serverConfig.fadeToVanillaScreen;
+                INSTANCE.fadeToVanillaSpeed = serverConfig.fadeToVanillaSpeed;
+                INSTANCE.fixedAnimationRate = serverConfig.fixedAnimationRate;
+                INSTANCE.disableButtonsBeforeAnimation = serverConfig.disableButtonsBeforeAnimation;
+                UndertaleDeathScreenCommon.logger.info("Successfully synced configuration from server.");
+            }
+        } catch (JsonSyntaxException e) {
+            UndertaleDeathScreenCommon.logger.error("Failed to parse configuration from server.", e);
+        }
+    }
+
     public void save() {
         try {
             Files.createDirectories(CONFIG_PATH.getParent());
