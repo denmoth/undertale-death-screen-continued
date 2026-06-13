@@ -1,69 +1,63 @@
 plugins {
     id("dev.architectury.loom")
-    id("architectury-plugin")
-    id("me.modmuss50.mod-publish-plugin")
-
-    id("dev.kikugie.fletching-table.fabric")
+    id("com.github.johnrengelman.shadow")
 }
-
-val minecraft: String = stonecutter.current.version
-val common: Project = requireNotNull(stonecutter.node.sibling("")) {
-    "No common project for $project"
-}.project
 
 architectury {
     platformSetupLoomIde()
     fabric()
 }
 
-configurations.configureEach {
-    exclude(group = "net.fabricmc.fabric-api", module = "fabric-content-registries-v0")
-}
+val common: Configuration by configurations.creating
+val shadowCommon: Configuration by configurations.creating
 
-repositories {
-    maven("https://maven.terraformersmc.com/")
-    maven("https://maven.shedaniel.me/")
+configurations {
+    compileClasspath.get().extendsFrom(configurations["common"])
+    runtimeClasspath.get().extendsFrom(configurations["common"])
+    getByName("developmentFabric").extendsFrom(configurations["common"])
 }
 
 dependencies {
-    modImplementation("net.fabricmc:fabric-loader:${mod.dep("fabric_loader")}")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${common.mod.dep("fabric_api")}")
+    minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
+    mappings(loom.officialMojangMappings())
 
-    modImplementation("me.shedaniel.cloth:cloth-config-fabric:${common.mod.dep("cloth_config")}") {
+    modImplementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
+    modApi("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}")
+
+    // Architectury API
+    modApi("dev.architectury:architectury-fabric:${project.property("architectury_api_version")}")
+
+    // Cloth Config
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
-    modImplementation("com.terraformersmc:modmenu:${common.mod.dep("modmenu")}")
+
+    // ModMenu
+    modApi("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
+
+    common(project(":common", configuration = "namedElements")) { isTransitive = false }
+    shadowCommon(project(":common", configuration = "transformProductionFabric")) { isTransitive = false }
 }
 
-fun convertMinecraftTargets(): String {
-    val split = common.mod.prop("mc_targets").split(" ")
-    return ">=${split[0]} <=${split[split.size-1]}"
-}
+tasks {
+    processResources {
+        inputs.property("version", project.version)
 
-tasks.processResources {
-    properties(listOf("fabric.mod.json"),
-        "id" to mod.id,
-        "name" to mod.name,
-        "version" to mod.version,
-        "description" to mod.prop("description"),
-        "author" to mod.prop("author"),
-        "license" to mod.prop("license"),
-        "minecraft" to convertMinecraftTargets(),
-        "group" to mod.group
-    )
-}
-
-publishMods {
-    modLoaders.addAll("fabric", "quilt")
-    displayName = "${common.mod.version} for Fabric $minecraft"
-
-    modrinth {
-        requires {
-            slug = "fabric-api"
+        filesMatching("fabric.mod.json") {
+            expand("version" to project.version)
         }
     }
 
-    curseforge {
-        requires("fabric-api")
+    shadowJar {
+        exclude("architectury.common.json")
+        configurations = listOf(shadowCommon)
+        archiveClassifier.set("dev-shadow")
+    }
+
+    remapJar {
+        injectAccessWidener.set(true)
+        inputFile.set(shadowJar.flatMap { it.archiveFile })
+        dependsOn(shadowJar)
+        archiveClassifier.set("fabric")
     }
 }

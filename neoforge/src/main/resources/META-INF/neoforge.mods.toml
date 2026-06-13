@@ -1,21 +1,21 @@
 modLoader = "javafml"
 loaderVersion = "*"
-license = "${license}"
-issueTrackerURL = "https://github.com/Raik176/undertale-death-screen/issues"
+license = "MIT"
+issueTrackerURL = "https://github.com/Denmoth/undertale-death-screen-continued/issues"
 
 [[mods]]
-modId = "${id}"
+modId = "undertale_death_screen"
 version = "${version}"
-displayName = "${name}"
-authors = "${author}"
-description = "${description}"
-logoFile = "assets/${id}/icon.png"
+displayName = "Undertale Death Screen"
+authors = "Denmoth"
+description = "Brings the Undertale Death Screen to Minecraft"
+logoFile = "assets/undertale_death_screen/icon.png"
 logoBlur = false
 
 [[mixins]]
-config = "${id}-common.mixins.json"
+config = "undertale_death_screen-common.mixins.json"
 
-[[dependencies.${id}]]
+[[dependencies.undertale_death_screen]]
 modId = "cloth_config"
 type = "optional"
 mandatory = false

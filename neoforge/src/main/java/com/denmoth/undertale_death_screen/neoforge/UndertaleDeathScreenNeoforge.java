@@ -16,12 +16,9 @@ import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
 import java.nio.file.Path;
 import java.util.function.Supplier;
 
-//? if >=1.20.6 {
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.jetbrains.annotations.NotNull;
 import net.minecraft.client.Minecraft;
-//?} else
-/*import net.neoforged.neoforge.client.ConfigScreenHandler;*/
 
 @Mod(UndertaleDeathScreenCommon.MOD_ID)
 public class UndertaleDeathScreenNeoforge {
@@ -30,7 +27,6 @@ public class UndertaleDeathScreenNeoforge {
         Impl.register(eventBus);
 
         if (UndertaleDeathScreenCommon.isConfigSupported()) {
-            //? if >=1.20.6 {
             ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> new IConfigScreenFactory() {
                 // neoforge changed the signature some time, no idea when but this should support both
 
@@ -41,11 +37,6 @@ public class UndertaleDeathScreenNeoforge {
                     return getConfigScreen(parent);
                 }
             });
-            //?} else {
-            /*ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () -> new ConfigScreenHandler.ConfigScreenFactory(
-                (client, parent) -> getConfigScreen(parent)
-            ));
-            *///?}
         }
     }
 

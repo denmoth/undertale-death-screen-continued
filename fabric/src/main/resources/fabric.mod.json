@@ -1,27 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "${id}",
+  "id": "undertale_death_screen",
   "version": "${version}",
-  "name": "${name}",
-  "description": "${description}",
+  "name": "Undertale Death Screen",
+  "description": "Brings the Undertale Death Screen to Minecraft",
   "authors": [
-    "${author}"
+    "Denmoth"
   ],
   "contact": {
-    "homepage": "https://rhm176.de",
-    "issues": "https://github.com/Raik176/undertale-death-screen/issues",
-    "sources": "https://github.com/Raik176/undertale-death-screen"
+    "homepage": "https://github.com/Denmoth/undertale-death-screen-continued",
+    "issues": "https://github.com/Denmoth/undertale-death-screen-continued/issues",
+    "sources": "https://github.com/Denmoth/undertale-death-screen-continued"
   },
-  "license": "${license}",
+  "license": "MIT",
   "icon": "assets/undertale_death_screen/icon.png",
   "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.denmoth.undertale_death_screen.fabric.UndertaleDeathScreenFabric"
+    ],
+    "modmenu": [
+      "com.denmoth.undertale_death_screen.fabric.compat.ModMenuCompat"
+    ]
+  },
   "mixins": [
-    "${id}-common.mixins.json"
+    "undertale_death_screen-common.mixins.json"
   ],
   "depends": {
     "fabricloader": "*",
     "fabric-api": "*",
-    "minecraft": "${minecraft}"
+    "minecraft": ">=1.21.1"
   },
   "suggests": {
     "cloth-config": "*",

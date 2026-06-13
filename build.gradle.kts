@@ -1,41 +1,38 @@
 plugins {
-    id("dev.architectury.loom")
-    id("architectury-plugin")
-
-    id("dev.kikugie.fletching-table")
+    id("dev.architectury.loom") version "1.11-SNAPSHOT" apply false
+    id("architectury-plugin") version "3.4-SNAPSHOT"
+    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
-val minecraft = stonecutter.current.version
-
-architectury.common(stonecutter.tree.branches.mapNotNull {
-    if (stonecutter.current.project !in it) null
-    else it.project.prop("loom.platform")
-})
-
-repositories {
-    maven("https://maven.terraformersmc.com/")
-    maven("https://maven.shedaniel.me/")
+architectury {
+    minecraft = project.property("minecraft_version").toString()
 }
 
-dependencies {
-    modImplementation("net.fabricmc:fabric-loader:${mod.dep("fabric_loader")}")
 
-    modCompileOnly("me.shedaniel.cloth:cloth-config-fabric:${mod.dep("cloth_config")}") {
-        exclude(group = "net.fabricmc")
+
+allprojects {
+    apply(plugin = "java")
+    apply(plugin = "architectury-plugin")
+    apply(plugin = "maven-publish")
+
+    project.extensions.getByType<org.gradle.api.plugins.BasePluginExtension>().archivesName.set(project.property("mod_id").toString())
+    version = project.property("mod_version").toString()
+    group = project.property("maven_group").toString()
+
+    repositories {
+        maven("https://maven.shedaniel.me/") // Cloth Config, Architectury
+        maven("https://maven.terraformersmc.com/") // ModMenu
+        maven("https://maven.parchmentmc.org") // Parchment
+        maven("https://maven.neoforged.net/releases/")
     }
-}
 
-java {
-    val javaVer = when {
-        minecraft.startsWith("1.20.4") -> 17
-        minecraft.startsWith("1.20") -> 21
-        minecraft.startsWith("1.21") -> 21
-        minecraft.startsWith("26.") -> 25
-        else -> 21
+    tasks.withType<JavaCompile> {
+        options.encoding = "UTF-8"
+        options.release.set(21)
     }
-    toolchain.languageVersion.set(JavaLanguageVersion.of(javaVer))
-}
 
-loom {
-    accessWidenerPath = rootProject.file("src/main/resources/${mod.id}.accesswidener")
+    configure<org.gradle.api.plugins.JavaPluginExtension> {
+        withSourcesJar()
+        toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
