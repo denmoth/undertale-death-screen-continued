@@ -74,6 +74,7 @@ public class HeartPiece {
         }
 
         guiGraphics.blit(
+                net.minecraft.client.renderer.RenderType::guiTextured,
                 PIECES_TEXTURE_LOCATION.withPrefix("textures/gui/sprites/").withSuffix(".png"),
                 0,
                 0,

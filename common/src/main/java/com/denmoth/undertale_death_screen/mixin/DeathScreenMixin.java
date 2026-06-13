@@ -366,6 +366,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     @Unique
     private void undertale_death_animation$renderHeart(GuiGraphics guiGraphics, int stage, int x, int y) {
         guiGraphics.blitSprite(
+                net.minecraft.client.renderer.RenderType::guiTextured,
                 this.hardcore ?
                         HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION,
                 HEART_TEXTURE_WIDTH,
