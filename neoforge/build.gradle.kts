@@ -24,7 +24,7 @@ dependencies {
     neoForge("net.neoforged:neoforge:${project.property("neoforge_version")}")
 
     // Architectury API
-    modApi("dev.architectury:architectury-neoforge:${project.property("architectury_api_version")}")
+    // Architectury API removed!
 
     // Cloth Config
     modApi("me.shedaniel.cloth:cloth-config-neoforge:${project.property("cloth_config_version")}")
