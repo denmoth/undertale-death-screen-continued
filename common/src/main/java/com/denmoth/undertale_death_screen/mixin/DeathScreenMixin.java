@@ -349,7 +349,16 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             int alpha = (int) ((1.0f - progress) * 255.0f);
             if (alpha > 0) {
                 int bgColor = (alpha << 24);
+                guiGraphics.pose().pushPose();
+                guiGraphics.pose().translate(0, 0, 1000);
                 guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
+                
+                // Draw title over the black rectangle to prevent flickering
+                guiGraphics.pose().translate(0, 0, 1000);
+                guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
+                guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
+                
+                guiGraphics.pose().popPose();
             }
         }
     }
@@ -376,14 +385,8 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     }
 
     // me when I ignore mixin standard
-    @WrapOperation(
-            method = "render",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/gui/GuiGraphics;fillGradient(IIIIII)V"
-            ),
-            require = 0
-    )
-    private void disableTint(GuiGraphics instance, int i, int j, int k, int l, int m, int n, Operation<Void> original) {
+    @Inject(method = "renderBackground", at = @At("HEAD"), cancellable = true)
+    private void disableTint(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
+        ci.cancel();
     }
 }

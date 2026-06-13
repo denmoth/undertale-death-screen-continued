@@ -13,12 +13,16 @@ import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
 
 @Mixin(ConfirmScreen.class)
 public class ConfirmScreenMixin {
-    @Inject(method = "render", at = @At("HEAD"))
+    @Inject(method = "render", at = @At("TAIL"))
     private void render(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
         if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
             if (UndertaleDeathScreenCommon.currentBackgroundAlpha > 0.0f) {
                 int alpha = (int) (255 * UndertaleDeathScreenCommon.currentBackgroundAlpha);
-                guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), alpha << 24);
+                int bgColor = (alpha << 24);
+                guiGraphics.pose().pushPose();
+                guiGraphics.pose().translate(0, 0, 1000);
+                guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
+                guiGraphics.pose().popPose();
             }
         }
     }
