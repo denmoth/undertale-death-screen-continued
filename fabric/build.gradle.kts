@@ -16,6 +16,10 @@ architectury {
     fabric()
 }
 
+configurations.configureEach {
+    exclude(group = "net.fabricmc.fabric-api", module = "fabric-content-registries-v0")
+}
+
 repositories {
     maven("https://maven.terraformersmc.com/")
     maven("https://maven.shedaniel.me/")

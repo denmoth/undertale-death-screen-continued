@@ -27,6 +27,8 @@ public class Config {
     private boolean dynamicHeart = true;
     private boolean vanillaFadeIn = true;
     private int vanillaFadeInDuration = 20;
+    private boolean textFadeIn = false;
+    private int textFadeInDuration = 40;
 
     private Config() {
     }
@@ -139,6 +141,20 @@ public class Config {
     }
     public void setVanillaFadeInDuration(int vanillaFadeInDuration) {
         this.vanillaFadeInDuration = vanillaFadeInDuration;
+    }
+
+    public boolean getTextFadeIn() {
+        return textFadeIn;
+    }
+    public void setTextFadeIn(boolean textFadeIn) {
+        this.textFadeIn = textFadeIn;
+    }
+
+    public int getTextFadeInDuration() {
+        return textFadeInDuration;
+    }
+    public void setTextFadeInDuration(int textFadeInDuration) {
+        this.textFadeInDuration = textFadeInDuration;
     }
 
 

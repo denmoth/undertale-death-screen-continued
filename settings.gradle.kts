@@ -23,20 +23,38 @@ stonecutter {
     centralScript = "build.gradle.kts"
     kotlinController = true
     create(rootProject) {
-        val allVersions = mutableListOf("1.20", "1.20.2", "1.20.6", "1.21.3", "1.21.5", "1.21.6", "1.21.8", "1.21.9")
-        val neoforgeVersions = mutableListOf("1.20.2", "1.20.6", "1.21.3", "1.21.5", "1.21.6", "1.21.8", "1.21.9")
-        if (isJava25) {
+        val localProps = java.util.Properties()
+        val localPropsFile = file("local.properties")
+        if (localPropsFile.exists()) {
+            localPropsFile.inputStream().use { localProps.load(it) }
+        }
+        val activeVersion = localProps.getProperty("active_version")
+
+        val allVersions = if (activeVersion != null) {
+            mutableListOf(activeVersion)
+        } else {
+            mutableListOf("1.20", "1.20.2", "1.20.6", "1.21.3", "1.21.5", "1.21.6", "1.21.8", "1.21.9")
+        }
+        val neoforgeVersions = if (activeVersion != null) {
+            mutableListOf(activeVersion)
+        } else {
+            mutableListOf("1.20.2", "1.20.6", "1.21.3", "1.21.5", "1.21.6", "1.21.8", "1.21.9")
+        }
+
+        if (isJava25 && activeVersion == null) {
             allVersions.addAll(listOf("26.1", "26.1.2"))
             neoforgeVersions.addAll(listOf("26.1", "26.1.2"))
         } else {
             logger.warn("WARNING: You are using Java version < 25. Minecraft 26.x requires Java 25. The 26.x versions will be skipped during this build!")
         }
 
+        val forgeVersions = listOf("1.20", "1.20.2", "1.20.6").intersect(allVersions.toSet()).toTypedArray()
+        
         versions(*allVersions.toTypedArray())
         vcsVersion = "1.20.6"
         branch("fabric")
-        branch("forge") { versions("1.20", "1.20.2", "1.20.6") }
-        branch("neoforge") { versions(*neoforgeVersions.toTypedArray()) }
+        if (forgeVersions.isNotEmpty()) branch("forge") { versions(*forgeVersions) }
+        if (neoforgeVersions.isNotEmpty()) branch("neoforge") { versions(*neoforgeVersions.toTypedArray()) }
     }
 }
 

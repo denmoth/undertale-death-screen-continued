@@ -89,12 +89,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         super(component);
     }
 
-    @Inject(method = "renderDeathBackground", at = @At("HEAD"), require = 0, cancellable = true)
-    private void disableBackground(GuiGraphics guiGraphics, int i, int j, CallbackInfo ci) {
-        if (!this.undertale_death_animation$hasFinished && !this.undertale_death_animation$fadingInVanilla) {
-            ci.cancel();
-        }
-    }
+
 
     @Shadow
     protected abstract void setButtonsActive(boolean bl);
@@ -258,8 +253,23 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             }
         }
 
-        if (!undertale_death_animation$hasFinished && !undertale_death_animation$fadingInVanilla)
+        if (!undertale_death_animation$hasFinished && !undertale_death_animation$fadingInVanilla) {
+            if (Config.INSTANCE.getTextFadeIn() && this.undertale_death_animation$age >= 25) {
+                int fadeStartAge = 25;
+                int fadeDuration = Config.INSTANCE.getTextFadeInDuration();
+                float progress = (this.undertale_death_animation$age - fadeStartAge + delta) / fadeDuration;
+                progress = Mth.clamp(progress, 0.0f, 1.0f);
+                int alpha = (int) (progress * 255.0f);
+                if (alpha > 0) {
+                    int textColor = (alpha << 24) | 0x00FFFFFF;
+                    guiGraphics.pose().pushPose();
+                    guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
+                    guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, textColor);
+                    guiGraphics.pose().popPose();
+                }
+            }
             ci.cancel();
+        }
     }
 
     @Inject(method = "render", at = @At("TAIL"))
