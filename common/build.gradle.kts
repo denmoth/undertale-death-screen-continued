@@ -18,9 +18,7 @@ dependencies {
     // Do NOT use other fabric deps here
     modImplementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
     
-    // Architectury API
-    modApi("dev.architectury:architectury:${project.property("architectury_api_version")}")
-
+    // Removed Architectury API to avoid runtime dependency
     // Cloth Config
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
         exclude(group = "net.fabricmc.fabric-api")
