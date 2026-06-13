@@ -24,25 +24,6 @@ public class UndertaleDeathScreenCommon {
         if (impl == null) {
             impl = implementation;
             SoundEventRegistry.init();
-
-            ResourceLocation syncPacket = id("sync_config");
-
-            dev.architectury.networking.NetworkManager.registerReceiver(
-                    dev.architectury.networking.NetworkManager.Side.S2C,
-                    syncPacket,
-                    (buf, context) -> {
-                        String json = buf.readUtf();
-                        context.queue(() -> {
-                            com.denmoth.undertale_death_screen.Config.updateFromServer(json);
-                        });
-                    }
-            );
-
-            dev.architectury.event.events.common.PlayerEvent.PLAYER_JOIN.register(player -> {
-                net.minecraft.network.FriendlyByteBuf buf = new net.minecraft.network.FriendlyByteBuf(io.netty.buffer.Unpooled.buffer());
-                buf.writeUtf(new com.google.gson.Gson().toJson(com.denmoth.undertale_death_screen.Config.INSTANCE));
-                dev.architectury.networking.NetworkManager.sendToPlayer((net.minecraft.server.level.ServerPlayer) player, syncPacket, buf);
-            });
         }
     }
 

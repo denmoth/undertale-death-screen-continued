@@ -24,8 +24,7 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
     modApi("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}")
 
-    // Architectury API
-    modApi("dev.architectury:architectury-fabric:${project.property("architectury_api_version")}")
+    // Architectury API removed!
 
     // Cloth Config
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {

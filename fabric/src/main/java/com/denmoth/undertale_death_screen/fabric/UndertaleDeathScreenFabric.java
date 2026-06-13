@@ -18,6 +18,15 @@ public class UndertaleDeathScreenFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         UndertaleDeathScreenCommon.init(new Impl());
+
+        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playS2C().register(
+                com.denmoth.undertale_death_screen.network.SyncConfigPayload.TYPE,
+                com.denmoth.undertale_death_screen.network.SyncConfigPayload.CODEC
+        );
+
+        net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+            com.denmoth.undertale_death_screen.platform.Services.NETWORK.sendConfigSync(handler.player);
+        });
     }
 
     public static final class Impl implements UndertaleDeathScreenBase {
