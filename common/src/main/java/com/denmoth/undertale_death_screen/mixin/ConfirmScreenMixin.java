@@ -29,9 +29,9 @@ public class ConfirmScreenMixin {
             if (UndertaleDeathScreenCommon.currentBackgroundAlpha > 0.0f) {
                 int alpha = (int) (255 * UndertaleDeathScreenCommon.currentBackgroundAlpha);
                 int bgColor = (alpha << 24);
-                guiGraphics.pose().pushMatrix();
+                guiGraphics.pose().pushPose();
                 guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
-                guiGraphics.pose().popMatrix();
+                guiGraphics.pose().popPose();
             }
         }
     }
