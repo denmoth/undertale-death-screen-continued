@@ -168,6 +168,15 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                 .setSaveConsumer(Config.INSTANCE::setDisableButtonsBeforeAnimation)
                 .build()
         );
+        general.addEntry(entryBuilder.startBooleanToggle(
+                        UndertaleDeathScreenCommon.translatable("config.vanilla_red_tint"),
+                        Config.INSTANCE.getVanillaRedTint()
+                ).setDefaultValue(Config.getDefault().getVanillaRedTint())
+                .setTooltip(UndertaleDeathScreenCommon.translatable("config.vanilla_red_tint.ttp"))
+                .setSaveConsumer(Config.INSTANCE::setVanillaRedTint)
+                .setDisplayRequirement(Requirement.isTrue(fadeToVanillaScreenToggle))
+                .build()
+        );
 
         return builder.build();
     }

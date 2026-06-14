@@ -33,6 +33,7 @@ public class Config {
     private double fadeToVanillaSpeed = 0.05;
     private boolean fixedAnimationRate = true;
     private boolean disableButtonsBeforeAnimation = true;
+    private boolean vanillaRedTint = true;
 
     private Config() {
     }
@@ -82,6 +83,7 @@ public class Config {
                 INSTANCE.fadeToVanillaSpeed = serverConfig.fadeToVanillaSpeed;
                 INSTANCE.fixedAnimationRate = serverConfig.fixedAnimationRate;
                 INSTANCE.disableButtonsBeforeAnimation = serverConfig.disableButtonsBeforeAnimation;
+                INSTANCE.vanillaRedTint = serverConfig.vanillaRedTint;
                 UndertaleDeathScreenCommon.logger.info("Successfully synced configuration from server.");
             }
         } catch (JsonSyntaxException e) {
@@ -214,6 +216,13 @@ public class Config {
     }
     public void setDisableButtonsBeforeAnimation(boolean disableButtonsBeforeAnimation) {
         this.disableButtonsBeforeAnimation = disableButtonsBeforeAnimation;
+    }
+
+    public boolean getVanillaRedTint() {
+        return vanillaRedTint;
+    }
+    public void setVanillaRedTint(boolean vanillaRedTint) {
+        this.vanillaRedTint = vanillaRedTint;
     }
 
 

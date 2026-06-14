@@ -386,6 +386,15 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     // me when I ignore mixin standard
     @Inject(method = "renderBackground", at = @At("HEAD"), cancellable = true)
     private void disableTint(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
-        ci.cancel();
+        if (!Config.INSTANCE.getVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
+            ci.cancel();
+        }
+    }
+
+    @Inject(method = "renderDeathBackground", at = @At("HEAD"), cancellable = true)
+    private static void disableDeathTint(GuiGraphics guiGraphics, int i, int j, CallbackInfo ci) {
+        if (!Config.INSTANCE.getVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
+            ci.cancel();
+        }
     }
 }
