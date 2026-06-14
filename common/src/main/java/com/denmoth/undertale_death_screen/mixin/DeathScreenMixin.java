@@ -325,16 +325,16 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                 int alpha = (int) (progress * 255.0f);
                 if (alpha > 0) {
                     int textColor = (alpha << 24) | 0x00FFFFFF;
-                    guiGraphics.pose().pushPose();
-                    guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
+                    guiGraphics.pose().pushMatrix();
+                    guiGraphics.pose().scale(2.0F, 2.0F);
                     guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, textColor);
-                    guiGraphics.pose().popPose();
+                    guiGraphics.pose().popMatrix();
                 }
             } else if (!Config.INSTANCE.getTextFadeIn() && undertale_death_animation$bgmProgress == -1 && undertale_death_animation$pieces.isEmpty() && undertale_death_animation$finishedAge > 0) {
-                guiGraphics.pose().pushPose();
-                guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
+                guiGraphics.pose().pushMatrix();
+                guiGraphics.pose().scale(2.0F, 2.0F);
                 guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
-                guiGraphics.pose().popPose();
+                guiGraphics.pose().popMatrix();
             }
             ci.cancel();
         }
@@ -349,16 +349,14 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             int alpha = (int) ((1.0f - progress) * 255.0f);
             if (alpha > 0) {
                 int bgColor = (alpha << 24);
-                guiGraphics.pose().pushPose();
-                guiGraphics.pose().translate(0, 0, 1000);
+                guiGraphics.pose().pushMatrix();
                 guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
                 
                 // Draw title over the black rectangle to prevent flickering
-                guiGraphics.pose().translate(0, 0, 1000);
-                guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
+                guiGraphics.pose().scale(2.0F, 2.0F);
                 guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
                 
-                guiGraphics.pose().popPose();
+                guiGraphics.pose().popMatrix();
             }
         }
     }
@@ -366,7 +364,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     @Unique
     private void undertale_death_animation$renderHeart(GuiGraphics guiGraphics, int stage, int x, int y) {
         guiGraphics.blitSprite(
-                net.minecraft.client.renderer.RenderType::guiTextured,
+                net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
                 this.hardcore ?
                         HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION,
                 HEART_TEXTURE_WIDTH,

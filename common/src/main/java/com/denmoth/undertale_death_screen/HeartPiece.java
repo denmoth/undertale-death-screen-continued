@@ -61,20 +61,20 @@ public class HeartPiece {
     }
 
     public void render(GuiGraphics guiGraphics) {
-        guiGraphics.pose().pushPose();
+        guiGraphics.pose().pushMatrix();
         guiGraphics.pose().translate(
-                x, y, 0f
+                x, y
         );
 
         if (!animated) {
-            guiGraphics.pose().mulPose(new org.joml.Quaternionf().rotateZ((float) Math.toRadians(rotation)));
+            guiGraphics.pose().rotate((float) Math.toRadians(rotation));
             guiGraphics.pose().translate(
-                    -PIECE_WIDTH / 2f, -PIECE_HEIGHT / 2f, 0f
+                    -PIECE_WIDTH / 2f, -PIECE_HEIGHT / 2f
             );
         }
 
         guiGraphics.blit(
-                net.minecraft.client.renderer.RenderType::guiTextured,
+                net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
                 PIECES_TEXTURE_LOCATION.withPrefix("textures/gui/sprites/").withSuffix(".png"),
                 0,
                 0,
@@ -86,6 +86,6 @@ public class HeartPiece {
                 PIECE_TEXTURE_HEIGHT
         );
 
-        guiGraphics.pose().popPose();
+        guiGraphics.pose().popMatrix();
     }
 }
