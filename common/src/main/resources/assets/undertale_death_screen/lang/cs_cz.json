@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Pevná sazba animace?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Pokud je pravda, animace běží na stabilních 60 FPS bez ohledu na vaši snímkovou frekvenci.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Zakázat tlačítka během animace?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Pokud je true, nemůžete kliknout na Respawn/Title Screen před dokončením animace."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Pokud je true, nemůžete kliknout na Respawn/Title Screen před dokončením animace.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Zakázat vanilkový červený odstín [experimentální]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktivuje vanilkový červený odstín kolem okrajů obrazovky po animaci smrti."
 }

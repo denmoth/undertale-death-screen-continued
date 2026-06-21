@@ -35,6 +35,6 @@
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Если включено, анимация будет работать со скоростью 60 кадров в секунду независимо от вашего FPS.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Заблокировать кнопки во время анимации?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Если включено, вы не сможете нажать кнопку Возродиться/Главное меню до окончания анимации.",
-  "undertale_death_screen.config.vanilla_red_tint": "Ванильное красное свечение [Экспериментально]",
-  "undertale_death_screen.config.vanilla_red_tint.ttp": "Включает красное свечение по краям экрана после анимации смерти."
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Отключить ванильное красное свечение [Экспериментально]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Отключает ванильное красное свечение по краям экрана после анимации смерти."
 }

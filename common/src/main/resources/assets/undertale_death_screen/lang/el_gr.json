@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Σταθερό ποσοστό κινούμενων εικόνων;",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Εάν ισχύει, η κινούμενη εικόνα εκτελείται σε σταθερά 60 FPS ανεξάρτητα από τον ρυθμό καρέ σας.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Απενεργοποίηση κουμπιών κατά τη διάρκεια της κίνησης;",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Εάν είναι αληθές, δεν μπορείτε να κάνετε κλικ στην οθόνη Respawn/Title Screen πριν ολοκληρωθεί η κινούμενη εικόνα."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Εάν είναι αληθές, δεν μπορείτε να κάνετε κλικ στην οθόνη Respawn/Title Screen πριν ολοκληρωθεί η κινούμενη εικόνα.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Απενεργοποίηση κόκκινης απόχρωσης βανίλιας [Πειραματικό]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Απενεργοποιεί την απόχρωση κόκκινου βανίλιας γύρω από τις άκρες της οθόνης μετά τον θάνατο."
 }

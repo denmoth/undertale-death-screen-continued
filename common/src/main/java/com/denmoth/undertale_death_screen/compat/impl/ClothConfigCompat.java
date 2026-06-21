@@ -169,11 +169,11 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                 .build()
         );
         general.addEntry(entryBuilder.startBooleanToggle(
-                        UndertaleDeathScreenCommon.translatable("config.vanilla_red_tint"),
-                        Config.INSTANCE.getVanillaRedTint()
-                ).setDefaultValue(Config.getDefault().getVanillaRedTint())
-                .setTooltip(UndertaleDeathScreenCommon.translatable("config.vanilla_red_tint.ttp"))
-                .setSaveConsumer(Config.INSTANCE::setVanillaRedTint)
+                        UndertaleDeathScreenCommon.translatable("config.disable_vanilla_red_tint"),
+                        Config.INSTANCE.getDisableVanillaRedTint()
+                ).setDefaultValue(Config.getDefault().getDisableVanillaRedTint())
+                .setTooltip(UndertaleDeathScreenCommon.translatable("config.disable_vanilla_red_tint.ttp"))
+                .setSaveConsumer(Config.INSTANCE::setDisableVanillaRedTint)
                 .setDisplayRequirement(Requirement.isTrue(fadeToVanillaScreenToggle))
                 .build()
         );

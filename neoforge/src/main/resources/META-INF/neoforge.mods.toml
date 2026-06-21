@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Undertale Death Screen"
 authors = "Denmoth"
 description = "Brings the Undertale Death Screen to Minecraft"
-logoFile = "assets/undertale_death_screen/icon.png"
+logoFile = "icon.png"
 logoBlur = false
 
 [[mixins]]

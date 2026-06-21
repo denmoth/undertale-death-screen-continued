@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "고정 애니메이션 속도?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "활성화된 경우, 프레임 속도에 관계없이 애니메이션이 60 FPS로 고정 실행됩니다.",
   "undertale_death_screen.config.disable_buttons_before_animation": "애니메이션 전에 버튼 비활성화?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "활성화된 경우, 애니메이션이 끝나기 전에 리스폰/타이틀 화면 버튼을 클릭할 수 없습니다."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "활성화된 경우, 애니메이션이 끝나기 전에 리스폰/타이틀 화면 버튼을 클릭할 수 없습니다.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "바닐라 레드 색조 비활성화 [실험적]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "사망 애니메이션 후 화면 가장자리 주변의 바닐라 붉은 색조를 비활성화합니다."
 }

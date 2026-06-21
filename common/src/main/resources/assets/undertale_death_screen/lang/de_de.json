@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Feste Animationsrate?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Wenn dies zutrifft, läuft die Animation unabhängig von Ihrer Framerate mit stabilen 60 FPS.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Schaltflächen während der Animation deaktivieren?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Wenn „true“, können Sie nicht auf „Respawn/Titelbildschirm“ klicken, bevor die Animation beendet ist."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Wenn „true“, können Sie nicht auf „Respawn/Titelbildschirm“ klicken, bevor die Animation beendet ist.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Vanillerot-Tönung deaktivieren [Experimentell]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiviert den vanilleroten Farbton an den Bildschirmrändern nach der Todesanimation."
 }

@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "อัตราแอนิเมชันคงที่?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "ถ้าเปิดใช้ แอนิเมชันจะทำงานที่ 60 FPS คงที่",
   "undertale_death_screen.config.disable_buttons_before_animation": "ปิดใช้งานปุ่มก่อนแอนิเมชัน?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "ถ้าเปิดใช้ คุณจะไม่สามารถคลิกปุ่มต่างๆ ได้จนกว่าแอนิเมชันจะจบลง"
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "ถ้าเปิดใช้ คุณจะไม่สามารถคลิกปุ่มต่างๆ ได้จนกว่าแอนิเมชันจะจบลง",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "ปิดการใช้งานวานิลลาเรดทินท์ [ทดลอง]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "ปิดใช้งานโทนสีแดงวานิลลารอบขอบของหน้าจอหลังจากแอนิเมชั่นการตาย"
 }

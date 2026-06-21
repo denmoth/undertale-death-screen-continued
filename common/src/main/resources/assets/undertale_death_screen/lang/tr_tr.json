@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Sabit Animasyon Hızı?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Etkinleştirilirse, animasyon FPS'nizden bağımsız olarak sabit 60 FPS'de çalışır.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Animasyondan Önce Butonlar Devre Dışı Bırakılsın mı?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Etkinleştirilirse, animasyon bitmeden düğmelere tıklayamazsınız."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Etkinleştirilirse, animasyon bitmeden düğmelere tıklayamazsınız.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Vanilya Kırmızı Tonunu Devre Dışı Bırakma [Deneysel]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Ölüm animasyonundan sonra ekranın kenarlarındaki vanilya kırmızısı renk tonunu devre dışı bırakır."
 }

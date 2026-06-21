@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "固定アニメーションレート?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "true の場合、アニメーションはフレームレートに関係なく安定した 60 FPS で実行されます。",
   "undertale_death_screen.config.disable_buttons_before_animation": "アニメーション中にボタンを無効にしますか?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "true の場合、アニメーションが終了する前に [Respawn/Title Screen] をクリックすることはできません。"
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "true の場合、アニメーションが終了する前に [Respawn/Title Screen] をクリックすることはできません。",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "バニラレッドティントを無効にする [実験的]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "死亡アニメーション後の画面の端の周りのバニラの赤い色合いを無効にします。"
 }

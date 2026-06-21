@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Tanca lintië?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Qui tanca, lintië 60 FPS.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Hecë botones?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Qui tanca, lá polilyë nappa."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Qui tanca, lá polilyë nappa.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Poista vaniljanpunainen sävy käytöstä [kokeellinen]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Poistaa käytöstä vaniljanpunaisen sävyn näytön reunoilla kuoleman jälkeisen animaation jälkeen."
 }

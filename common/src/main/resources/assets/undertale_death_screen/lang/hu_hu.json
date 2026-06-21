@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "Fix animációs ráta?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "Ha igaz, az animáció stabil 60 FPS-sel fut, függetlenül a képkockafrekvenciától.",
   "undertale_death_screen.config.disable_buttons_before_animation": "Letiltja a gombokat animáció közben?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ha igaz, akkor nem kattinthat a Respawn/Title Screen gombra az animáció befejezése előtt."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ha igaz, akkor nem kattinthat a Respawn/Title Screen gombra az animáció befejezése előtt.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Vaníliavörös árnyalat letiltása [kísérleti]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Letiltja a vaníliavörös árnyalatot a képernyő szélei körül a halál utáni animációt."
 }

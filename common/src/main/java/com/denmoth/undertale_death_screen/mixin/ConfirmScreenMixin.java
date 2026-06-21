@@ -17,7 +17,7 @@ public class ConfirmScreenMixin {
     @Inject(method = "renderBackground", at = @At("HEAD"), cancellable = true)
     private void disableTint(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
         if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
-            if (!Config.INSTANCE.getVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
+            if (Config.INSTANCE.getDisableVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
                 ci.cancel();
             }
         }
@@ -25,7 +25,7 @@ public class ConfirmScreenMixin {
 
     @Inject(method = "render", at = @At("TAIL"))
     private void render(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
-        if (Config.INSTANCE.getFadeToVanillaScreen() && (Object) this instanceof ConfirmScreen && Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
+        if ((Object) this instanceof ConfirmScreen && Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
             if (UndertaleDeathScreenCommon.currentBackgroundAlpha > 0.0f) {
                 int alpha = (int) (255 * UndertaleDeathScreenCommon.currentBackgroundAlpha);
                 int bgColor = (alpha << 24);

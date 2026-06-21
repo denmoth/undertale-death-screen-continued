@@ -34,5 +34,7 @@
   "undertale_death_screen.config.fixed_animation_rate": "tenpo pi tawa li ante ala?",
   "undertale_death_screen.config.fixed_animation_rate.ttp": "ni li lon la, tenpo tawa li lon 60.",
   "undertale_death_screen.config.disable_buttons_before_animation": "tu e nena lon tenpo open?",
-  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "ni li lon la, sina ken ala luka e nena lon tenpo open."
+  "undertale_death_screen.config.disable_buttons_before_animation.ttp": "ni li lon la, sina ken ala luka e nena lon tenpo open.",
+  "undertale_death_screen.config.disable_vanilla_red_tint": "Disable Vanilla Red Tint [Experimental]",
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Disables the vanilla red tint around the edges of the screen after death animation."
 }
