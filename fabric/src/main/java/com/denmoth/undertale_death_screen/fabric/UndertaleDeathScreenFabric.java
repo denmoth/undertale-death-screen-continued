@@ -5,7 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import com.denmoth.undertale_death_screen.UndertaleDeathScreenBase;
 import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
@@ -19,7 +19,7 @@ public class UndertaleDeathScreenFabric implements ModInitializer {
     public void onInitialize() {
         UndertaleDeathScreenCommon.init(new Impl());
 
-        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playS2C().register(
+        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.clientboundPlay().register(
                 com.denmoth.undertale_death_screen.network.SyncConfigPayload.TYPE,
                 com.denmoth.undertale_death_screen.network.SyncConfigPayload.CODEC
         );
@@ -33,7 +33,7 @@ public class UndertaleDeathScreenFabric implements ModInitializer {
 
         @Override
         public Supplier<SoundEvent> registerSoundEvent(String path) {
-            ResourceLocation location = UndertaleDeathScreenCommon.id(path);
+            Identifier location = UndertaleDeathScreenCommon.id(path);
             SoundEvent event = Registry.register(
                     BuiltInRegistries.SOUND_EVENT,
                     location,

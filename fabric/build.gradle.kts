@@ -1,6 +1,6 @@
 plugins {
-    id("dev.architectury.loom")
-    id("com.github.johnrengelman.shadow")
+    id("dev.architectury.loom-no-remap")
+    id("io.github.goooler.shadow")
 }
 
 architectury {
@@ -19,23 +19,23 @@ configurations {
 
 dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
-    mappings(loom.officialMojangMappings())
+    // mappings(loom.officialMojangMappings())
 
-    modImplementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
-    modApi("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}")
+    implementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
+    api("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}")
 
     // Architectury API removed!
 
     // Cloth Config
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
+    api("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
 
     // ModMenu
-    modApi("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
+    api("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
 
-    common(project(":common", configuration = "namedElements")) { isTransitive = false }
-    shadowCommon(project(":common", configuration = "transformProductionFabric")) { isTransitive = false }
+    common(project(":common")) { isTransitive = false }
+    shadowCommon(project(":common")) { isTransitive = false }
 }
 
 tasks {
@@ -50,13 +50,6 @@ tasks {
     shadowJar {
         exclude("architectury.common.json")
         configurations = listOf(shadowCommon)
-        archiveClassifier.set("dev-shadow")
-    }
-
-    remapJar {
-        injectAccessWidener.set(true)
-        inputFile.set(shadowJar.flatMap { it.archiveFile })
-        dependsOn(shadowJar)
         archiveClassifier.set("fabric")
     }
 }

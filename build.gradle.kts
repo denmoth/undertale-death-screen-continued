@@ -1,7 +1,7 @@
 plugins {
-    id("dev.architectury.loom") version "1.13-SNAPSHOT" apply false
-    id("architectury-plugin") version "3.4-SNAPSHOT"
-    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
+    id("dev.architectury.loom-no-remap") version "1.14-SNAPSHOT" apply false
+    id("architectury-plugin") version "3.5-SNAPSHOT"
+    id("io.github.goooler.shadow") version "8.1.8" apply false
 }
 
 architectury {
@@ -28,11 +28,11 @@ allprojects {
 
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
-        options.release.set(21)
+        options.release.set(25)
     }
 
     configure<org.gradle.api.plugins.JavaPluginExtension> {
         withSourcesJar()
-        toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+        toolchain.languageVersion.set(JavaLanguageVersion.of(25))
     }
 }

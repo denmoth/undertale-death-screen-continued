@@ -1,6 +1,6 @@
 plugins {
-    id("dev.architectury.loom")
-    id("com.github.johnrengelman.shadow")
+    id("dev.architectury.loom-no-remap")
+    id("io.github.goooler.shadow")
 }
 
 architectury {
@@ -19,7 +19,7 @@ configurations {
 
 dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
-    mappings(loom.officialMojangMappings())
+    // mappings(loom.officialMojangMappings())
 
     neoForge("net.neoforged:neoforge:${project.property("neoforge_version")}")
 
@@ -27,10 +27,10 @@ dependencies {
     // Architectury API removed!
 
     // Cloth Config
-    modApi("me.shedaniel.cloth:cloth-config-neoforge:${project.property("cloth_config_version")}")
+    api("me.shedaniel.cloth:cloth-config-neoforge:${project.property("cloth_config_version")}")
 
-    common(project(":common", configuration = "namedElements")) { isTransitive = false }
-    shadowCommon(project(":common", configuration = "transformProductionNeoForge")) { isTransitive = false }
+    common(project(":common")) { isTransitive = false }
+    shadowCommon(project(":common")) { isTransitive = false }
 }
 
 tasks {
@@ -45,12 +45,6 @@ tasks {
     shadowJar {
         exclude("architectury.common.json")
         configurations = listOf(shadowCommon)
-        archiveClassifier.set("dev-shadow")
-    }
-
-    remapJar {
-        inputFile.set(shadowJar.flatMap { it.archiveFile })
-        dependsOn(shadowJar)
         archiveClassifier.set("neoforge")
     }
 }

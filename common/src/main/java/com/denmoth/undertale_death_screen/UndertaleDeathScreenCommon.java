@@ -3,7 +3,7 @@ package com.denmoth.undertale_death_screen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import com.denmoth.undertale_death_screen.compat.ClothConfigCompatBase;
 import com.denmoth.undertale_death_screen.registry.SoundEventRegistry;
 import org.slf4j.Logger;
@@ -31,8 +31,8 @@ public class UndertaleDeathScreenCommon {
         return impl;
     }
 
-    public static ResourceLocation id(String path) {
-        return ResourceLocation.tryBuild(MOD_ID, path);
+    public static Identifier id(String path) {
+        return Identifier.tryBuild(MOD_ID, path);
     }
 
     public static MutableComponent translatable(String path) {

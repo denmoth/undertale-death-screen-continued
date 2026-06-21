@@ -5,7 +5,6 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 
 import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
 
-
 public class ModMenuCompat implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {

@@ -1,11 +1,12 @@
 package com.denmoth.undertale_death_screen;
 
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.resources.Identifier;
 import org.joml.Matrix3x2f;
 
 public class HeartPiece {
-    public static final ResourceLocation PIECES_TEXTURE_LOCATION = UndertaleDeathScreenCommon.id("undertale_death/heart_pieces");
+    public static final Identifier PIECES_TEXTURE_LOCATION = UndertaleDeathScreenCommon.id("undertale_death/heart_pieces");
 
     public static final int PIECE_TEXTURE_WIDTH = 40;
     public static final int PIECE_TEXTURE_HEIGHT = 20;
@@ -60,32 +61,32 @@ public class HeartPiece {
         }
     }
 
-    public void render(GuiGraphics guiGraphics) {
-        guiGraphics.pose().pushPose();
+    public void render(GuiGraphicsExtractor guiGraphics) {
+        guiGraphics.pose().pushMatrix();
         guiGraphics.pose().translate(
-                (float) x, (float) y, 0f
+                (float) x, (float) y
         );
 
         if (!animated) {
-            guiGraphics.pose().mulPose(new org.joml.Quaternionf().rotateZ((float) Math.toRadians(rotation)));
+            guiGraphics.pose().rotate((float) Math.toRadians(rotation));
             guiGraphics.pose().translate(
-                    -PIECE_WIDTH / 2f, -PIECE_HEIGHT / 2f, 0f
+                    -PIECE_WIDTH / 2f, -PIECE_HEIGHT / 2f
             );
         }
 
-        guiGraphics.blit(
-                net.minecraft.client.renderer.RenderType::guiTextured,
-                PIECES_TEXTURE_LOCATION.withPrefix("textures/gui/sprites/").withSuffix(".png"),
-                0,
-                0,
+        guiGraphics.blitSprite(
+                RenderPipelines.GUI_TEXTURED,
+                PIECES_TEXTURE_LOCATION,
+                PIECE_TEXTURE_WIDTH,
+                PIECE_TEXTURE_HEIGHT,
                 animated ? currentFrame * PIECE_WIDTH : textureX,
                 textureY,
+                0,
+                0,
                 PIECE_WIDTH,
-                PIECE_HEIGHT,
-                PIECE_TEXTURE_WIDTH,
-                PIECE_TEXTURE_HEIGHT
+                PIECE_HEIGHT
         );
 
-        guiGraphics.pose().popPose();
+        guiGraphics.pose().popMatrix();
     }
 }

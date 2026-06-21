@@ -3,12 +3,13 @@ package com.denmoth.undertale_death_screen.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.DeathScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.Util;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffects;
@@ -22,6 +23,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
@@ -51,9 +53,8 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     private static final int HEART_TEXTURE_HEIGHT = HEART_HEIGHT * 4;
 
     @Unique
-    private static final ResourceLocation HEART_TEXTURE_LOCATION = UndertaleDeathScreenCommon.id("undertale_death/heart_shatter");
-    @Unique
-    private static final ResourceLocation HEART_TEXTURE_LOCATION_HC = UndertaleDeathScreenCommon.id("undertale_death/heart_shatter_hardcore");
+    private static final Identifier HEART_TEXTURE_LOCATION = UndertaleDeathScreenCommon.id("undertale_death/heart_shatter");
+    private static final Identifier HEART_TEXTURE_LOCATION_HC = UndertaleDeathScreenCommon.id("undertale_death/heart_shatter_hardcore");
 
     @Shadow
     @Final
@@ -202,9 +203,9 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             ci.cancel();
     }
 
-    @Inject(method = "render", at = @At("HEAD"), cancellable = true)
-    private void render(GuiGraphics guiGraphics, int i, int j, float delta, CallbackInfo ci) {
-        long currentTime = net.minecraft.Util.getMillis();
+    @Inject(method = "extractRenderState", at = @At("HEAD"), cancellable = true)
+    private void render(GuiGraphicsExtractor guiGraphics, int i, int j, float delta, CallbackInfo ci) {
+        long currentTime = Util.getMillis();
         if (undertale_death_animation$lastRenderTime == 0) {
             undertale_death_animation$lastRenderTime = currentTime;
         }
@@ -325,23 +326,23 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                 int alpha = (int) (progress * 255.0f);
                 if (alpha > 0) {
                     int textColor = (alpha << 24) | 0x00FFFFFF;
-                    guiGraphics.pose().pushPose();
-                    guiGraphics.pose().scale(2.0F, 2.0F, 1.0F);
-                    guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, textColor);
-                    guiGraphics.pose().popPose();
+                    guiGraphics.pose().pushMatrix();
+                    guiGraphics.pose().scale(2.0F, 2.0F);
+                    guiGraphics.centeredText(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, textColor);
+                    guiGraphics.pose().popMatrix();
                 }
             } else if (!Config.INSTANCE.getTextFadeIn() && undertale_death_animation$bgmProgress == -1 && undertale_death_animation$pieces.isEmpty() && undertale_death_animation$finishedAge > 0) {
-                guiGraphics.pose().pushPose();
-                guiGraphics.pose().scale(2.0F, 2.0F, 1.0F);
-                guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
-                guiGraphics.pose().popPose();
+                guiGraphics.pose().pushMatrix();
+                guiGraphics.pose().scale(2.0F, 2.0F);
+                guiGraphics.centeredText(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
+                guiGraphics.pose().popMatrix();
             }
             ci.cancel();
         }
     }
 
-    @Inject(method = "render", at = @At("TAIL"))
-    private void renderTail(GuiGraphics guiGraphics, int i, int j, float delta, CallbackInfo ci) {
+    @Inject(method = "extractRenderState", at = @At("TAIL"))
+    private void renderTail(GuiGraphicsExtractor guiGraphics, int i, int j, float delta, CallbackInfo ci) {
         if (undertale_death_animation$fadingInVanilla) {
             int fadeAge = undertale_death_animation$age - undertale_death_animation$fadeStartAge;
             float progress = (fadeAge + delta) / Config.INSTANCE.getVanillaFadeInDuration();
@@ -349,26 +350,25 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             int alpha = (int) ((1.0f - progress) * 255.0f);
             if (alpha > 0) {
                 int bgColor = (alpha << 24);
-                guiGraphics.pose().pushPose();
-                guiGraphics.pose().translate(0f, 0f, 1000f);
+                guiGraphics.pose().pushMatrix();
+                guiGraphics.pose().translate(0f, 0f);
                 guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
                 
                 // Draw title over the black rectangle to prevent flickering
-                guiGraphics.pose().translate(0f, 0f, 1000f);
-                guiGraphics.pose().scale(2.0F, 2.0F, 2.0F);
-                guiGraphics.drawCenteredString(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
+                guiGraphics.pose().translate(0f, 0f);
+                guiGraphics.pose().scale(2.0F, 2.0F);
+                guiGraphics.centeredText(Minecraft.getInstance().font, this.title, guiGraphics.guiWidth() / 2 / 2, 30, 0xFFFFFFFF);
                 
-                guiGraphics.pose().popPose();
+                guiGraphics.pose().popMatrix();
             }
         }
     }
 
     @Unique
-    private void undertale_death_animation$renderHeart(GuiGraphics guiGraphics, int stage, int x, int y) {
+    private void undertale_death_animation$renderHeart(GuiGraphicsExtractor guiGraphics, int stage, int x, int y) {
         guiGraphics.blitSprite(
-                net.minecraft.client.renderer.RenderType::guiTextured,
-                this.hardcore ?
-                        HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION,
+                net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
+                (this.hardcore ? HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION),
                 HEART_TEXTURE_WIDTH,
                 HEART_TEXTURE_HEIGHT,
                 HEART_WIDTH * stage,
@@ -386,17 +386,33 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
     }
 
     // me when I ignore mixin standard
-    @Inject(method = "renderBackground", at = @At("HEAD"), cancellable = true)
-    private void disableTint(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
+    @Inject(method = "extractDeathBackground", at = @At("HEAD"), require = 0, cancellable = true)
+    private static void disableDeathTint(GuiGraphicsExtractor guiGraphics, int i, int j, CallbackInfo ci) {
         if (Config.INSTANCE.getDisableVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
             ci.cancel();
         }
     }
 
+    @Redirect(
+            method = "extractRenderState",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;fillGradient(IIIIII)V"
+            ),
+            require = 0
+    )
+    private void redirectFillGradient(GuiGraphicsExtractor instance, int x1, int y1, int x2, int y2, int colorFrom, int colorTo) {
+        if (!Config.INSTANCE.getDisableVanillaRedTint() && Config.INSTANCE.getFadeToVanillaScreen()) {
+            instance.fillGradient(x1, y1, x2, y2, colorFrom, colorTo);
+        }
+    }
+
+    /* 
     @Inject(method = "renderDeathBackground", at = @At("HEAD"), cancellable = true)
-    private static void disableDeathTint(GuiGraphics guiGraphics, int i, int j, CallbackInfo ci) {
-        if (Config.INSTANCE.getDisableVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
+    private static void disableDeathTint(GuiGraphicsExtractor guiGraphics, int i, int j, CallbackInfo ci) {
+        if (!Config.INSTANCE.getVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
             ci.cancel();
         }
     }
+    */
 }
