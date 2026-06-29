@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Schaltflächen während der Animation deaktivieren?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Wenn „true“, können Sie nicht auf „Respawn/Titelbildschirm“ klicken, bevor die Animation beendet ist.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vanillerot-Tönung deaktivieren [Experimentell]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiviert den vanilleroten Farbton an den Bildschirmrändern nach der Todesanimation."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiviert den vanilleroten Farbton an den Bildschirmrändern nach der Todesanimation.",
+  "config.independent_bgm_volume": "Unabhängige Musiklautstärke",
+  "config.independent_bgm_volume.ttp": "Wenn aktiviert, ignoriert die Musik im Todesbildschirm die Einstellung für die Musiklautstärke und ist nur von der Gesamtlautstärke abhängig."
 }

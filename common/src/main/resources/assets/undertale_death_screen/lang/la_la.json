@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Claude pugas ante motum?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Si verum est, pugas tangere non potes ante finem motus.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Inactivare Vanilla Red Tint [Experimental]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Vanilla rubra tint circa margines screen post mortem animationem."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Vanilla rubra tint circa margines screen post mortem animationem.",
+  "config.independent_bgm_volume": "Volumen Musicae Liberum",
+  "config.independent_bgm_volume.ttp": "Si activatum, musica in quadrum mortis praetermittet configurationem voluminis musicae et solum e volumine principali pendebit."
 }

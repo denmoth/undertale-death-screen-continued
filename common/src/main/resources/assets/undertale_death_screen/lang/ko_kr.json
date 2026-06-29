@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "애니메이션 전에 버튼 비활성화?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "활성화된 경우, 애니메이션이 끝나기 전에 리스폰/타이틀 화면 버튼을 클릭할 수 없습니다.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "바닐라 레드 색조 비활성화 [실험적]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "사망 애니메이션 후 화면 가장자리 주변의 바닐라 붉은 색조를 비활성화합니다."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "사망 애니메이션 후 화면 가장자리 주변의 바닐라 붉은 색조를 비활성화합니다.",
+  "config.independent_bgm_volume": "독립적인 음악 볼륨",
+  "config.independent_bgm_volume.ttp": "활성화되면 사망 화면의 음악은 '음악' 볼륨 설정을 무시하고 주 볼륨에만 의존합니다."
 }

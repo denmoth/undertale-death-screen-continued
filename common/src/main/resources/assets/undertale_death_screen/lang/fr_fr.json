@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Désactiver les boutons pendant l'animation ?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Si c'est vrai, vous ne pouvez pas cliquer sur Respawn/Title Screen avant la fin de l'animation.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Désactiver la teinte rouge vanille [expérimental]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Désactive la teinte rouge vanille sur les bords de l'écran après l'animation de la mort."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Désactive la teinte rouge vanille sur les bords de l'écran après l'animation de la mort.",
+  "config.independent_bgm_volume": "Volume de musique indépendant",
+  "config.independent_bgm_volume.ttp": "Si activé, la musique de l'écran de mort ignorera le réglage du volume de la musique et ne dépendra que du volume principal."
 }

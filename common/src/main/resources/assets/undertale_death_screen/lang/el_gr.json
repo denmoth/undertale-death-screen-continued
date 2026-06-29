@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Απενεργοποίηση κουμπιών κατά τη διάρκεια της κίνησης;",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Εάν είναι αληθές, δεν μπορείτε να κάνετε κλικ στην οθόνη Respawn/Title Screen πριν ολοκληρωθεί η κινούμενη εικόνα.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Απενεργοποίηση κόκκινης απόχρωσης βανίλιας [Πειραματικό]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Απενεργοποιεί την απόχρωση κόκκινου βανίλιας γύρω από τις άκρες της οθόνης μετά τον θάνατο."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Απενεργοποιεί την απόχρωση κόκκινου βανίλιας γύρω από τις άκρες της οθόνης μετά τον θάνατο.",
+  "config.independent_bgm_volume": "Ανεξάρτητη ένταση μουσικής",
+  "config.independent_bgm_volume.ttp": "Εάν ενεργοποιηθεί, η μουσική της οθόνης θανάτου θα αγνοήσει τη ρύθμιση έντασης μουσικής και θα εξαρτάται μόνο από την κύρια ένταση."
 }

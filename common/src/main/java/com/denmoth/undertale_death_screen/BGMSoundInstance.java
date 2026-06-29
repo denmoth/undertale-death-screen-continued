@@ -11,7 +11,7 @@ public class BGMSoundInstance extends AbstractTickableSoundInstance {
     private int fade;
 
     public BGMSoundInstance(SoundEvent soundEvent) {
-        super(soundEvent, SoundSource.MUSIC, SoundInstance.createUnseededRandom());
+        super(soundEvent, Config.INSTANCE.getIndependentBgmVolume() ? SoundSource.MASTER : SoundSource.MUSIC, SoundInstance.createUnseededRandom());
         this.looping = true;
         this.delay = 0;
         this.volume = 1;

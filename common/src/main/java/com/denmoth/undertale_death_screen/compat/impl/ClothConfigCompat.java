@@ -43,6 +43,14 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                         .build()
         );
         general.addEntry(entryBuilder.startBooleanToggle(
+                                UndertaleDeathScreenCommon.translatable("config.independent_bgm_volume"),
+                                Config.INSTANCE.getIndependentBgmVolume()
+                        ).setDefaultValue(Config.getDefault().getIndependentBgmVolume())
+                        .setTooltip(UndertaleDeathScreenCommon.translatable("config.independent_bgm_volume.ttp"))
+                        .setSaveConsumer(Config.INSTANCE::setIndependentBgmVolume)
+                        .build()
+        );
+        general.addEntry(entryBuilder.startBooleanToggle(
                         UndertaleDeathScreenCommon.translatable("config.determination"),
                         Config.INSTANCE.getDetermination()
                 ).setDefaultValue(Config.getDefault().getDetermination())

@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Онемогући дугмад пре анимације?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ако је укључено, нећете моћи да кликнете дугмад пре краја.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Онемогући ванилин црвену нијансу [експериментално]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Онемогућава ванилу црвену нијансу око ивица екрана након анимације смрти."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Онемогућава ванилу црвену нијансу око ивица екрана након анимације смрти.",
+  "config.independent_bgm_volume": "Независна јачина музике",
+  "config.independent_bgm_volume.ttp": "Ако је омогућено, музика на екрану смрти ће игнорисати подешавање јачине музике и зависиће само од главне јачине звука."
 }

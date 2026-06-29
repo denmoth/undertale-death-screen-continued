@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Да се ​​деактивират ли бутоните по време на анимация?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ако е вярно, не можете да щракнете върху Respawn/Title Screen, преди анимацията да приключи.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Деактивиране на ванилово червен нюанс [Експериментално]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Деактивира ванилово червения нюанс около краищата на екрана след анимацията на смъртта."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Деактивира ванилово червения нюанс около краищата на екрана след анимацията на смъртта.",
+  "config.independent_bgm_volume": "Независима сила на музиката",
+  "config.independent_bgm_volume.ttp": "Ако е активирано, музиката на екрана при смърт ще игнорира настройката за сила на музиката и ще зависи само от общата сила на звука."
 }

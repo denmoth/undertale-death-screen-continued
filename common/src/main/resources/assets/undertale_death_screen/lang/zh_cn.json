@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "动画结束前禁用按钮？",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "如果启用，在动画结束前你将无法点击“重生/主菜单”按钮。",
   "undertale_death_screen.config.disable_vanilla_red_tint": "禁用香草红色调 [实验]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "死亡动画后禁用屏幕边缘的香草红色调。"
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "死亡动画后禁用屏幕边缘的香草红色调。",
+  "config.independent_bgm_volume": "独立的音乐音量",
+  "config.independent_bgm_volume.ttp": "如果启用，死亡界面的音乐将忽略“音乐”音量设置，仅取决于主音量。"
 }

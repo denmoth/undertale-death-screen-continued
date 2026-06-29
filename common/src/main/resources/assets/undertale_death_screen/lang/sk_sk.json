@@ -36,5 +36,7 @@
   "undertale_death_screen.config.disable_buttons_before_animation": "Zakázať tlačidlá pred animáciou?",
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ak je povolené, nebudete môcť klikať na tlačidlá pred koncom animácie.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Zakázať vanilkový červený odtieň [experimentálne]",
-  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktivuje vanilkový červený odtieň okolo okrajov obrazovky po animácii smrti."
+  "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktivuje vanilkový červený odtieň okolo okrajov obrazovky po animácii smrti.",
+  "config.independent_bgm_volume": "Nezávislá hlasitosť hudby",
+  "config.independent_bgm_volume.ttp": "Ak je povolené, hudba na obrazovke smrti bude ignorovať nastavenie hlasitosti hudby a bude závisieť len od hlavnej hlasitosti."
 }
