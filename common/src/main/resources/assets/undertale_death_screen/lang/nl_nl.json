@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Indien ingeschakeld kun je geen knoppen aanklikken voordat de animatie is afgelopen.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vanillerode tint uitschakelen [Experimenteel]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Schakelt de vanillerode tint rond de randen van het scherm uit na de doodsanimatie.",
-  "config.independent_bgm_volume": "Onafhankelijk muziekvolume",
-  "config.independent_bgm_volume.ttp": "Indien ingeschakeld, negeert de muziek op het doodsscherm de instelling voor muziekvolume en is deze alleen afhankelijk van het hoofdvolume."
+  "undertale_death_screen.config.independent_bgm_volume": "Onafhankelijk muziekvolume",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Indien ingeschakeld, negeert de muziek op het doodsscherm de instelling voor muziekvolume en is deze alleen afhankelijk van het hoofdvolume."
 }

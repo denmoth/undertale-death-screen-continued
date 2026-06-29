@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Jika benar, Anda tidak dapat mengklik Respawn/Title Screen sebelum animasi selesai.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Nonaktifkan Warna Merah Vanila [Eksperimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Menonaktifkan warna merah vanilla di sekitar tepi layar setelah animasi kematian.",
-  "config.independent_bgm_volume": "Volume Musik Independen",
-  "config.independent_bgm_volume.ttp": "Jika diaktifkan, musik layar kematian akan mengabaikan pengaturan volume Musik dan hanya bergantung pada volume Utama."
+  "undertale_death_screen.config.independent_bgm_volume": "Volume Musik Independen",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jika diaktifkan, musik layar kematian akan mengabaikan pengaturan volume Musik dan hanya bergantung pada volume Utama."
 }

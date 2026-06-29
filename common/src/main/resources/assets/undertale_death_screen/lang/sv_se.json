@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Om aktiverad, kan du inte klicka på knapparna innan animationen slutar.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Inaktivera Vanilla Red Tint [Experimentell]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Inaktiverar den röda vaniljtonen runt kanterna på skärmen efter dödsanimeringen.",
-  "config.independent_bgm_volume": "Oberoende musikvolym",
-  "config.independent_bgm_volume.ttp": "Om aktiverat ignorerar dödsskärmens musik inställningen för musikvolym och beror endast på huvudvolymen."
+  "undertale_death_screen.config.independent_bgm_volume": "Oberoende musikvolym",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Om aktiverat ignorerar dödsskärmens musik inställningen för musikvolym och beror endast på huvudvolymen."
 }

@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Se ativado, você não poderá clicar nos botões Renascer/Menu Principal antes do fim da animação.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Desativar tonalidade vermelha baunilha [experimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Desativa o tom vermelho baunilha nas bordas da tela após a animação da morte.",
-  "config.independent_bgm_volume": "Volume de Música Independente",
-  "config.independent_bgm_volume.ttp": "Se ativado, a música da tela de morte ignorará a configuração de volume da música e dependerá apenas do volume principal."
+  "undertale_death_screen.config.independent_bgm_volume": "Volume de Música Independente",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se ativado, a música da tela de morte ignorará a configuração de volume da música e dependerá apenas do volume principal."
 }

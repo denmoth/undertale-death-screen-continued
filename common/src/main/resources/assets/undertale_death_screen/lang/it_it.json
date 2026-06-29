@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Se è vero, non puoi fare clic su Respawn/Schermata del titolo prima che l'animazione finisca.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Disattiva la tinta rosso vaniglia [sperimentale]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Disabilita la tinta rosso vaniglia attorno ai bordi dello schermo dopo l'animazione della morte.",
-  "config.independent_bgm_volume": "Volume della musica indipendente",
-  "config.independent_bgm_volume.ttp": "Se attivato, la musica nella schermata di morte ignorerà l'impostazione del volume della musica e dipenderà solo dal volume principale."
+  "undertale_death_screen.config.independent_bgm_volume": "Volume della musica indipendente",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se attivato, la musica nella schermata di morte ignorerà l'impostazione del volume della musica e dipenderà solo dal volume principale."
 }

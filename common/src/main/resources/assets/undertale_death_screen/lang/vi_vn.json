@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Nếu bật, bạn sẽ không thể nhấp vào các nút Hồi sinh/Màn hình chính trước khi hoạt ảnh kết thúc.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vô hiệu hóa màu đỏ Vanilla [Thử nghiệm]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Tắt tông màu đỏ vani xung quanh các cạnh của màn hình sau khi hoạt ảnh chết.",
-  "config.independent_bgm_volume": "Âm lượng âm nhạc độc lập",
-  "config.independent_bgm_volume.ttp": "Nếu được bật, âm nhạc ở màn hình chết sẽ bỏ qua cài đặt âm lượng Âm nhạc và chỉ phụ thuộc vào âm lượng Chính."
+  "undertale_death_screen.config.independent_bgm_volume": "Âm lượng âm nhạc độc lập",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Nếu được bật, âm nhạc ở màn hình chết sẽ bỏ qua cài đặt âm lượng Âm nhạc và chỉ phụ thuộc vào âm lượng Chính."
 }

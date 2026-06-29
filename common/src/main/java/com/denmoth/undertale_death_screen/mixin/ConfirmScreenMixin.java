@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Screen.class)
 public class ConfirmScreenMixin {
@@ -33,6 +34,13 @@ public class ConfirmScreenMixin {
                 guiGraphics.fill(0, 0, guiGraphics.guiWidth(), guiGraphics.guiHeight(), bgColor);
                 guiGraphics.pose().popMatrix();
             }
+        }
+    }
+
+    @Inject(method = "isPauseScreen", at = @At("HEAD"), cancellable = true)
+    private void shouldPause(CallbackInfoReturnable<Boolean> cir) {
+        if ((Object) this instanceof ConfirmScreen && Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
+            cir.setReturnValue(false);
         }
     }
 }

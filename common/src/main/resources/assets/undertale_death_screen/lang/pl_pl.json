@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Jeśli włączone, nie będziesz mógł wcisnąć przycisków przed zakońчением animacji.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Wyłącz waniliowy odcień czerwieni [eksperymentalnie]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Wyłącza waniliowy czerwony odcień wokół krawędzi ekranu po animacji śmierci.",
-  "config.independent_bgm_volume": "Niezależna głośność muzyki",
-  "config.independent_bgm_volume.ttp": "Jeśli włączone, muzyka na ekranie śmierci zignoruje ustawienie głośności muzyki i będzie zależeć tylko od głośności głównej."
+  "undertale_death_screen.config.independent_bgm_volume": "Niezależna głośność muzyki",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jeśli włączone, muzyka na ekranie śmierci zignoruje ustawienie głośności muzyki i będzie zależeć tylko od głośności głównej."
 }

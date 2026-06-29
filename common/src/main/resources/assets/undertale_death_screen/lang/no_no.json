@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Hvis aktivert, kan du ikke klikke på knapper før animasjonen slutter.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Deaktiver vaniljerød fargetone [eksperimentell]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiverer den røde vaniljefargen rundt kantene på skjermen etter død-animasjonen.",
-  "config.independent_bgm_volume": "Uavhengig musikkvolum",
-  "config.independent_bgm_volume.ttp": "Hvis aktivert, ignorerer dødsskjermens musikk innstillingen for musikkvolum og avhenger kun av hovedvolumet."
+  "undertale_death_screen.config.independent_bgm_volume": "Uavhengig musikkvolum",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Hvis aktivert, ignorerer dødsskjermens musikk innstillingen for musikkvolum og avhenger kun av hovedvolumet."
 }

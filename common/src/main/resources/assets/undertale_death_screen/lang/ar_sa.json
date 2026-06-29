@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "إذا كان هذا صحيحًا، فلا يمكنك النقر فوق Respawn/Title Screen قبل انتهاء الرسم المتحرك.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "تعطيل اللون الأحمر الفانيليا [تجريبي]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "تعطيل اللون الأحمر الفانيليا حول حواف الشاشة بعد الرسوم المتحركة للموت.",
-  "config.independent_bgm_volume": "مستوى صوت الموسيقى المستقل",
-  "config.independent_bgm_volume.ttp": "إذا تم تمكينه ، ستتجاهل موسيقى شاشة الموت إعداد مستوى صوت الموسيقى وتعتمد فقط على مستوى الصوت الرئيسي."
+  "undertale_death_screen.config.independent_bgm_volume": "مستوى صوت الموسيقى المستقل",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "إذا تم تمكينه ، ستتجاهل موسيقى شاشة الموت إعداد مستوى صوت الموسيقى وتعتمد فقط على مستوى الصوت الرئيسي."
 }

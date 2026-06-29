@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Якщо увімкнено, ви не зможете натискати кнопки Відродження/Головне меню до закінчення анімації.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Вимкнути Vanilla Red Tint [Експериментальний]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Вимикає ванільно-червоний відтінок по краях екрана після анімації смерті.",
-  "config.independent_bgm_volume": "Незалежна гучність музики",
-  "config.independent_bgm_volume.ttp": "Якщо ввімкнено, музика на екрані смерті ігноруватиме налаштування гучності 'Музика' і залежатиме лише від загальної гучності."
+  "undertale_death_screen.config.independent_bgm_volume": "Незалежна гучність музики",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Якщо ввімкнено, музика на екрані смерті ігноруватиме налаштування гучності 'Музика' і залежатиме лише від загальної гучності."
 }

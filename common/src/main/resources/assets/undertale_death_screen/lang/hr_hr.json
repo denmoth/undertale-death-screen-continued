@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Ako je istina, ne možete kliknuti Respawn/Naslovni zaslon prije nego što animacija završi.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Onemogući nijansu crvene boje vanilije [eksperimentalno]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Onemogućuje crvenu nijansu boje vanilije oko rubova zaslona nakon animacije smrti.",
-  "config.independent_bgm_volume": "Nezavisna glasnoća glazbe",
-  "config.independent_bgm_volume.ttp": "Ako je omogućeno, glazba na ekranu smrti ignorirat će postavku glasnoće glazbe i ovisit će samo o glavnoj glasnoći."
+  "undertale_death_screen.config.independent_bgm_volume": "Nezavisna glasnoća glazbe",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ako je omogućeno, glazba na ekranu smrti ignorirat će postavku glasnoće glazbe i ovisit će samo o glavnoj glasnoći."
 }

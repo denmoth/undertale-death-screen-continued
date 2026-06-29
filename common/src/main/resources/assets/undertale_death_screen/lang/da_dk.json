@@ -37,6 +37,6 @@
   "undertale_death_screen.config.disable_buttons_before_animation.ttp": "Hvis det er sandt, kan du ikke klikke på Respawn/Title Screen, før animationen er færdig.",
   "undertale_death_screen.config.disable_vanilla_red_tint": "Deaktiver vaniljerød farvetone [eksperimentel]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiverer den vaniljerøde nuance rundt om skærmens kanter efter dødsanimation.",
-  "config.independent_bgm_volume": "Uafhængig musiklydstyrke",
-  "config.independent_bgm_volume.ttp": "Hvis aktiveret, ignorerer døds-skærmens musik indstillingen for musiklydstyrke og afhænger kun af masterlydstyrken."
+  "undertale_death_screen.config.independent_bgm_volume": "Uafhængig musiklydstyrke",
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Hvis aktiveret, ignorerer døds-skærmens musik indstillingen for musiklydstyrke og afhænger kun af masterlydstyrken."
 }
