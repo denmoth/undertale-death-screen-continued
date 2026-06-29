@@ -23,7 +23,7 @@ public class ConfirmScreenMixin {
         }
     }
 
-    @Inject(method = "extractRenderState", at = @At("TAIL"))
+    @Inject(method = "extractRenderState", at = @At("HEAD"))
     private void render(GuiGraphicsExtractor guiGraphics, int i, int j, float f, CallbackInfo ci) {
         if ((Object) this instanceof ConfirmScreen && Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
             if (UndertaleDeathScreenCommon.currentBackgroundAlpha > 0.0f) {
