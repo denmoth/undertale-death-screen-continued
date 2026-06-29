@@ -19,7 +19,11 @@ public class MinecraftMixin {
     @Inject(method = "setScreen", at = @At("HEAD"))
     private void stopMusicOnDeathScreenRemoved(Screen newScreen, CallbackInfo ci) {
         if (com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance != null) {
-            if (!(newScreen instanceof net.minecraft.client.gui.screens.DeathScreen) && !(newScreen instanceof net.minecraft.client.gui.screens.ConfirmScreen)) {
+            boolean keepPlaying = (newScreen instanceof net.minecraft.client.gui.screens.DeathScreen) || (newScreen instanceof net.minecraft.client.gui.screens.ConfirmScreen);
+            if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
+                keepPlaying = true;
+            }
+            if (!keepPlaying) {
                 Minecraft.getInstance().getSoundManager().stop((net.minecraft.client.resources.sounds.SoundInstance) com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance);
                 com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance = null;
             }
