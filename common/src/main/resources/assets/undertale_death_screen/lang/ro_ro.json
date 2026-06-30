@@ -38,5 +38,7 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Dezactivează Tenta roșie vanilie [Experimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Dezactivează nuanța roșie vanilie în jurul marginilor ecranului după animația morții.",
   "undertale_death_screen.config.independent_bgm_volume": "Volum muzical independent",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Dacă este activat, muzica ecranului de moarte va ignora setarea volumului muzicii și va depinde doar de volumul principal."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Dacă este activat, muzica ecranului de moarte va ignora setarea volumului muzicii și va depinde doar de volumul principal.",
+  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
+  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
 }

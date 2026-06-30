@@ -16,7 +16,7 @@ public class MinecraftMixin {
     @Nullable
     public Screen screen;
 
-    @Inject(method = "setScreen", at = @At("HEAD"))
+    @Inject(method = "setScreenAndShow", at = @At("HEAD"))
     private void stopMusicOnDeathScreenRemoved(Screen newScreen, CallbackInfo ci) {
         if (com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance != null) {
             boolean keepPlaying = (newScreen instanceof net.minecraft.client.gui.screens.DeathScreen) || (newScreen instanceof net.minecraft.client.gui.screens.ConfirmScreen);

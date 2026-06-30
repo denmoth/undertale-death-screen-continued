@@ -38,5 +38,7 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vanillerot-Tönung deaktivieren [Experimentell]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiviert den vanilleroten Farbton an den Bildschirmrändern nach der Todesanimation.",
   "undertale_death_screen.config.independent_bgm_volume": "Unabhängige Musiklautstärke",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Wenn aktiviert, ignoriert die Musik im Todesbildschirm die Einstellung für die Musiklautstärke und ist nur von der Gesamtlautstärke abhängig."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Wenn aktiviert, ignoriert die Musik im Todesbildschirm die Einstellung für die Musiklautstärke und ist nur von der Gesamtlautstärke abhängig.",
+  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
+  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
 }
