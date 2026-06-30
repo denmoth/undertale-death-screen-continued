@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Desativar tonalidade vermelha baunilha [experimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Desativa o tom vermelho baunilha nas bordas da tela após a animação da morte.",
   "undertale_death_screen.config.independent_bgm_volume": "Volume de Música Independente",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se ativado, a música da tela de morte ignorará a configuração de volume da música e dependerá apenas do volume principal.",
-  "undertale_death_screen.config.preview_on_save": "Pré-visualização do Ecrã de Morte",
-  "undertale_death_screen.config.preview_on_save.ttp": "Se LIGADO, fechar o menu de configuração acionará instantaneamente um falso ecrã de morte para pré-visualizar as suas definições."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se ativado, a música da tela de morte ignorará a configuração de volume da música e dependerá apenas do volume principal."
 }

@@ -18,16 +18,7 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
                 .setTitle(Component.literal(UndertaleDeathScreenCommon.MOD_NAME))
-                .setSavingRunnable(() -> {
-                    Config.INSTANCE.save();
-                    if (UndertaleDeathScreenCommon.scheduleDeathScreenPreview) {
-                        UndertaleDeathScreenCommon.scheduleDeathScreenPreview = false;
-                        net.minecraft.client.Minecraft mc = net.minecraft.client.Minecraft.getInstance();
-                        if (mc.level != null && mc.player != null) {
-                            mc.execute(() -> mc.setScreenAndShow(new net.minecraft.client.gui.screens.DeathScreen(Component.literal("You died"), false, mc.player)));
-                        }
-                    }
-                });
+                .setSavingRunnable(Config.INSTANCE::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
         ConfigCategory general = builder.getOrCreateCategory(Component.empty()); // doesn't show when there's only 1 category anyway
@@ -194,18 +185,7 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                 .setDisplayRequirement(Requirement.isTrue(fadeToVanillaScreenToggle))
                 .build()
         );
-        general.addEntry(entryBuilder.startBooleanToggle(
-                        UndertaleDeathScreenCommon.translatable("config.preview_on_save"),
-                        false
-                ).setDefaultValue(false)
-                .setTooltip(UndertaleDeathScreenCommon.translatable("config.preview_on_save.ttp"))
-                .setSaveConsumer(b -> {
-                    if (b) {
-                        UndertaleDeathScreenCommon.scheduleDeathScreenPreview = true;
-                    }
-                })
-                .build()
-        );
+
 
         return builder.build();
     }

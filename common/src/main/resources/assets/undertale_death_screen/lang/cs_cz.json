@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Zakázat vanilkový červený odstín [experimentální]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktivuje vanilkový červený odstín kolem okrajů obrazovky po animaci smrti.",
   "undertale_death_screen.config.independent_bgm_volume": "Nezávislá hlasitost hudby",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Pokud je povoleno, hudba na obrazovce smrti bude ignorovat nastavení hlasitosti hudby a bude záviset pouze na hlavní hlasitosti.",
-  "undertale_death_screen.config.preview_on_save": "Náhled obrazovky smrti",
-  "undertale_death_screen.config.preview_on_save.ttp": "Pokud je zapnuto, zavření nabídky konfigurace okamžitě spustí falešnou obrazovku smrti pro zobrazení vašich nastavení."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Pokud je povoleno, hudba na obrazovce smrti bude ignorovat nastavení hlasitosti hudby a bude záviset pouze na hlavní hlasitosti."
 }

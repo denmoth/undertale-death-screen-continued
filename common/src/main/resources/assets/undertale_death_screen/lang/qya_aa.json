@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Poista vaniljanpunainen sävy käytöstä [kokeellinen]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Poistaa käytöstä vaniljanpunaisen sävyn näytön reunoilla kuoleman jälkeisen animaation jälkeen.",
   "undertale_death_screen.config.independent_bgm_volume": "Lerya Lindalë Óma",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Qui lerya, i lindalë qualmë tiessë hehtuva i lindalë óma ar alya er i heru óma.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Qui lerya, i lindalë qualmë tiessë hehtuva i lindalë óma ar alya er i heru óma."
 }

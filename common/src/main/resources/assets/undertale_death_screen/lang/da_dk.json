@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Deaktiver vaniljerød farvetone [eksperimentel]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Deaktiverer den vaniljerøde nuance rundt om skærmens kanter efter dødsanimation.",
   "undertale_death_screen.config.independent_bgm_volume": "Uafhængig musiklydstyrke",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Hvis aktiveret, ignorerer døds-skærmens musik indstillingen for musiklydstyrke og afhænger kun af masterlydstyrken.",
-  "undertale_death_screen.config.preview_on_save": "Forhåndsvisning af dødsskærm",
-  "undertale_death_screen.config.preview_on_save.ttp": "Hvis TÆNDT, vil lukning af konfigurationsmenuen øjeblikkeligt udløse en falsk dødsskærm for at forhåndsvise dine indstillinger."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Hvis aktiveret, ignorerer døds-skærmens musik indstillingen for musiklydstyrke og afhænger kun af masterlydstyrken."
 }

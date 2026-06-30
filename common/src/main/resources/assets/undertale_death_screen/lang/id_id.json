@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Nonaktifkan Warna Merah Vanila [Eksperimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Menonaktifkan warna merah vanilla di sekitar tepi layar setelah animasi kematian.",
   "undertale_death_screen.config.independent_bgm_volume": "Volume Musik Independen",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jika diaktifkan, musik layar kematian akan mengabaikan pengaturan volume Musik dan hanya bergantung pada volume Utama.",
-  "undertale_death_screen.config.preview_on_save": "Pratinjau Layar Kematian",
-  "undertale_death_screen.config.preview_on_save.ttp": "Jika NYALA, menutup menu konfigurasi akan langsung memicu layar kematian palsu untuk mempratinjau pengaturan Anda."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jika diaktifkan, musik layar kematian akan mengabaikan pengaturan volume Musik dan hanya bergantung pada volume Utama."
 }

@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Disable Vanilla Red Tint [Experimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Disables the vanilla red tint around the edges of the screen after death animation.",
   "undertale_death_screen.config.independent_bgm_volume": "Erui Lindë",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ae tiri, i lindë gurth-diliant ú-bendra i lindë-caw, a bendratha er i taur-caw.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ae tiri, i lindë gurth-diliant ú-bendra i lindë-caw, a bendratha er i taur-caw."
 }

@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vanilya Kırmızı Tonunu Devre Dışı Bırakma [Deneysel]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Ölüm animasyonundan sonra ekranın kenarlarındaki vanilya kırmızısı renk tonunu devre dışı bırakır.",
   "undertale_death_screen.config.independent_bgm_volume": "Bağımsız Müzik Sesi",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Etkinleştirilirse, ölüm ekranı müziği Müzik sesi ayarını yok sayar ve yalnızca Ana sese bağlı olur.",
-  "undertale_death_screen.config.preview_on_save": "Ölüm Ekranını Önizle",
-  "undertale_death_screen.config.preview_on_save.ttp": "Eğer AÇIK ise, yapılandırma menüsünü kapatmak anında sahte bir ölüm ekranını tetikleyerek ayarlarınızı önizlemenizi sağlar."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Etkinleştirilirse, ölüm ekranı müziği Müzik sesi ayarını yok sayar ve yalnızca Ana sese bağlı olur."
 }

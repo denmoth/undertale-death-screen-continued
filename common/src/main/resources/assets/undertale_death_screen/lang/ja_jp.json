@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "バニラレッドティントを無効にする [実験的]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "死亡アニメーション後の画面の端の周りのバニラの赤い色合いを無効にします。",
   "undertale_death_screen.config.independent_bgm_volume": "独立した音楽の音量",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "有効にすると、死亡画面の音楽は「音楽」の音量設定を無視し、主音量のみに依存するようになります。",
-  "undertale_death_screen.config.preview_on_save": "死亡画面のプレビュー",
-  "undertale_death_screen.config.preview_on_save.ttp": "オンの場合、設定メニューを閉じると、設定をプレビューするための偽の死亡画面がすぐにトリガーされます。"
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "有効にすると、死亡画面の音楽は「音楽」の音量設定を無視し、主音量のみに依存するようになります。"
 }

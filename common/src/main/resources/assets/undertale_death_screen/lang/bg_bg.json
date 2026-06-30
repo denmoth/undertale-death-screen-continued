@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Деактивиране на ванилово червен нюанс [Експериментално]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Деактивира ванилово червения нюанс около краищата на екрана след анимацията на смъртта.",
   "undertale_death_screen.config.independent_bgm_volume": "Независима сила на музиката",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ако е активирано, музиката на екрана при смърт ще игнорира настройката за сила на музиката и ще зависи само от общата сила на звука.",
-  "undertale_death_screen.config.preview_on_save": "Преглед на екрана на смъртта",
-  "undertale_death_screen.config.preview_on_save.ttp": "Ако е включено, затварянето на менюто с настройки незабавно ще задейства фалшив екран на смъртта, за да прегледате вашите настройки."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ако е активирано, музиката на екрана при смърт ще игнорира настройката за сила на музиката и ще зависи само от общата сила на звука."
 }

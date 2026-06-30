@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "تعطيل اللون الأحمر الفانيليا [تجريبي]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "تعطيل اللون الأحمر الفانيليا حول حواف الشاشة بعد الرسوم المتحركة للموت.",
   "undertale_death_screen.config.independent_bgm_volume": "مستوى صوت الموسيقى المستقل",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "إذا تم تمكينه ، ستتجاهل موسيقى شاشة الموت إعداد مستوى صوت الموسيقى وتعتمد فقط على مستوى الصوت الرئيسي.",
-  "undertale_death_screen.config.preview_on_save": "معاينة شاشة الموت",
-  "undertale_death_screen.config.preview_on_save.ttp": "إذا كان قيد التشغيل، سيؤدي إغلاق قائمة التكوين إلى تشغيل شاشة موت وهمية فورًا لمعاينة إعداداتك."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "إذا تم تمكينه ، ستتجاهل موسيقى شاشة الموت إعداد مستوى صوت الموسيقى وتعتمد فقط على مستوى الصوت الرئيسي."
 }

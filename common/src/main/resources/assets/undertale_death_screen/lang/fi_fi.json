@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Poista vaniljanpunainen sävy käytöstä [kokeellinen]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Poistaa käytöstä vaniljanpunaisen sävyn näytön reunoilla kuoleman jälkeisen animaation jälkeen.",
   "undertale_death_screen.config.independent_bgm_volume": "Itsenäinen musiikin äänenvoimakkuus",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jos käytössä, kuolinnäytön musiikki ohittaa musiikin äänenvoimakkuuden asetuksen ja riippuu vain päääänenvoimakkuudesta.",
-  "undertale_death_screen.config.preview_on_save": "Esikatsele kuolemanruutua",
-  "undertale_death_screen.config.preview_on_save.ttp": "Jos PÄÄLLÄ, asetusvalikon sulkeminen laukaisee välittömästi vale-kuolemanruudun asetustesi esikatselua varten."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Jos käytössä, kuolinnäytön musiikki ohittaa musiikin äänenvoimakkuuden asetuksen ja riippuu vain päääänenvoimakkuudesta."
 }

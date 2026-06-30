@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Отключить ванильное красное свечение [Экспериментально]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Отключает ванильное красное свечение по краям экрана после анимации смерти.",
   "undertale_death_screen.config.independent_bgm_volume": "Независимая Громкость Музыки",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Если включено, музыка на экране смерти будет игнорировать ползунок громкости 'Музыка' и зависеть только от общей громкости.",
-  "undertale_death_screen.config.preview_on_save": "Проверить настройки",
-  "undertale_death_screen.config.preview_on_save.ttp": "Если ВКЛ, при выходе из меню сразу появится экран смерти, чтобы проверить новые настройки."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Если включено, музыка на экране смерти будет игнорировать ползунок громкости 'Музыка' и зависеть только от общей громкости."
 }

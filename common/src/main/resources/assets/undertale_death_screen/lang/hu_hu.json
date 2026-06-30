@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Vaníliavörös árnyalat letiltása [kísérleti]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Letiltja a vaníliavörös árnyalatot a képernyő szélei körül a halál utáni animációt.",
   "undertale_death_screen.config.independent_bgm_volume": "Független zene hangerő",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ha engedélyezve van, a halálképernyő zenéje figyelmen kívül hagyja a zene hangerő beállítását, és csak a fő hangerőtől függ.",
-  "undertale_death_screen.config.preview_on_save": "Halálképernyő előnézete",
-  "undertale_death_screen.config.preview_on_save.ttp": "Ha BE van kapcsolva, a beállítások menü bezárása azonnal elindít egy hamis halálképernyőt a beállítások megtekintéséhez."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Ha engedélyezve van, a halálképernyő zenéje figyelmen kívül hagyja a zene hangerő beállítását, és csak a fő hangerőtől függ."
 }

@@ -38,7 +38,5 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Malebligu Vanilan Ruĝan Nuancon [Eksperimenta]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Malebligas la vanilruĝan nuancon ĉirkaŭ la randoj de la ekrano post morto-animacio.",
   "undertale_death_screen.config.independent_bgm_volume": "Sendependa Muzika Volumo",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se ebligita, la muziko de la morta ekrano ignoros la agordon de muzika volumo kaj dependos nur de la ĉefa volumo.",
-  "undertale_death_screen.config.preview_on_save": "Antaŭvidi Mort-Ekranon",
-  "undertale_death_screen.config.preview_on_save.ttp": "Se AKTIVA, fermi la agordan menuon tuj ekigos falsan mort-ekranon por antaŭvidi viajn agordojn."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "Se ebligita, la muziko de la morta ekrano ignoros la agordon de muzika volumo kaj dependos nur de la ĉefa volumo."
 }
