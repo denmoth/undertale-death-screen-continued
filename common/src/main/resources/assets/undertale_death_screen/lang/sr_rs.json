@@ -39,6 +39,6 @@
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Онемогућава ванилу црвену нијансу око ивица екрана након анимације смрти.",
   "undertale_death_screen.config.independent_bgm_volume": "Независна јачина музике",
   "undertale_death_screen.config.independent_bgm_volume.ttp": "Ако је омогућено, музика на екрану смрти ће игнорисати подешавање јачине музике и зависиће само од главне јачине звука.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.preview_on_save": "Преглед екрана смрти",
+  "undertale_death_screen.config.preview_on_save.ttp": "Ако је УКЉУЧЕНО, затварање конфигурационог менија ће одмах покренути лажни екран смрти како бисте прегледали своја подешавања."
 }

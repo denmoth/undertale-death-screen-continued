@@ -39,6 +39,6 @@
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "사망 애니메이션 후 화면 가장자리 주변의 바닐라 붉은 색조를 비활성화합니다.",
   "undertale_death_screen.config.independent_bgm_volume": "독립적인 음악 볼륨",
   "undertale_death_screen.config.independent_bgm_volume.ttp": "활성화되면 사망 화면의 음악은 '음악' 볼륨 설정을 무시하고 주 볼륨에만 의존합니다.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.preview_on_save": "사망 화면 미리보기",
+  "undertale_death_screen.config.preview_on_save.ttp": "켜져 있으면 설정 메뉴를 닫을 때 가짜 사망 화면이 즉시 표시되어 설정을 미리 볼 수 있습니다."
 }

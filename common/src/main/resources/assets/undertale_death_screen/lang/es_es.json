@@ -39,6 +39,6 @@
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Desactiva el tinte rojo vainilla alrededor de los bordes de la pantalla después de la animación de la muerte.",
   "undertale_death_screen.config.independent_bgm_volume": "Volumen de música independiente",
   "undertale_death_screen.config.independent_bgm_volume.ttp": "Si está activado, la música de la pantalla de muerte ignorará el ajuste del volumen de la música y solo dependerá del volumen principal.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.preview_on_save": "Vista previa de la pantalla de muerte",
+  "undertale_death_screen.config.preview_on_save.ttp": "Si está ACTIVADO, cerrar el menú de configuración activará instantáneamente una pantalla de muerte falsa para obtener una vista previa de tus configuraciones."
 }

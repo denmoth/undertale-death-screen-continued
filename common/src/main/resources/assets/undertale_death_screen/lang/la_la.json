@@ -39,6 +39,6 @@
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Vanilla rubra tint circa margines screen post mortem animationem.",
   "undertale_death_screen.config.independent_bgm_volume": "Volumen Musicae Liberum",
   "undertale_death_screen.config.independent_bgm_volume.ttp": "Si activatum, musica in quadrum mortis praetermittet configurationem voluminis musicae et solum e volumine principali pendebit.",
-  "undertale_death_screen.config.preview_on_save": "Preview Death Screen",
-  "undertale_death_screen.config.preview_on_save.ttp": "If ON, closing the config menu will instantly trigger a fake death screen to preview your settings."
+  "undertale_death_screen.config.preview_on_save": "Praevidere Velum Mortis",
+  "undertale_death_screen.config.preview_on_save.ttp": "Si ON, claudere menu configurationis statim provocabit velum mortis falsum ad praevidendum occasus tuos."
 }
