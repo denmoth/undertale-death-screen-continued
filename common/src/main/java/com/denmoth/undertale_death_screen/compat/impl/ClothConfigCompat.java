@@ -23,7 +23,9 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                     if (UndertaleDeathScreenCommon.scheduleDeathScreenPreview) {
                         UndertaleDeathScreenCommon.scheduleDeathScreenPreview = false;
                         net.minecraft.client.Minecraft mc = net.minecraft.client.Minecraft.getInstance();
-                        mc.setScreenAndShow(new net.minecraft.client.gui.screens.DeathScreen(Component.literal("You died"), false, mc.player));
+                        if (mc.level != null && mc.player != null) {
+                            mc.execute(() -> mc.setScreenAndShow(new net.minecraft.client.gui.screens.DeathScreen(Component.literal("You died"), false, mc.player)));
+                        }
                     }
                 });
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
