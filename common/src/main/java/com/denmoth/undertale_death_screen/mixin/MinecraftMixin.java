@@ -12,9 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Minecraft.class)
 public class MinecraftMixin {
-    @Shadow
-    @Nullable
-    public Screen screen;
 
     @Inject(method = "setScreenAndShow", at = @At("HEAD"))
     private void stopMusicOnDeathScreenRemoved(Screen newScreen, CallbackInfo ci) {
