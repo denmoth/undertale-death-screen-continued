@@ -17,7 +17,7 @@ public class UndertaleDeathScreenCommon {
     public static final String MOD_NAME = "Undertale Death Screen";
     public static final Logger logger = LoggerFactory.getLogger(MOD_NAME);
     public static UndertaleDeathScreenBase impl;
-    public static ResourceLocation MOD_ID_RES = id(MOD_ID);
+    public static Identifier MOD_ID_RES = id(MOD_ID);
     public static float currentBackgroundAlpha = 1.0f;
     public static Object currentBgmSoundInstance = null;
 
