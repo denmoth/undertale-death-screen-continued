@@ -1,11 +1,15 @@
 package com.denmoth.undertale_death_screen.mixin;
 
+import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.ConfirmScreen;
+import net.minecraft.client.gui.screens.DeathScreen;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.resources.sounds.SoundInstance;
 import org.jetbrains.annotations.Nullable;
-import com.denmoth.undertale_death_screen.DeathScreenAccess;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -15,15 +19,28 @@ public class MinecraftMixin {
 
     @Inject(method = "setScreenAndShow", at = @At("HEAD"))
     private void stopMusicOnDeathScreenRemoved(Screen newScreen, CallbackInfo ci) {
-        if (com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance != null) {
-            boolean keepPlaying = (newScreen instanceof net.minecraft.client.gui.screens.DeathScreen) || (newScreen instanceof net.minecraft.client.gui.screens.ConfirmScreen);
-            if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.isDeadOrDying()) {
-                keepPlaying = true;
-            }
-            if (!keepPlaying) {
-                Minecraft.getInstance().getSoundManager().stop((net.minecraft.client.resources.sounds.SoundInstance) com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance);
-                com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon.currentBgmSoundInstance = null;
-            }
+        undertale_death_animation$stopBackgroundMusicIfDone(newScreen);
+    }
+
+    @Inject(method = "tick", at = @At("HEAD"))
+    private void stopMusicOnRespawn(CallbackInfo ci) {
+        undertale_death_animation$stopBackgroundMusicIfDone(Minecraft.getInstance().gui.screen());
+    }
+
+    @Unique
+    private void undertale_death_animation$stopBackgroundMusicIfDone(@Nullable Screen screen) {
+        SoundInstance bgm = (SoundInstance) UndertaleDeathScreenCommon.currentBgmSoundInstance;
+        if (bgm == null) {
+            return;
+        }
+
+        Minecraft minecraft = Minecraft.getInstance();
+        LocalPlayer player = minecraft.player;
+        boolean onDeathScreen = screen instanceof DeathScreen || screen instanceof ConfirmScreen;
+
+        if (!onDeathScreen && (player == null || !player.isDeadOrDying())) {
+            minecraft.getSoundManager().stop(bgm);
+            UndertaleDeathScreenCommon.currentBgmSoundInstance = null;
         }
     }
 }
