@@ -140,11 +140,12 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         }
 
         // Build dynamic textures if a custom heart resource pack is detected
-        if (CustomHeartDetector.hasCustomHeart()) {
+        if (CustomHeartDetector.hasCustomHeart(this.undertale_death_animation$heartStyle, this.hardcore)) {
             DynamicHeartTextureManager.buildTextures(
                     CustomHeartDetector.getCustomHeartPixels(),
                     CustomHeartDetector.getSpriteWidth(),
-                    CustomHeartDetector.getSpriteHeight()
+                    CustomHeartDetector.getSpriteHeight(),
+                    this.undertale_death_animation$heartStyle
             );
         }
     }

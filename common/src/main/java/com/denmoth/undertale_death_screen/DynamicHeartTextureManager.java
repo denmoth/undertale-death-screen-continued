@@ -62,12 +62,13 @@ public final class DynamicHeartTextureManager {
      * @param customHeartPixels ARGB pixels of the custom heart sprite (from GUI atlas)
      * @param spriteWidth       width of the custom sprite in pixels
      * @param spriteHeight      height of the custom sprite in pixels
+     * @param heartStyle        active style row to write (0=normal,1=poison,2=wither,3=freeze)
      */
-    public static void buildTextures(int[] customHeartPixels, int spriteWidth, int spriteHeight) {
+    public static void buildTextures(int[] customHeartPixels, int spriteWidth, int spriteHeight, int heartStyle) {
         cleanup();
         try {
-            buildShatterTexture(customHeartPixels, spriteWidth, spriteHeight);
-            buildPiecesTexture(customHeartPixels, spriteWidth, spriteHeight);
+            buildShatterTexture(customHeartPixels, spriteWidth, spriteHeight, heartStyle);
+            buildPiecesTexture(customHeartPixels, spriteWidth, spriteHeight, heartStyle);
             dynamicRegistered = true;
         } catch (Exception e) {
             UndertaleDeathScreenCommon.logger.error("Failed to build dynamic heart textures: {}", e.getMessage());
@@ -93,43 +94,37 @@ public final class DynamicHeartTextureManager {
 
     // -------------------------------------------------------------------------
 
-    private static void buildShatterTexture(int[] srcPixels, int srcW, int srcH) {
+    private static void buildShatterTexture(int[] srcPixels, int srcW, int srcH, int targetStyle) {
         NativeImage img = new NativeImage(NativeImage.Format.RGBA, SHATTER_TEX_W, SHATTER_TEX_H, true);
 
         int hw = HeartDisplacementData.HEART_WIDTH;
         int hh = HeartDisplacementData.HEART_HEIGHT;
         int numStages = HeartDisplacementData.NUM_STAGES;
 
-        // We only have displacement data for style 0 (normal red).
-        // For styles 1-3 (poison/wither/freeze), we replicate style 0 mapping since
-        // the custom pack likely only supplies the base color — dynamic handling for
-        // alternative heart styles is best-effort.
-        for (int style = 0; style < 4; style++) {
-            for (int stage = 0; stage < numStages; stage++) {
-                // Render pixels for this stage using displacement data
-                // Each pixel index corresponds to a source position in the 13x15 heart
-                for (int pi = 0; pi < HeartDisplacementData.SHATTER_DISPLACEMENT.length; pi++) {
-                    int origLx = pi % hw;
-                    int origLy = pi / hw;
-                    int enc = HeartDisplacementData.SHATTER_DISPLACEMENT[pi][stage];
-                    boolean visible = HeartDisplacementData.isVisible(enc);
-                    if (!visible) continue;
+        // Only write the row that matches the active heart style.
+        // The mixin always reads from heartStyle row, so other rows are unused.
+        int style = Math.max(0, Math.min(3, targetStyle));
+        for (int stage = 0; stage < numStages; stage++) {
+            for (int pi = 0; pi < HeartDisplacementData.SHATTER_DISPLACEMENT.length; pi++) {
+                int origLx = pi % hw;
+                int origLy = pi / hw;
+                int enc = HeartDisplacementData.SHATTER_DISPLACEMENT[pi][stage];
+                boolean visible = HeartDisplacementData.isVisible(enc);
+                if (!visible) continue;
 
-                    int dx = HeartDisplacementData.getDx(enc);
-                    int dy = HeartDisplacementData.getDy(enc);
-                    int destLx = origLx + dx;
-                    int destLy = origLy + dy;
+                int dx = HeartDisplacementData.getDx(enc);
+                int dy = HeartDisplacementData.getDy(enc);
+                int destLx = origLx + dx;
+                int destLy = origLy + dy;
 
-                    if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
+                if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
 
-                    // Sample the custom sprite, scaling from srcW*srcH to hw*hh
-                    int sampledArgb = sampleScaled(srcPixels, srcW, srcH, origLx, origLy, hw, hh);
-                    if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
+                int sampledArgb = sampleScaled(srcPixels, srcW, srcH, origLx, origLy, hw, hh);
+                if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
 
-                    int destGx = stage * hw + destLx;
-                    int destGy = style * hh + destLy;
-                    img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
-                }
+                int destGx = stage * hw + destLx;
+                int destGy = style * hh + destLy;
+                img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
             }
         }
 
@@ -137,33 +132,32 @@ public final class DynamicHeartTextureManager {
         Minecraft.getInstance().getTextureManager().register(DYNAMIC_SHATTER_ID, dynamicShatter);
     }
 
-    private static void buildPiecesTexture(int[] srcPixels, int srcW, int srcH) {
+    private static void buildPiecesTexture(int[] srcPixels, int srcW, int srcH, int targetStyle) {
         NativeImage img = new NativeImage(NativeImage.Format.RGBA, PIECES_TEX_W, PIECES_TEX_H, true);
 
         int pw = HeartDisplacementData.PIECE_WIDTH;
         int ph = HeartDisplacementData.PIECE_HEIGHT;
         int hw = HeartDisplacementData.HEART_WIDTH;
         int hh = HeartDisplacementData.HEART_HEIGHT;
+        int style = Math.max(0, Math.min(3, targetStyle));
 
-        for (int style = 0; style < 4; style++) {
-            for (int pieceIdx = 0; pieceIdx < HeartDisplacementData.NUM_PIECES; pieceIdx++) {
-                int[] pieceSource = HeartDisplacementData.PIECE_SOURCE[pieceIdx];
-                for (int pxi = 0; pxi < pieceSource.length; pxi++) {
-                    int enc = pieceSource[pxi];
-                    if (enc == -1) continue;
+        for (int pieceIdx = 0; pieceIdx < HeartDisplacementData.NUM_PIECES; pieceIdx++) {
+            int[] pieceSource = HeartDisplacementData.PIECE_SOURCE[pieceIdx];
+            for (int pxi = 0; pxi < pieceSource.length; pxi++) {
+                int enc = pieceSource[pxi];
+                if (enc == -1) continue;
 
-                    int srcX = HeartDisplacementData.getSrcX(enc);
-                    int srcY = HeartDisplacementData.getSrcY(enc);
+                int srcX = HeartDisplacementData.getSrcX(enc);
+                int srcY = HeartDisplacementData.getSrcY(enc);
 
-                    int sampledArgb = sampleScaled(srcPixels, srcW, srcH, srcX, srcY, hw, hh);
-                    if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
+                int sampledArgb = sampleScaled(srcPixels, srcW, srcH, srcX, srcY, hw, hh);
+                if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
 
-                    int plx = pxi % pw;
-                    int ply = pxi / pw;
-                    int destGx = pieceIdx * pw + plx;
-                    int destGy = style * ph + ply;
-                    img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
-                }
+                int plx = pxi % pw;
+                int ply = pxi / pw;
+                int destGx = pieceIdx * pw + plx;
+                int destGy = style * ph + ply;
+                img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
             }
         }
 
