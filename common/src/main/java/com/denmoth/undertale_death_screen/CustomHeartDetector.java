@@ -104,23 +104,46 @@ public final class CustomHeartDetector {
     }
 
     /**
-     * Returns true if all opaque pixels in the sprite look like vanilla red heart colors.
-     * Vanilla uses shades of red/pink: dominant R channel, low G and B.
+     * Returns true if all opaque pixels exactly match the vanilla heart palette
+     * (within a small tolerance for any platform color conversion rounding).
+     *
+     * Vanilla heart uses exactly 4 colors:
+     *   0xFF000000 - black outline/shadow
+     *   0xFFBB1313 - dark red
+     *   0xFFFF1313 - bright red
+     *   0xFFFFC8C8 - light pink highlight
      */
+    private static final int[] VANILLA_PALETTE = {
+        0xFF000000,
+        0xFFBB1313,
+        0xFFFF1313,
+        0xFFFFC8C8,
+    };
+    private static final int PALETTE_TOLERANCE = 8; // per-channel max delta
+
     private static boolean isVanillaColors(int[] pixels) {
         for (int px : pixels) {
             int a = (px >> 24) & 0xFF;
             if (a <= 10) continue;
-            int r = (px >> 16) & 0xFF;
-            int g = (px >> 8) & 0xFF;
-            int b = px & 0xFF;
-
-            // Skip dark shadow pixels (r,g,b all low)
-            if (r < 40 && g < 40 && b < 40) continue;
-
-            // Non-vanilla if green or blue dominates over red by a clear margin
-            if (g > r + 25 || b > r + 25) return false;
+            if (!matchesAnyVanillaColor(px)) return false;
         }
         return true;
+    }
+
+    private static boolean matchesAnyVanillaColor(int argb) {
+        int r = (argb >> 16) & 0xFF;
+        int g = (argb >> 8) & 0xFF;
+        int b = argb & 0xFF;
+        for (int vc : VANILLA_PALETTE) {
+            int vr = (vc >> 16) & 0xFF;
+            int vg = (vc >> 8) & 0xFF;
+            int vb = vc & 0xFF;
+            if (Math.abs(r - vr) <= PALETTE_TOLERANCE
+                    && Math.abs(g - vg) <= PALETTE_TOLERANCE
+                    && Math.abs(b - vb) <= PALETTE_TOLERANCE) {
+                return true;
+            }
+        }
+        return false;
     }
 }
