@@ -76,7 +76,7 @@ public class HeartPiece {
 
         guiGraphics.blitSprite(
                 RenderPipelines.GUI_TEXTURED,
-                PIECES_TEXTURE_LOCATION,
+                DynamicHeartTextureManager.getPiecesLocation(),
                 PIECE_TEXTURE_WIDTH,
                 PIECE_TEXTURE_HEIGHT,
                 animated ? currentFrame * PIECE_WIDTH : textureX,

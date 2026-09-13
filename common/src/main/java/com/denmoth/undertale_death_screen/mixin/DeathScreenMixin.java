@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.Nullable;
 import com.denmoth.undertale_death_screen.*;
+import net.minecraft.client.gui.screens.Screen;
 import com.denmoth.undertale_death_screen.registry.SoundEventRegistry;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -136,6 +137,15 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                     }
                 }
             }
+        }
+
+        // Build dynamic textures if a custom heart resource pack is detected
+        if (CustomHeartDetector.hasCustomHeart()) {
+            DynamicHeartTextureManager.buildTextures(
+                    CustomHeartDetector.getCustomHeartPixels(),
+                    CustomHeartDetector.getSpriteWidth(),
+                    CustomHeartDetector.getSpriteHeight()
+            );
         }
     }
 
@@ -366,9 +376,12 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
 
     @Unique
     private void undertale_death_animation$renderHeart(GuiGraphicsExtractor guiGraphics, int stage, int x, int y) {
+        Identifier shatterLocation = this.hardcore
+                ? HEART_TEXTURE_LOCATION_HC
+                : DynamicHeartTextureManager.getShatterLocation();
         guiGraphics.blitSprite(
                 net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
-                (this.hardcore ? HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION),
+                shatterLocation,
                 HEART_TEXTURE_WIDTH,
                 HEART_TEXTURE_HEIGHT,
                 HEART_WIDTH * stage,
@@ -378,6 +391,11 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                 HEART_WIDTH,
                 HEART_HEIGHT
         );
+    }
+
+    @Inject(method = "onClose", at = @At("HEAD"))
+    private void onClose(CallbackInfo ci) {
+        DynamicHeartTextureManager.cleanup();
     }
 
     @Override

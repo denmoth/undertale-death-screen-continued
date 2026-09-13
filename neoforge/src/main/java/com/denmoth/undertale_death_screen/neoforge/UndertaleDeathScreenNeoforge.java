@@ -19,6 +19,10 @@ import java.util.function.Supplier;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.jetbrains.annotations.NotNull;
 import net.minecraft.client.Minecraft;
+import net.neoforged.neoforge.client.event.AddClientReloadListenersEvent;
+import net.minecraft.resources.Identifier;
+import com.denmoth.undertale_death_screen.CustomHeartDetector;
+import com.denmoth.undertale_death_screen.DynamicHeartTextureManager;
 
 @Mod(UndertaleDeathScreenCommon.MOD_ID)
 public class UndertaleDeathScreenNeoforge {
@@ -50,6 +54,24 @@ public class UndertaleDeathScreenNeoforge {
 
         public static void register(IEventBus eventBus) {
             SOUND_EVENT_REGISTRY.register(eventBus);
+            eventBus.addListener(Impl::onAddReloadListeners);
+        }
+
+        private static void onAddReloadListeners(AddClientReloadListenersEvent event) {
+            event.addListener(
+                    Identifier.fromNamespaceAndPath("undertale_death_screen", "heart_texture_cache"),
+                    new net.minecraft.server.packs.resources.SimplePreparableReloadListener<Void>() {
+                        @Override
+                        protected Void prepare(net.minecraft.server.packs.resources.ResourceManager manager, net.minecraft.util.profiling.ProfilerFiller profiler) {
+                            return null;
+                        }
+                        @Override
+                        protected void apply(Void prepared, net.minecraft.server.packs.resources.ResourceManager manager, net.minecraft.util.profiling.ProfilerFiller profiler) {
+                            DynamicHeartTextureManager.cleanup();
+                            CustomHeartDetector.invalidate();
+                        }
+                    }
+            );
         }
 
         @Override
