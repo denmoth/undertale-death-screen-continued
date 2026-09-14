@@ -104,31 +104,63 @@ public final class DynamicHeartTextureManager {
         int hw = HeartDisplacementData.HEART_WIDTH;
         int hh = HeartDisplacementData.HEART_HEIGHT;
         int numStages = HeartDisplacementData.NUM_STAGES;
-
-        // Only write the row that matches the active heart style.
-        // The mixin always reads from heartStyle row, so other rows are unused.
         int style = Math.max(0, Math.min(3, targetStyle));
-        for (int stage = 0; stage < numStages; stage++) {
-            for (int pi = 0; pi < HeartDisplacementData.SHATTER_DISPLACEMENT.length; pi++) {
-                int origLx = pi % hw;
-                int origLy = pi / hw;
-                int enc = HeartDisplacementData.SHATTER_DISPLACEMENT[pi][stage];
-                boolean visible = HeartDisplacementData.isVisible(enc);
-                if (!visible) continue;
 
-                int dx = HeartDisplacementData.getDx(enc);
-                int dy = HeartDisplacementData.getDy(enc);
-                int destLx = origLx + dx;
-                int destLy = origLy + dy;
+        NativeImage vanillaImg = null;
+        Identifier resLoc = UndertaleDeathScreenCommon.id("textures/gui/sprites/undertale_death/heart_shatter.png");
+        var opt = Minecraft.getInstance().getResourceManager().getResource(resLoc);
+        if (opt.isPresent()) {
+            try (java.io.InputStream is = opt.get().open()) {
+                vanillaImg = NativeImage.read(is);
+            } catch (Exception ignored) {}
+        }
 
-                if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
+        try {
+            for (int stage = 0; stage < numStages; stage++) {
+                for (int pi = 0; pi < HeartDisplacementData.SHATTER_DISPLACEMENT.length; pi++) {
+                    int origLx = pi % hw;
+                    int origLy = pi / hw;
+                    int enc = HeartDisplacementData.SHATTER_DISPLACEMENT[pi][stage];
+                    boolean visible = HeartDisplacementData.isVisible(enc);
+                    if (!visible) continue;
 
-                int sampledArgb = sampleHeartPixel(srcPixels, srcW, srcH, origLx, origLy);
-                if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
+                    int dx = HeartDisplacementData.getDx(enc);
+                    int dy = HeartDisplacementData.getDy(enc);
+                    int destLx = origLx + dx;
+                    int destLy = origLy + dy;
 
-                int destGx = stage * hw + destLx;
-                int destGy = style * hh + destLy;
-                img.setPixel(destGx, destGy, argbToNativeImage(sampledArgb));
+                    if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
+
+                    int destGx = stage * hw + destLx;
+                    int destGy = style * hh + destLy;
+
+                    int vanillaPixel = 0;
+                    if (vanillaImg != null && destGx < vanillaImg.getWidth() && destGy < vanillaImg.getHeight()) {
+                        vanillaPixel = vanillaImg.getPixel(destGx, destGy);
+                    }
+
+                    int alpha = (vanillaPixel >> 24) & 0xFF;
+                    int r = (vanillaPixel >> 16) & 0xFF;
+                    int g = (vanillaPixel >> 8) & 0xFF;
+                    int b = vanillaPixel & 0xFF;
+
+                    int finalPixel;
+                    if (alpha > 10 && r == 0 && g == 0 && b == 0) {
+                        // Black outline or black crack line from vanilla shatter template
+                        finalPixel = 0xFF000000;
+                    } else {
+                        // Heart body pixel — sample custom heart color
+                        int sampledArgb = sampleHeartPixel(srcPixels, srcW, srcH, origLx, origLy);
+                        if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
+                        finalPixel = sampledArgb;
+                    }
+
+                    img.setPixel(destGx, destGy, argbToNativeImage(finalPixel));
+                }
+            }
+        } finally {
+            if (vanillaImg != null) {
+                vanillaImg.close();
             }
         }
 
