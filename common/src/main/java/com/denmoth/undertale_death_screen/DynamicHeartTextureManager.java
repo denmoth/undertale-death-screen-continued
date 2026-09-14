@@ -177,9 +177,24 @@ public final class DynamicHeartTextureManager {
      * Returns ARGB.
      */
     private static int sampleScaled(int[] srcPixels, int srcW, int srcH, int lx, int ly, int gridW, int gridH) {
-        // Map logical (lx,ly) in gridW*gridH space to srcW*srcH
-        int sx = (int) Math.round((lx + 0.5) * srcW / (double) gridW - 0.5);
-        int sy = (int) Math.round((ly + 0.5) * srcH / (double) gridH - 0.5);
+        // The heart sprite from the resource pack maps to the 9x9 region [x: 2..10, y: 3..11]
+        // inside the 13x15 canvas. Outside this region are transparent margins matching heart_shatter.png.
+        int heartMinX = 2;
+        int heartMaxX = 10; // inclusive (9px wide)
+        int heartMinY = 3;
+        int heartMaxY = 11; // inclusive (9px tall)
+
+        if (lx < heartMinX || lx > heartMaxX || ly < heartMinY || ly > heartMaxY) {
+            return 0; // transparent padding
+        }
+
+        int relLx = lx - heartMinX;
+        int relLy = ly - heartMinY;
+        int relW = heartMaxX - heartMinX + 1; // 9
+        int relH = heartMaxY - heartMinY + 1; // 9
+
+        int sx = (int) Math.round((relLx + 0.5) * srcW / (double) relW - 0.5);
+        int sy = (int) Math.round((relLy + 0.5) * srcH / (double) relH - 0.5);
         sx = Math.max(0, Math.min(srcW - 1, sx));
         sy = Math.max(0, Math.min(srcH - 1, sy));
         return srcPixels[sy * srcW + sx];
