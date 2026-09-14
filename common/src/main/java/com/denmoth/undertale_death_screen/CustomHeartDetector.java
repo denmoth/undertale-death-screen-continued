@@ -3,9 +3,10 @@ package com.denmoth.undertale_death_screen;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.denmoth.undertale_death_screen.mixin.SpriteContentsAccessor;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.sprite.AtlasManager;
-import net.minecraft.client.resources.model.sprite.SpriteId;
 import net.minecraft.data.AtlasIds;
 import net.minecraft.resources.Identifier;
 
@@ -132,11 +133,13 @@ public final class CustomHeartDetector {
 
     private static int[] readSpritePixels(Identifier textureName) {
         AtlasManager atlasManager = Minecraft.getInstance().getAtlasManager();
-        SpriteId spriteId = new SpriteId(AtlasIds.GUI, textureName);
-        TextureAtlasSprite sprite = atlasManager.get(spriteId);
+        TextureAtlas guiAtlas = atlasManager.getAtlasOrThrow(AtlasIds.GUI);
+        TextureAtlasSprite sprite = guiAtlas.getSprite(textureName);
         if (sprite == null) return null;
 
         var contents = sprite.contents();
+        if (contents.name().equals(MissingTextureAtlasSprite.getLocation())) return null;
+
         int sw = contents.width();
         int sh = contents.height();
         NativeImage originalImage = ((SpriteContentsAccessor) (Object) contents).undertale_death_animation$getOriginalImage();
