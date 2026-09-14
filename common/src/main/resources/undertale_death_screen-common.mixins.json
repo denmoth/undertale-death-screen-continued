@@ -10,6 +10,7 @@
   "client": [
     "DeathScreenMixin",
     "MinecraftMixin",
-    "ConfirmScreenMixin"
+    "ConfirmScreenMixin",
+    "SpriteContentsAccessor"
   ]
 }
