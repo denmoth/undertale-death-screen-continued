@@ -117,45 +117,39 @@ public final class DynamicHeartTextureManager {
 
         try {
             for (int stage = 0; stage < numStages; stage++) {
-                for (int pi = 0; pi < HeartDisplacementData.SHATTER_DISPLACEMENT.length; pi++) {
-                    int origLx = pi % hw;
-                    int origLy = pi / hw;
-                    int enc = HeartDisplacementData.SHATTER_DISPLACEMENT[pi][stage];
-                    boolean visible = HeartDisplacementData.isVisible(enc);
-                    if (!visible) continue;
+                int stageXOffset = stage * hw;
+                int styleYOffset = style * hh;
 
-                    int dx = HeartDisplacementData.getDx(enc);
-                    int dy = HeartDisplacementData.getDy(enc);
-                    int destLx = origLx + dx;
-                    int destLy = origLy + dy;
+                for (int ly = 0; ly < hh; ly++) {
+                    for (int lx = 0; lx < hw; lx++) {
+                        int gx = stageXOffset + lx;
+                        int gy = styleYOffset + ly;
 
-                    if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
+                        if (vanillaImg == null || gx >= vanillaImg.getWidth() || gy >= vanillaImg.getHeight()) {
+                            continue;
+                        }
 
-                    int destGx = stage * hw + destLx;
-                    int destGy = style * hh + destLy;
+                        int vanillaPixel = vanillaImg.getPixel(gx, gy);
+                        int alpha = (vanillaPixel >> 24) & 0xFF;
+                        if (alpha <= 10) {
+                            continue; // Transparent in shatter template -> gap / empty space
+                        }
 
-                    int vanillaPixel = 0;
-                    if (vanillaImg != null && destGx < vanillaImg.getWidth() && destGy < vanillaImg.getHeight()) {
-                        vanillaPixel = vanillaImg.getPixel(destGx, destGy);
+                        int r = (vanillaPixel >> 16) & 0xFF;
+                        int g = (vanillaPixel >> 8) & 0xFF;
+                        int b = vanillaPixel & 0xFF;
+
+                        if (r == 0 && g == 0 && b == 0) {
+                            // Black outline or black crack line from template
+                            img.setPixel(gx, gy, argbToNativeImage(0xFF000000));
+                        } else {
+                            // Body pixel of the heart — sample custom heart sprite at (lx, ly)
+                            int customColor = sampleHeartPixel(srcPixels, srcW, srcH, lx, ly);
+                            if (((customColor >> 24) & 0xFF) > 10) {
+                                img.setPixel(gx, gy, argbToNativeImage(customColor));
+                            }
+                        }
                     }
-
-                    int alpha = (vanillaPixel >> 24) & 0xFF;
-                    int r = (vanillaPixel >> 16) & 0xFF;
-                    int g = (vanillaPixel >> 8) & 0xFF;
-                    int b = vanillaPixel & 0xFF;
-
-                    int finalPixel;
-                    if (alpha > 10 && r == 0 && g == 0 && b == 0) {
-                        // Black outline or black crack line from vanilla shatter template
-                        finalPixel = 0xFF000000;
-                    } else {
-                        // Heart body pixel — sample custom heart color
-                        int sampledArgb = sampleHeartPixel(srcPixels, srcW, srcH, origLx, origLy);
-                        if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
-                        finalPixel = sampledArgb;
-                    }
-
-                    img.setPixel(destGx, destGy, argbToNativeImage(finalPixel));
                 }
             }
         } finally {
