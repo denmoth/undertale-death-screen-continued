@@ -394,10 +394,6 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         );
     }
 
-    @Inject(method = "onClose", at = @At("HEAD"))
-    private void onClose(CallbackInfo ci) {
-        DynamicHeartTextureManager.cleanup();
-    }
 
     @Override
     public void undertale_death_animation$stopBackgroundMusic() {
