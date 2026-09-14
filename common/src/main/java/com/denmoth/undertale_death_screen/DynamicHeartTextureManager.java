@@ -123,7 +123,7 @@ public final class DynamicHeartTextureManager {
 
                 if (destLx < 0 || destLx >= hw || destLy < 0 || destLy >= hh) continue;
 
-                int sampledArgb = sampleScaled(srcPixels, srcW, srcH, origLx, origLy, hw, hh);
+                int sampledArgb = sampleHeartPixel(srcPixels, srcW, srcH, origLx, origLy);
                 if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
 
                 int destGx = stage * hw + destLx;
@@ -142,8 +142,6 @@ public final class DynamicHeartTextureManager {
 
         int pw = HeartDisplacementData.PIECE_WIDTH;
         int ph = HeartDisplacementData.PIECE_HEIGHT;
-        int hw = HeartDisplacementData.HEART_WIDTH;
-        int hh = HeartDisplacementData.HEART_HEIGHT;
         int style = Math.max(0, Math.min(3, targetStyle));
 
         for (int pieceIdx = 0; pieceIdx < HeartDisplacementData.NUM_PIECES; pieceIdx++) {
@@ -155,7 +153,7 @@ public final class DynamicHeartTextureManager {
                 int srcX = HeartDisplacementData.getSrcX(enc);
                 int srcY = HeartDisplacementData.getSrcY(enc);
 
-                int sampledArgb = sampleScaled(srcPixels, srcW, srcH, srcX, srcY, hw, hh);
+                int sampledArgb = sampleHeartPixel(srcPixels, srcW, srcH, srcX, srcY);
                 if (((sampledArgb >> 24) & 0xFF) <= 10) continue;
 
                 int plx = pxi % pw;
@@ -172,14 +170,27 @@ public final class DynamicHeartTextureManager {
     }
 
     /**
-     * Samples a pixel from srcPixels (srcW x srcH) at logical position (lx, ly)
-     * in a logical grid of (gridW x gridH), scaling accordingly.
-     * Returns ARGB.
+     * Maps logical (lx, ly) in the 13x15 Undertale grid to pixels in srcPixels (srcW x srcH).
+     * The 9x9 heart sprite maps to [x: 2..10, y: 3..11] inside the 13x15 grid.
+     * Pixels outside [2..10, 3..11] return 0 (transparent margin matching heart_shatter.png).
      */
-    private static int sampleScaled(int[] srcPixels, int srcW, int srcH, int lx, int ly, int gridW, int gridH) {
-        // Map logical (lx,ly) in gridW*gridH space to srcW*srcH
-        int sx = (int) Math.round((lx + 0.5) * srcW / (double) gridW - 0.5);
-        int sy = (int) Math.round((ly + 0.5) * srcH / (double) gridH - 0.5);
+    private static int sampleHeartPixel(int[] srcPixels, int srcW, int srcH, int lx, int ly) {
+        int minX = 2;
+        int maxX = 10; // inclusive (9px wide)
+        int minY = 3;
+        int maxY = 11; // inclusive (9px tall)
+
+        if (lx < minX || lx > maxX || ly < minY || ly > maxY) {
+            return 0; // transparent padding
+        }
+
+        int relX = lx - minX; // 0..8
+        int relY = ly - minY; // 0..8
+        int gridW = maxX - minX + 1; // 9
+        int gridH = maxY - minY + 1; // 9
+
+        int sx = (int) Math.round((relX + 0.5) * srcW / (double) gridW - 0.5);
+        int sy = (int) Math.round((relY + 0.5) * srcH / (double) gridH - 0.5);
         sx = Math.max(0, Math.min(srcW - 1, sx));
         sy = Math.max(0, Math.min(srcH - 1, sy));
         return srcPixels[sy * srcW + sx];
