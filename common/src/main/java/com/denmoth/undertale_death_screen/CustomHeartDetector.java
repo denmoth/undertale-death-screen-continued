@@ -234,19 +234,9 @@ public final class CustomHeartDetector {
         int[] pixels = new int[sw * sh];
         for (int y = 0; y < sh; y++) {
             for (int x = 0; x < sw; x++) {
-                // getPixel() returns RGBA packed as int (little-endian x86):
-                //   bits  7-0  = R
-                //   bits 15-8  = G
-                //   bits 23-16 = B
-                //   bits 31-24 = A
-                // We store as ARGB (Java convention):
-                //   bits 31-24 = A, 23-16 = R, 15-8 = G, 7-0 = B
-                int rgba = originalImage.getPixel(x, y);
-                int a = (rgba >> 24) & 0xFF;
-                int b = (rgba >> 16) & 0xFF;
-                int g = (rgba >>  8) & 0xFF;
-                int r =  rgba        & 0xFF;
-                pixels[y * sw + x] = (a << 24) | (r << 16) | (g << 8) | b;
+                // getPixel() already returns ARGB (A=31-24, R=23-16, G=15-8, B=7-0)
+                // No conversion needed — store as-is
+                pixels[y * sw + x] = originalImage.getPixel(x, y);
             }
         }
 

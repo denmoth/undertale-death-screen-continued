@@ -124,7 +124,7 @@ public final class DynamicHeartTextureManager {
 
                 int destGx = stage * hw + destLx;
                 int destGy = style * hh + destLy;
-                img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
+                img.setPixel(destGx, destGy, argbToNativeImage(sampledArgb));
             }
         }
 
@@ -157,7 +157,7 @@ public final class DynamicHeartTextureManager {
                 int ply = pxi / pw;
                 int destGx = pieceIdx * pw + plx;
                 int destGy = style * ph + ply;
-                img.setPixel(destGx, destGy, argbToAbgr(sampledArgb));
+                img.setPixel(destGx, destGy, argbToNativeImage(sampledArgb));
             }
         }
 
@@ -180,13 +180,10 @@ public final class DynamicHeartTextureManager {
     }
 
     /**
-     * Converts ARGB to ABGR (what NativeImage expects on most platforms).
+     * NativeImage.setPixel takes ARGB (same format as getPixel returns).
+     * No byte swap needed.
      */
-    private static int argbToAbgr(int argb) {
-        int a = (argb >> 24) & 0xFF;
-        int r = (argb >> 16) & 0xFF;
-        int g = (argb >> 8) & 0xFF;
-        int b = argb & 0xFF;
-        return (a << 24) | (b << 16) | (g << 8) | r;
+    private static int argbToNativeImage(int argb) {
+        return argb;
     }
 }
