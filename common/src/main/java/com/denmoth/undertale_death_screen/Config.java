@@ -35,6 +35,7 @@ public class Config {
     private boolean disableButtonsBeforeAnimation = true;
     private boolean disableVanillaRedTint = false;
     private boolean independentBgmVolume = true;
+    private boolean debugMode = false;
 
     private Config() {
     }
@@ -86,6 +87,7 @@ public class Config {
                 INSTANCE.disableButtonsBeforeAnimation = serverConfig.disableButtonsBeforeAnimation;
                 INSTANCE.disableVanillaRedTint = serverConfig.disableVanillaRedTint;
                 INSTANCE.independentBgmVolume = serverConfig.independentBgmVolume;
+                INSTANCE.debugMode = serverConfig.debugMode;
                 UndertaleDeathScreenCommon.logger.info("Successfully synced configuration from server.");
             }
         } catch (JsonSyntaxException e) {
@@ -232,6 +234,13 @@ public class Config {
     }
     public void setIndependentBgmVolume(boolean independentBgmVolume) {
         this.independentBgmVolume = independentBgmVolume;
+    }
+
+    public boolean getDebugMode() {
+        return debugMode;
+    }
+    public void setDebugMode(boolean debugMode) {
+        this.debugMode = debugMode;
     }
 
 

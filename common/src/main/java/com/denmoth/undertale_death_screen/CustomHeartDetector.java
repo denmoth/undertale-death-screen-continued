@@ -16,27 +16,31 @@ import net.minecraft.resources.Identifier;
  *
  * Reads the correct sprite based on the active heart style (normal/poison/wither/freeze)
  * and compares against the exact known vanilla palette for that style.
+ *
+ * NativeImage pixel format note:
+ *   getPixel(x,y) returns raw memory int — on little-endian x86 with RGBA layout
+ *   this is 0xAABBGGRR (i.e. ABGR as a Java int), same as getPixelABGR.
+ *   We always read/write using ABGR convention to match what NativeImage expects.
  */
 public final class CustomHeartDetector {
 
-    // Sprite names per style (style index matches COLUMN_SELECTOR in DeathScreenMixin)
     private static final Identifier[] NORMAL_SPRITES = {
-        Identifier.withDefaultNamespace("hud/heart/full"),          // 0: normal
-        Identifier.withDefaultNamespace("hud/heart/poisoned_full"), // 1: poison
-        Identifier.withDefaultNamespace("hud/heart/withered_full"), // 2: wither
-        Identifier.withDefaultNamespace("hud/heart/frozen_full"),   // 3: freeze
+        Identifier.withDefaultNamespace("hud/heart/full"),
+        Identifier.withDefaultNamespace("hud/heart/poisoned_full"),
+        Identifier.withDefaultNamespace("hud/heart/withered_full"),
+        Identifier.withDefaultNamespace("hud/heart/frozen_full"),
     };
     private static final Identifier[] HARDCORE_SPRITES = {
-        Identifier.withDefaultNamespace("hud/heart/hardcore_full"),          // 0: normal
-        Identifier.withDefaultNamespace("hud/heart/poisoned_hardcore_full"), // 1: poison
-        Identifier.withDefaultNamespace("hud/heart/withered_hardcore_full"), // 2: wither
-        Identifier.withDefaultNamespace("hud/heart/frozen_hardcore_full"),   // 3: freeze
+        Identifier.withDefaultNamespace("hud/heart/hardcore_full"),
+        Identifier.withDefaultNamespace("hud/heart/poisoned_hardcore_full"),
+        Identifier.withDefaultNamespace("hud/heart/withered_hardcore_full"),
+        Identifier.withDefaultNamespace("hud/heart/frozen_hardcore_full"),
     };
 
-    // Exact vanilla palettes per style — extracted from heart_shatter.png and heart_shatter_hardcore.png
-    // Tolerance applied per-channel during comparison.
+    // Palettes stored as ARGB (Java int convention A=bits31-24, R=23-16, G=15-8, B=7-0)
+    // Extracted from our heart_shatter.png sprite sheet rows.
     private static final int[][] VANILLA_PALETTES = {
-        // Style 0: normal
+        // Style 0: normal red
         { 0xFF000000, 0xFFBB1313, 0xFFFF1313, 0xFFFFC8C8 },
         // Style 1: poison
         { 0xFF000000, 0xFF685308, 0xFF8B8712, 0xFF947818, 0xFFAC7BA2 },
@@ -60,9 +64,8 @@ public final class CustomHeartDetector {
           0xFF6B949E, 0xFF80E5EF, 0xFFA8F7FF, 0xFFE1FCFF },
     };
 
-    private static final int PALETTE_TOLERANCE = 8; // per-channel max delta
+    private static final int PALETTE_TOLERANCE = 8;
 
-    // Cached results; null = not yet evaluated
     private static Boolean cachedIsCustom = null;
     private static int[] cachedPixels = null;
     private static int cachedSpriteWidth = 0;
@@ -72,7 +75,6 @@ public final class CustomHeartDetector {
 
     private CustomHeartDetector() {}
 
-    /** Invalidate cache when resource packs reload. */
     public static void invalidate() {
         cachedIsCustom = null;
         cachedPixels = null;
@@ -82,11 +84,6 @@ public final class CustomHeartDetector {
         cachedForHardcore = false;
     }
 
-    /**
-     * Returns true if a non-vanilla heart texture is active for the given style.
-     * @param heartStyle 0=normal, 1=poison, 2=wither, 3=freeze
-     * @param hardcore   whether the player is in hardcore mode
-     */
     public static boolean hasCustomHeart(int heartStyle, boolean hardcore) {
         if (cachedIsCustom == null || cachedForStyle != heartStyle || cachedForHardcore != hardcore) {
             detect(heartStyle, hardcore);
@@ -94,7 +91,6 @@ public final class CustomHeartDetector {
         return Boolean.TRUE.equals(cachedIsCustom);
     }
 
-    /** ARGB pixel array of the custom heart sprite, or null if vanilla. */
     public static int[] getCustomHeartPixels() { return cachedPixels; }
     public static int getSpriteWidth()          { return cachedSpriteWidth; }
     public static int getSpriteHeight()         { return cachedSpriteHeight; }
@@ -104,81 +100,164 @@ public final class CustomHeartDetector {
     private static void detect(int heartStyle, boolean hardcore) {
         cachedForStyle = heartStyle;
         cachedForHardcore = hardcore;
+        boolean debug = Config.INSTANCE.getDebugMode();
+
         try {
             int styleIdx = Math.max(0, Math.min(3, heartStyle));
-            Identifier spriteId = hardcore ? HARDCORE_SPRITES[styleIdx] : NORMAL_SPRITES[styleIdx];
+            Identifier spriteName = hardcore ? HARDCORE_SPRITES[styleIdx] : NORMAL_SPRITES[styleIdx];
             int[] vanillaPalette = hardcore ? VANILLA_PALETTES_HC[styleIdx] : VANILLA_PALETTES[styleIdx];
 
-            int[] pixels = readSpritePixels(spriteId);
+            if (debug) {
+                UndertaleDeathScreenCommon.logger.info(
+                    "[UDSC DEBUG] detecting heart: style={} hardcore={} sprite={}",
+                    styleIdx, hardcore, spriteName);
+            }
+
+            // Read pixel data from GUI atlas
+            int[] pixels = readSpritePixels(spriteName, debug);
             if (pixels == null) {
+                UndertaleDeathScreenCommon.logger.warn("[UDSC] Could not read sprite pixels for {}", spriteName);
                 cachedIsCustom = false;
                 return;
             }
 
-            if (isVanillaColors(pixels, vanillaPalette)) {
+            // Find the first non-matching pixel for debug output
+            int firstMismatchIdx = -1;
+            int firstMismatchColor = 0;
+            for (int i = 0; i < pixels.length; i++) {
+                int a = (pixels[i] >> 24) & 0xFF;
+                if (a <= 10) continue;
+                if (!matchesAny(pixels[i], vanillaPalette)) {
+                    firstMismatchIdx = i;
+                    firstMismatchColor = pixels[i];
+                    break;
+                }
+            }
+
+            boolean isVanilla = (firstMismatchIdx == -1);
+
+            if (debug) {
+                UndertaleDeathScreenCommon.logger.info(
+                    "[UDSC DEBUG] sprite={}x{} totalPixels={} isVanilla={}",
+                    cachedSpriteWidth, cachedSpriteHeight, pixels.length, isVanilla);
+                if (!isVanilla) {
+                    int r = (firstMismatchColor >> 16) & 0xFF;
+                    int g = (firstMismatchColor >> 8) & 0xFF;
+                    int b = firstMismatchColor & 0xFF;
+                    int a = (firstMismatchColor >> 24) & 0xFF;
+                    UndertaleDeathScreenCommon.logger.info(
+                        "[UDSC DEBUG] first mismatch at pixel #{}: ARGB=0x{} rgb({},{},{}) a={}",
+                        firstMismatchIdx, Integer.toHexString(firstMismatchColor).toUpperCase(), r, g, b, a);
+                    UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] vanilla palette for style {}:", styleIdx);
+                    for (int vc : vanillaPalette) {
+                        UndertaleDeathScreenCommon.logger.info("  0x{} rgb({},{},{})",
+                            Integer.toHexString(vc).toUpperCase(),
+                            (vc >> 16) & 0xFF, (vc >> 8) & 0xFF, vc & 0xFF);
+                    }
+                    // Print ALL unique opaque pixel colors for diagnosis
+                    java.util.Set<Integer> unique = new java.util.LinkedHashSet<>();
+                    for (int px : pixels) {
+                        if (((px >> 24) & 0xFF) > 10) unique.add(px);
+                    }
+                    UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] all unique opaque colors in sprite ({}):", unique.size());
+                    for (int vc : unique) {
+                        UndertaleDeathScreenCommon.logger.info("  0x{}  rgb({},{},{})",
+                            Integer.toHexString(vc).toUpperCase(),
+                            (vc >> 16) & 0xFF, (vc >> 8) & 0xFF, vc & 0xFF);
+                    }
+                }
+            }
+
+            if (isVanilla) {
+                if (debug) UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] → vanilla, no dynamic textures");
                 cachedIsCustom = false;
                 cachedPixels = null;
             } else {
+                UndertaleDeathScreenCommon.logger.info(
+                    "[UDSC] Custom heart detected (style={} hardcore={}) — building dynamic textures",
+                    styleIdx, hardcore);
                 cachedIsCustom = true;
                 cachedPixels = pixels;
-                UndertaleDeathScreenCommon.logger.info(
-                    "Custom heart texture detected for style={} hardcore={} — generating dynamic textures",
-                    styleIdx, hardcore);
             }
+
         } catch (Exception e) {
-            UndertaleDeathScreenCommon.logger.warn("Failed to detect custom heart texture: {}", e.getMessage());
+            UndertaleDeathScreenCommon.logger.warn("[UDSC] Failed to detect custom heart: {}", e.getMessage());
+            if (Config.INSTANCE.getDebugMode()) {
+                UndertaleDeathScreenCommon.logger.warn("[UDSC DEBUG] stacktrace:", e);
+            }
             cachedIsCustom = false;
         }
     }
 
-    private static int[] readSpritePixels(Identifier textureName) {
+    /**
+     * Reads pixels from the named sprite in the GUI atlas.
+     * Returns ARGB int[] (A=bits31-24, R=23-16, G=15-8, B=7-0), or null on failure.
+     *
+     * NativeImage.getPixel() returns raw memory as int.
+     * For RGBA images on x86 little-endian the in-memory layout is R,G,B,A per byte,
+     * which as a little-endian int reads as 0xAABBGGRR — i.e. ABGR.
+     * So bits 0-7=R, 8-15=G, 16-23=B, 24-31=A.
+     */
+    private static int[] readSpritePixels(Identifier spriteName, boolean debug) {
         AtlasManager atlasManager = Minecraft.getInstance().getAtlasManager();
         TextureAtlas guiAtlas = atlasManager.getAtlasOrThrow(AtlasIds.GUI);
-        TextureAtlasSprite sprite = guiAtlas.getSprite(textureName);
-        if (sprite == null) return null;
+        TextureAtlasSprite sprite = guiAtlas.getSprite(spriteName);
+
+        if (sprite == null) {
+            if (debug) UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] getSprite returned null for {}", spriteName);
+            return null;
+        }
 
         var contents = sprite.contents();
-        if (contents.name().equals(MissingTextureAtlasSprite.getLocation())) return null;
+
+        // Reject missing texture (pink/black checkerboard)
+        if (contents.name().equals(MissingTextureAtlasSprite.getLocation())) {
+            if (debug) UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] sprite is missing texture for {}", spriteName);
+            return null;
+        }
 
         int sw = contents.width();
         int sh = contents.height();
+
         NativeImage originalImage = ((SpriteContentsAccessor) (Object) contents).undertale_death_animation$getOriginalImage();
-        if (originalImage == null) return null;
+        if (originalImage == null) {
+            if (debug) UndertaleDeathScreenCommon.logger.info("[UDSC DEBUG] originalImage is null for {}", spriteName);
+            return null;
+        }
+
+        if (debug) {
+            UndertaleDeathScreenCommon.logger.info(
+                "[UDSC DEBUG] sprite={} size={}x{} format={}",
+                spriteName, sw, sh, originalImage.format());
+        }
 
         int[] pixels = new int[sw * sh];
         for (int y = 0; y < sh; y++) {
             for (int x = 0; x < sw; x++) {
-                // NativeImage.getPixel returns ABGR; convert to ARGB
+                // getPixel returns ABGR (bits: A=31-24, B=23-16, G=15-8, R=7-0)
+                // Convert to ARGB (A=31-24, R=23-16, G=15-8, B=7-0)
                 int abgr = originalImage.getPixel(x, y);
                 int a = (abgr >> 24) & 0xFF;
                 int b = (abgr >> 16) & 0xFF;
-                int g = (abgr >> 8) & 0xFF;
-                int r = abgr & 0xFF;
+                int g = (abgr >>  8) & 0xFF;
+                int r =  abgr        & 0xFF;
                 pixels[y * sw + x] = (a << 24) | (r << 16) | (g << 8) | b;
             }
         }
+
         cachedSpriteWidth = sw;
         cachedSpriteHeight = sh;
         return pixels;
     }
 
-    private static boolean isVanillaColors(int[] pixels, int[] palette) {
-        for (int px : pixels) {
-            int a = (px >> 24) & 0xFF;
-            if (a <= 10) continue;
-            if (!matchesAny(px, palette)) return false;
-        }
-        return true;
-    }
-
     private static boolean matchesAny(int argb, int[] palette) {
         int r = (argb >> 16) & 0xFF;
-        int g = (argb >> 8) & 0xFF;
-        int b = argb & 0xFF;
+        int g = (argb >>  8) & 0xFF;
+        int b =  argb        & 0xFF;
         for (int vc : palette) {
             if (Math.abs(r - ((vc >> 16) & 0xFF)) <= PALETTE_TOLERANCE
-                    && Math.abs(g - ((vc >> 8) & 0xFF)) <= PALETTE_TOLERANCE
-                    && Math.abs(b - (vc & 0xFF)) <= PALETTE_TOLERANCE) {
+                    && Math.abs(g - ((vc >>  8) & 0xFF)) <= PALETTE_TOLERANCE
+                    && Math.abs(b - ( vc         & 0xFF)) <= PALETTE_TOLERANCE) {
                 return true;
             }
         }
