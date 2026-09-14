@@ -377,21 +377,36 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
 
     @Unique
     private void undertale_death_animation$renderHeart(GuiGraphicsExtractor guiGraphics, int stage, int x, int y) {
-        Identifier shatterLocation = this.hardcore
-                ? HEART_TEXTURE_LOCATION_HC
-                : DynamicHeartTextureManager.getShatterLocation();
-        guiGraphics.blitSprite(
-                net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
-                shatterLocation,
-                HEART_TEXTURE_WIDTH,
-                HEART_TEXTURE_HEIGHT,
-                HEART_WIDTH * stage,
-                HEART_HEIGHT * this.undertale_death_animation$heartStyle,
-                x,
-                y,
-                HEART_WIDTH,
-                HEART_HEIGHT
-        );
+        if (!this.hardcore && DynamicHeartTextureManager.isDynamicRegistered()) {
+            guiGraphics.blit(
+                    net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
+                    DynamicHeartTextureManager.getShatterLocation(),
+                    x,
+                    y,
+                    HEART_WIDTH * stage,
+                    HEART_HEIGHT * this.undertale_death_animation$heartStyle,
+                    HEART_WIDTH,
+                    HEART_HEIGHT,
+                    HEART_TEXTURE_WIDTH,
+                    HEART_TEXTURE_HEIGHT
+            );
+        } else {
+            Identifier shatterLocation = this.hardcore
+                    ? HEART_TEXTURE_LOCATION_HC
+                    : DynamicHeartTextureManager.getShatterLocation();
+            guiGraphics.blitSprite(
+                    net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
+                    shatterLocation,
+                    HEART_TEXTURE_WIDTH,
+                    HEART_TEXTURE_HEIGHT,
+                    HEART_WIDTH * stage,
+                    HEART_HEIGHT * this.undertale_death_animation$heartStyle,
+                    x,
+                    y,
+                    HEART_WIDTH,
+                    HEART_HEIGHT
+            );
+        }
     }
 
 

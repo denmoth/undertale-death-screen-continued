@@ -54,6 +54,10 @@ public final class DynamicHeartTextureManager {
         return dynamicRegistered ? DYNAMIC_PIECES_ID : VANILLA_PIECES;
     }
 
+    public static boolean isDynamicRegistered() {
+        return dynamicRegistered;
+    }
+
     /**
      * Builds dynamic textures from the given custom heart pixels.
      * customHeartPixels is ARGB int[], sized spriteWidth * spriteHeight.
@@ -130,6 +134,7 @@ public final class DynamicHeartTextureManager {
 
         dynamicShatter = new DynamicTexture(() -> "dynamic_heart_shatter", img);
         Minecraft.getInstance().getTextureManager().register(DYNAMIC_SHATTER_ID, dynamicShatter);
+        dynamicShatter.upload();
     }
 
     private static void buildPiecesTexture(int[] srcPixels, int srcW, int srcH, int targetStyle) {
@@ -163,6 +168,7 @@ public final class DynamicHeartTextureManager {
 
         dynamicPieces = new DynamicTexture(() -> "dynamic_heart_pieces", img);
         Minecraft.getInstance().getTextureManager().register(DYNAMIC_PIECES_ID, dynamicPieces);
+        dynamicPieces.upload();
     }
 
     /**
