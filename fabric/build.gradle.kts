@@ -1,5 +1,5 @@
 plugins {
-    id("dev.architectury.loom-no-remap")
+    id("dev.architectury.loom")
     id("io.github.goooler.shadow")
 }
 
@@ -19,23 +19,25 @@ configurations {
 
 dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
-    // mappings(loom.officialMojangMappings())
+    mappings(loom.officialMojangMappings())
 
-    implementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
-    api("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}")
+    modImplementation("net.fabricmc:fabric-loader:${project.property("fabric_loader_version")}")
+    modApi("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_api_version")}") {
+        exclude(module = "fabric-content-registries-v0")
+    }
 
     // Architectury API removed!
 
     // Cloth Config
-    api("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.property("cloth_config_version")}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
 
     // ModMenu
-    api("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
+    modApi("com.terraformersmc:modmenu:${project.property("modmenu_version")}")
 
-    common(project(":common")) { isTransitive = false }
-    shadowCommon(project(":common")) { isTransitive = false }
+    common(project(":common", configuration = "namedElements")) { isTransitive = false }
+    shadowCommon(project(":common", configuration = "transformProductionFabric")) { isTransitive = false }
 }
 
 tasks {
@@ -50,6 +52,26 @@ tasks {
     shadowJar {
         exclude("architectury.common.json")
         configurations = listOf(shadowCommon)
+        archiveClassifier.set("dev-shadow")
+    }
+
+    remapJar {
+        injectAccessWidener.set(true)
+        inputFile.set(shadowJar.flatMap { it.archiveFile })
+        dependsOn(shadowJar)
+
+        archiveBaseName.set("[${project.property("minecraft_version")}] ${project.property("mod_id")}")
+        archiveVersion.set("v${project.property("mod_version")}")
         archiveClassifier.set("fabric")
+
+        doLast {
+            archiveFile.orNull?.asFile?.let { jarFile ->
+                if (jarFile.exists()) {
+                    val targetDir = rootProject.file("local/builds")
+                    targetDir.mkdirs()
+                    jarFile.copyTo(File(targetDir, jarFile.name), overwrite = true)
+                }
+            }
+        }
     }
 }

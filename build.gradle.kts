@@ -1,5 +1,5 @@
 plugins {
-    id("dev.architectury.loom-no-remap") version "1.14-SNAPSHOT" apply false
+    id("dev.architectury.loom") version "1.14-SNAPSHOT" apply false
     id("architectury-plugin") version "3.5-SNAPSHOT"
     id("io.github.goooler.shadow") version "8.1.8" apply false
 }
@@ -7,8 +7,6 @@ plugins {
 architectury {
     minecraft = project.property("minecraft_version").toString()
 }
-
-
 
 allprojects {
     apply(plugin = "java")
@@ -28,11 +26,11 @@ allprojects {
 
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
-        options.release.set(25)
+        options.release.set(21)
     }
 
     configure<org.gradle.api.plugins.JavaPluginExtension> {
         withSourcesJar()
-        toolchain.languageVersion.set(JavaLanguageVersion.of(25))
+        toolchain.languageVersion.set(JavaLanguageVersion.of(21))
     }
 }

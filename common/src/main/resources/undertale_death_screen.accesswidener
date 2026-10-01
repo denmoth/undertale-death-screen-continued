@@ -1,4 +1,4 @@
-accessWidener v2 official
+accessWidener v2 named
 
 accessible field net/minecraft/client/renderer/texture/SpriteContents originalImage Lcom/mojang/blaze3d/platform/NativeImage;
-accessible field net/minecraft/client/Minecraft atlasManager Lnet/minecraft/client/resources/model/sprite/AtlasManager;
+accessible field net/minecraft/client/Minecraft atlasManager Lnet/minecraft/client/resources/model/AtlasManager;

@@ -1,5 +1,5 @@
 plugins {
-    id("dev.architectury.loom-no-remap")
+    id("dev.architectury.loom")
     id("io.github.goooler.shadow")
 }
 
@@ -19,7 +19,7 @@ configurations {
 
 dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
-    // mappings(loom.officialMojangMappings())
+    mappings(loom.officialMojangMappings())
 
     neoForge("net.neoforged:neoforge:${project.property("neoforge_version")}")
 
@@ -27,10 +27,10 @@ dependencies {
     // Architectury API removed!
 
     // Cloth Config
-    api("me.shedaniel.cloth:cloth-config-neoforge:${project.property("cloth_config_version")}")
+    modApi("me.shedaniel.cloth:cloth-config-neoforge:${project.property("cloth_config_version")}")
 
-    common(project(":common")) { isTransitive = false }
-    shadowCommon(project(":common")) { isTransitive = false }
+    common(project(":common", configuration = "namedElements")) { isTransitive = false }
+    shadowCommon(project(":common", configuration = "transformProductionNeoForge")) { isTransitive = false }
 }
 
 tasks {
@@ -45,6 +45,25 @@ tasks {
     shadowJar {
         exclude("architectury.common.json")
         configurations = listOf(shadowCommon)
+        archiveClassifier.set("dev-shadow")
+    }
+
+    remapJar {
+        inputFile.set(shadowJar.flatMap { it.archiveFile })
+        dependsOn(shadowJar)
+
+        archiveBaseName.set("[${project.property("minecraft_version")}] ${project.property("mod_id")}")
+        archiveVersion.set("v${project.property("mod_version")}")
         archiveClassifier.set("neoforge")
+
+        doLast {
+            archiveFile.orNull?.asFile?.let { jarFile ->
+                if (jarFile.exists()) {
+                    val targetDir = rootProject.file("local/builds")
+                    targetDir.mkdirs()
+                    jarFile.copyTo(File(targetDir, jarFile.name), overwrite = true)
+                }
+            }
+        }
     }
 }

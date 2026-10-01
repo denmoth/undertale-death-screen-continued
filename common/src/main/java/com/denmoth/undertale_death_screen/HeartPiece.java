@@ -1,6 +1,6 @@
 package com.denmoth.undertale_death_screen;
 
-import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 import org.joml.Matrix3x2f;
@@ -61,7 +61,7 @@ public class HeartPiece {
         }
     }
 
-    public void render(GuiGraphicsExtractor guiGraphics) {
+    public void render(GuiGraphics guiGraphics) {
         guiGraphics.pose().pushMatrix();
         guiGraphics.pose().translate(
                 (float) x, (float) y

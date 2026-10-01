@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.sprite.AtlasManager;
+import net.minecraft.client.resources.model.AtlasManager;
 import net.minecraft.data.AtlasIds;
 import net.minecraft.resources.Identifier;
 
