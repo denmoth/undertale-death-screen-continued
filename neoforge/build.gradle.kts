@@ -42,6 +42,22 @@ tasks {
         }
     }
 
+    jar {
+        archiveBaseName.set("[${project.property("minecraft_version")}] ${project.property("mod_id")}")
+        archiveVersion.set("v${project.property("mod_version")}")
+        archiveClassifier.set("neoforge")
+
+        doLast {
+            archiveFile.orNull?.asFile?.let { jarFile ->
+                if (jarFile.exists()) {
+                    val targetDir = rootProject.file("local/builds")
+                    targetDir.mkdirs()
+                    jarFile.copyTo(File(targetDir, jarFile.name), overwrite = true)
+                }
+            }
+        }
+    }
+
     shadowJar {
         exclude("architectury.common.json")
         configurations = listOf(shadowCommon)
