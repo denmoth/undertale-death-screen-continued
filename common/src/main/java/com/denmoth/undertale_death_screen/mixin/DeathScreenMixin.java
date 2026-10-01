@@ -201,7 +201,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                 undertale_death_animation$vanillaFadeOutProgress = 1.0;
                 UndertaleDeathScreenCommon.currentBackgroundAlpha = 0.0f;
             } else {
-                UndertaleDeathScreenCommon.currentBackgroundAlpha = (float) (1.0 - Mth.smoothstep(undertale_death_animation$vanillaFadeOutProgress));
+                UndertaleDeathScreenCommon.currentBackgroundAlpha = (float) (1.0 - Mth.smoothstep((float) undertale_death_animation$vanillaFadeOutProgress));
             }
         }
         
@@ -244,7 +244,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             } else {
                 int alpha = (int) (
                         Mth.smoothstep(
-                                Math.min((undertale_death_animation$age + delta) * Math.pow(fadeSpeed, 0.5) / 5, 1)
+                                (float) Math.min((undertale_death_animation$age + delta) * Math.pow(fadeSpeed, 0.5) / 5, 1)
                         ) * 255
                 );
                 bgColor = (alpha << 24);
@@ -268,7 +268,7 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
             } else {
                 undertale_death_animation$progress = Math.min(undertale_death_animation$progress + delta * speed, 1);
             }
-            double easedProgress = Mth.smoothstep(undertale_death_animation$progress);
+            double easedProgress = Mth.smoothstep((float) undertale_death_animation$progress);
 
             int startX = (guiGraphics.guiWidth() / 2) - 91 - 2;
             int startY = guiGraphics.guiHeight() - 39 - 3;
