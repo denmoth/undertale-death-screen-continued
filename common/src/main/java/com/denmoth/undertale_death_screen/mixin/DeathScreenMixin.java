@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.Nullable;
 import com.denmoth.undertale_death_screen.*;
+import net.minecraft.client.gui.screens.Screen;
 import com.denmoth.undertale_death_screen.registry.SoundEventRegistry;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -136,6 +137,16 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
                     }
                 }
             }
+        }
+
+        // Build dynamic textures if a custom heart resource pack is detected
+        if (CustomHeartDetector.hasCustomHeart(this.undertale_death_animation$heartStyle, this.hardcore)) {
+            DynamicHeartTextureManager.buildTextures(
+                    CustomHeartDetector.getCustomHeartPixels(),
+                    CustomHeartDetector.getSpriteWidth(),
+                    CustomHeartDetector.getSpriteHeight(),
+                    this.undertale_death_animation$heartStyle
+            );
         }
     }
 
@@ -366,19 +377,38 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
 
     @Unique
     private void undertale_death_animation$renderHeart(GuiGraphicsExtractor guiGraphics, int stage, int x, int y) {
-        guiGraphics.blitSprite(
-                net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
-                (this.hardcore ? HEART_TEXTURE_LOCATION_HC : HEART_TEXTURE_LOCATION),
-                HEART_TEXTURE_WIDTH,
-                HEART_TEXTURE_HEIGHT,
-                HEART_WIDTH * stage,
-                HEART_HEIGHT * this.undertale_death_animation$heartStyle,
-                x,
-                y,
-                HEART_WIDTH,
-                HEART_HEIGHT
-        );
+        if (!this.hardcore && DynamicHeartTextureManager.isDynamicRegistered()) {
+            guiGraphics.blit(
+                    net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
+                    DynamicHeartTextureManager.getShatterLocation(),
+                    x,
+                    y,
+                    HEART_WIDTH * stage,
+                    HEART_HEIGHT * this.undertale_death_animation$heartStyle,
+                    HEART_WIDTH,
+                    HEART_HEIGHT,
+                    HEART_TEXTURE_WIDTH,
+                    HEART_TEXTURE_HEIGHT
+            );
+        } else {
+            Identifier shatterLocation = this.hardcore
+                    ? HEART_TEXTURE_LOCATION_HC
+                    : DynamicHeartTextureManager.getShatterLocation();
+            guiGraphics.blitSprite(
+                    net.minecraft.client.renderer.RenderPipelines.GUI_TEXTURED,
+                    shatterLocation,
+                    HEART_TEXTURE_WIDTH,
+                    HEART_TEXTURE_HEIGHT,
+                    HEART_WIDTH * stage,
+                    HEART_HEIGHT * this.undertale_death_animation$heartStyle,
+                    x,
+                    y,
+                    HEART_WIDTH,
+                    HEART_HEIGHT
+            );
+        }
     }
+
 
     @Override
     public void undertale_death_animation$stopBackgroundMusic() {

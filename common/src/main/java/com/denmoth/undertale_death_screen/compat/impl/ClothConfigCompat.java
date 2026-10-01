@@ -185,6 +185,14 @@ public class ClothConfigCompat implements ClothConfigCompatBase {
                 .setDisplayRequirement(Requirement.isTrue(fadeToVanillaScreenToggle))
                 .build()
         );
+        general.addEntry(entryBuilder.startBooleanToggle(
+                        UndertaleDeathScreenCommon.translatable("config.debug_mode"),
+                        Config.INSTANCE.getDebugMode()
+                ).setDefaultValue(Config.getDefault().getDebugMode())
+                .setTooltip(UndertaleDeathScreenCommon.translatable("config.debug_mode.ttp"))
+                .setSaveConsumer(Config.INSTANCE::setDebugMode)
+                .build()
+        );
 
 
         return builder.build();

@@ -1,5 +1,6 @@
 package com.denmoth.undertale_death_screen.mixin;
 
+import com.denmoth.undertale_death_screen.DynamicHeartTextureManager;
 import com.denmoth.undertale_death_screen.UndertaleDeathScreenCommon;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ConfirmScreen;
@@ -22,6 +23,11 @@ public class MinecraftMixin {
                 Minecraft.getInstance().getSoundManager().stop((SoundInstance) UndertaleDeathScreenCommon.currentBgmSoundInstance);
                 UndertaleDeathScreenCommon.currentBgmSoundInstance = null;
             }
+        }
+        Minecraft client = Minecraft.getInstance();
+        Screen currentScreen = client.gui != null ? client.gui.screen() : null;
+        if (currentScreen instanceof DeathScreen && !(newScreen instanceof DeathScreen)) {
+            DynamicHeartTextureManager.cleanup();
         }
     }
 }

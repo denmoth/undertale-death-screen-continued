@@ -74,18 +74,33 @@ public class HeartPiece {
             );
         }
 
-        guiGraphics.blitSprite(
-                RenderPipelines.GUI_TEXTURED,
-                PIECES_TEXTURE_LOCATION,
-                PIECE_TEXTURE_WIDTH,
-                PIECE_TEXTURE_HEIGHT,
-                animated ? currentFrame * PIECE_WIDTH : textureX,
-                textureY,
-                0,
-                0,
-                PIECE_WIDTH,
-                PIECE_HEIGHT
-        );
+        if (DynamicHeartTextureManager.isDynamicRegistered()) {
+            guiGraphics.blit(
+                    RenderPipelines.GUI_TEXTURED,
+                    DynamicHeartTextureManager.getPiecesLocation(),
+                    0,
+                    0,
+                    animated ? currentFrame * PIECE_WIDTH : textureX,
+                    textureY,
+                    PIECE_WIDTH,
+                    PIECE_HEIGHT,
+                    PIECE_TEXTURE_WIDTH,
+                    PIECE_TEXTURE_HEIGHT
+            );
+        } else {
+            guiGraphics.blitSprite(
+                    RenderPipelines.GUI_TEXTURED,
+                    DynamicHeartTextureManager.getPiecesLocation(),
+                    PIECE_TEXTURE_WIDTH,
+                    PIECE_TEXTURE_HEIGHT,
+                    animated ? currentFrame * PIECE_WIDTH : textureX,
+                    textureY,
+                    0,
+                    0,
+                    PIECE_WIDTH,
+                    PIECE_HEIGHT
+            );
+        }
 
         guiGraphics.pose().popMatrix();
     }

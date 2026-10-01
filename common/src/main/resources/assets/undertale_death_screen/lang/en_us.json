@@ -38,5 +38,7 @@
   "undertale_death_screen.config.disable_vanilla_red_tint": "Disable Vanilla Red Tint [Experimental]",
   "undertale_death_screen.config.disable_vanilla_red_tint.ttp": "Disables the vanilla red tint around the edges of the screen after death animation.",
   "undertale_death_screen.config.independent_bgm_volume": "Independent Music Volume",
-  "undertale_death_screen.config.independent_bgm_volume.ttp": "If enabled, the death screen music will ignore the Music volume setting and only depend on the Master volume."
+  "undertale_death_screen.config.independent_bgm_volume.ttp": "If enabled, the death screen music will ignore the Music volume setting and only depend on the Master volume.",
+  "undertale_death_screen.config.debug_mode": "Debug Mode",
+  "undertale_death_screen.config.debug_mode.ttp": "Enables verbose logging for the custom heart texture detection system. Useful for diagnosing false positives or broken dynamic textures. Check your game log after dying."
 }
