@@ -48,6 +48,12 @@ tasks {
     }
 
     jar {
+        archiveClassifier.set("dev")
+    }
+
+    shadowJar {
+        exclude("architectury.common.json")
+        configurations = listOf(shadowCommon)
         archiveBaseName.set("[${project.property("minecraft_version")}] ${project.property("mod_id")}")
         archiveVersion.set("v${project.property("mod_version")}")
         archiveClassifier.set("fabric")
@@ -63,9 +69,7 @@ tasks {
         }
     }
 
-    shadowJar {
-        exclude("architectury.common.json")
-        configurations = listOf(shadowCommon)
-        archiveClassifier.set("fabric")
+    assemble {
+        dependsOn(shadowJar)
     }
 }
