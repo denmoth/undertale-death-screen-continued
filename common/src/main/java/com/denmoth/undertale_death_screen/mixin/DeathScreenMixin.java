@@ -1,7 +1,5 @@
 package com.denmoth.undertale_death_screen.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.DeathScreen;
@@ -24,7 +22,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
@@ -423,26 +420,4 @@ public abstract class DeathScreenMixin extends Screen implements DeathScreenAcce
         }
     }
 
-    @Redirect(
-            method = "extractRenderState",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;fillGradient(IIIIII)V"
-            ),
-            require = 0
-    )
-    private void redirectFillGradient(GuiGraphicsExtractor instance, int x1, int y1, int x2, int y2, int colorFrom, int colorTo) {
-        if (!Config.INSTANCE.getDisableVanillaRedTint() && Config.INSTANCE.getFadeToVanillaScreen()) {
-            instance.fillGradient(x1, y1, x2, y2, colorFrom, colorTo);
-        }
-    }
-
-    /* 
-    @Inject(method = "renderDeathBackground", at = @At("HEAD"), cancellable = true)
-    private static void disableDeathTint(GuiGraphicsExtractor guiGraphics, int i, int j, CallbackInfo ci) {
-        if (!Config.INSTANCE.getVanillaRedTint() || !Config.INSTANCE.getFadeToVanillaScreen()) {
-            ci.cancel();
-        }
-    }
-    */
 }
